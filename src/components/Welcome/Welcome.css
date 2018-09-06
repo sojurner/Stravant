@@ -1,0 +1,12 @@
+.fa-sign-in-alt {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.fa-sign-in-alt:hover {
+  color: #826868;
+}
+
+.welcome-title {
+  color: crimson;
+}
