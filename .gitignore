@@ -20,5 +20,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/helpers/api-Calls/accessToken.js
 /src/data/strava_config.js
