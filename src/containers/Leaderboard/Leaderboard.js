@@ -38,9 +38,21 @@ export class LeaderBoard extends Component {
       );
     });
 
+    const activity = unfilteredKeys.map(recent => {
+      const { distance, name, activity } = clubActivity.mostRecent;
+      const roundedDistance = Math.round(distance * 100) / 100;
+      const recentActivity = `${name} did a ${roundedDistance}
+      mile ${activity}`;
     return (
       <div>
-        {/* <h3>{clubActivity[sortedByDistance[0]].mostRecent}</h3> */}
+          <h3>{recentActivity}</h3>
+        </div>
+      );
+    });
+
+    return (
+      <div>
+        {activity}
         <table width="500">
           <tbody>
             <tr>
