@@ -18,6 +18,16 @@ export const exchangeUserToken = async code => {
   return await response.json();
 };
 
+export const getUserStats = async (token, num) => {
+  let weeklyStats = [];
+  while (num < 7) {
+    const weeklyData = recursiveRetrival(token, num);
+    weeklyStats.push(weeklyData);
+    num++;
+  }
+  const result = await Promise.all(weeklyStats);
+  return scrape.weeklyData(result);
+};
   const response = await fetch(url, options);
   return await response.json();
 };
