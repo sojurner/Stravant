@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: veraja;
+  src: url('./fonts/Veraja.ttf');
+}
+
+@font-face {
+  font-family: daybold;
+  src: url('./fonts/Daybold.otf');
+}

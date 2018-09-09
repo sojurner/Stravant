@@ -7,8 +7,17 @@ import * as scrape from '../../helpers/helpers/helpers';
 
 import './Welcome.css';
 export class Welcome extends Component {
+  constructor() {
+    super();
+    this.state = {
+      timer: 0
+    };
+  }
   componentDidMount() {
-    const userCode = window.location.search.slice(13, 53);
+    const { search } = window.location;
+    const codeIndex = search.indexOf('code') + 5;
+    const lastIndex = search.lastIndexOf('&');
+    const userCode = search.slice(codeIndex, lastIndex);
     this.exchangeToken(userCode);
   }
 
@@ -18,33 +27,60 @@ export class Welcome extends Component {
       const scrapedUserInfo = scrape.userInfo(result);
       this.props.setAccessToken(scrapedUserInfo);
     }
-  };
-
-  handleClick = () => {
-    const url = `https://www.strava.com/oauth/authorize?client_id=${
-      stravaApi.client_id
-    }&redirect_uri=${
-      stravaApi.redirect_uri
-    }&response_type=code&approval_prompt=force`;
-    window.location = url;
+    localStorage.setItem('code', JSON.stringify({ code }));
   };
 
   togglePom = () => {
-    const { togglePomState, currentUser } = this.props;
+    const { togglePomState, currentUser, pomStatus } = this.props;
+    if (pomStatus) {
+      this.setState({ timer: 0 });
+    }
     togglePomState(!currentUser.pomStatus);
   };
 
+  startTimer = () => {
+    let time = this.state.timer + 1;
+    this.setState({ timer: time });
+  };
+
+  signOutUser = () => {
+    localStorage.removeItem('code');
+    window.location = 'http://localhost:3000/';
+  };
+
   render() {
-    const stravant = 'S†ra√an†';
-    const { athlete } = this.props.currentUser.info;
+    const { info, pomStatus } = this.props.currentUser;
     return (
       <div className="welcome-page">
-        <h1 className="welcome-title">{stravant}</h1>
-        {athlete && <h2>HI {athlete.firstname}</h2>}
-        <i className="fas fa-sign-in-alt" />
-        <button onClick={this.handleClick}>login w/strava</button>
-        <button onClick={this.togglePom}>POM</button>
-        <button onClick={this.retrieveWeeklyStats}>get routes</button>
+        {this.state.timer > 0 && pomStatus && <h4>{this.state.timer}</h4>}
+        {this.state.timer > 0 &&
+          !pomStatus && (
+            <h4>
+              You took a {this.state.timer}
+              sec pom
+            </h4>
+          )}
+        {info && <h2>HI {info.firstName}</h2>}
+        <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
+        {pomStatus ? (
+          <button
+            onClick={() => {
+              this.togglePom();
+              clearInterval(this.time);
+            }}
+          >
+            Done!
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              this.togglePom();
+              this.time = setInterval(this.startTimer, 1000);
+            }}
+          >
+            POM TIME
+          </button>
+        )}
       </div>
     );
   }
