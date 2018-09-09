@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PieChart } from 'react-easy-chart';
-
+import { PieChart, Legend } from 'react-easy-chart';
+import * as apiFetch from '../../helpers/apiCalls/apiCalls';
+import * as userActions from '../../actions/userAction';
 import './Personal.css';
 
 export class Personal extends Component {
@@ -12,24 +13,26 @@ export class Personal extends Component {
       top: '',
       left: '',
       value: '',
-      key: ''
+      key: '',
+      goal: 0
     };
   }
 
-  mouseOverHandler = (data, event) => {
-    this.setState({
-      showToolTip: true,
-      top: event.y,
-      left: event.x,
-      value: data.value,
-      key: data.data.key
-    });
+  componentDidMount() {
+    this.getUserStats();
+  }
+
+  getUserStats = async () => {
+    const { setTotalStats } = this.props;
+    const { accessToken, userId } = this.props.currentUser.info;
+    const userStats = await apiFetch.getAggregateStats(accessToken, userId);
+    setTotalStats(userStats);
   };
 
-  mouseMoveHandler = e => {
-    if (this.state.showToolTip) {
-      this.setState({ top: e.y, left: e.x });
-    }
+  mouseOverHandler = (data, event) => {
+    this.setState({
+      key: data.data.key
+    });
   };
 
   mouseOutHandler = () => {
@@ -37,46 +40,61 @@ export class Personal extends Component {
   };
 
   render() {
+    // const mockData = { running: 32, swimming: 56, biking: 100 };
+    const { totalStats } = this.props.currentUser;
+    const filteredActivity = Object.keys(totalStats).filter(
+      key => totalStats[key] !== 0
+    );
+    const pieData = filteredActivity.map((activity, index) => {
+      return {
+        key: activity,
+        value: Math.round(totalStats[activity] * 100) / 100,
+        color: `rgb(${index}04, 1${index}9, 2${index}4)`
+      };
+    });
+
+    const textDisplay = filteredActivity.map((activity, index) => {
+      if (this.state.showToolTip && this.state.key === activity) {
+        return (
+          <p className="personal-stats">
+            {activity} {this.state.value} miles!!
+          </p>
+        );
+      }
+    });
+
     return (
-      <div>
+      <div className="pie-chart-wrap">
         <PieChart
-          labels
           className="personal-piechart"
-          data={[
-            { key: 'Goal', value: 100, color: '#DC143C' },
-            { key: 'Current', value: 444, color: '#aaac84' }
-          ]}
-          innerHoleSize={200}
+          data={pieData}
+          innerHoleSize={150}
           mouseOverHandler={this.mouseOverHandler}
           mouseOutHandler={event => this.mouseOutHandler(event)}
-          mouseMoveHandler={event => this.mouseMoveHandler(event)}
           padding={10}
+          clickHandler={d =>
+            this.setState({
+              showToolTip: true,
+              value: `${d.data.value}`
+            })
+          }
         />
-        {this.state.showToolTip &&
-          this.state.key === 'Current' && (
-            <p
-              className="personal-stats"
-              top={this.state.top}
-              left={this.state.left}
-            >
-              Your Pom-meter is {this.state.value} Miles!
-            </p>
-          )}
-        {this.state.showToolTip &&
-          this.state.key === 'Goal' && (
-            <p
-              className="personal-stats"
-              top={this.state.top}
-              left={this.state.left}
-            >
-              C'mon {this.state.value} miles left!!
-            </p>
-          )}
+        <Legend data={pieData} dataId={'key'} />
+        {textDisplay}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  currentUser: state.currentUser
+});
 
-export default connect(mapStateToProps)(Personal);
+const mapDispatchToProps = dispatch => ({
+  setTotalStats: stats => dispatch(userActions.setTotalStats(stats))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Personal);

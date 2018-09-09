@@ -1,5 +1,6 @@
 const initialState = {
   info: {},
+  totalStats: {},
   weeklyStats: {},
   pomStatus: false
 };
@@ -22,6 +23,12 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         weeklyStats: action.stats
+      };
+
+    case 'SET_TOTAL_STATS':
+      return {
+        ...state,
+        totalStats: action.stats
       };
 
     default:

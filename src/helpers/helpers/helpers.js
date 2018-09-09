@@ -9,8 +9,12 @@ export const userInfo = info => {
   return modifiedObj;
 };
 
-export const userDailyStats = stats => {
-  console.log(stats);
+export const userStats = stats => {
+  return {
+    Biked: stats.all_ride_totals.distance / 1609,
+    Ran: stats.all_run_totals.distance / 1609,
+    Swam: stats.all_swim_totals.distance / 1609
+  };
 };
 
 export const clubData = (info, activities) => {

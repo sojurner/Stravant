@@ -18,7 +18,21 @@ export const exchangeUserToken = async code => {
   return await response.json();
 };
 
-export const getUserStats = async (token, num) => {
+export const getAggregateStats = async (token, id) => {
+  const url = `https://www.strava.com/api/v3/athletes/${id}/stats`;
+  const options = {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
+  };
+  const response = await fetch(url, options);
+  const result = await response.json();
+  return scrape.userStats(result);
+};
+
+export const getWeeklyStats = async (token, num) => {
   let weeklyStats = [];
   while (num < 7) {
     const weeklyData = recursiveRetrival(token, num);

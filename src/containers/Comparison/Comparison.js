@@ -21,7 +21,7 @@ export class Comparison extends Component {
 
   retrieveWeeklyStats = async () => {
     const { currentUser, setWeeklyStats } = this.props;
-    const accumulativeStats = await apiCalls.getUserStats(
+    const accumulativeStats = await apiCalls.getWeeklyStats(
       currentUser.info.accessToken,
       0
     );
