@@ -43,6 +43,21 @@ const recursiveRetrival = async (token, num) => {
   const response = await fetch(url, options);
   return await response.json();
 };
+
+export const getUserClubs = async token => {
+  const url = `https://www.strava.com/api/v3/athlete/clubs`;
+  const options = {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
+  };
+  const response = await fetch(url, options);
+  const result = await response.json();
+  const activityData = await getClubActivity(result[0].id, token);
+  return scrape.clubData(result, activityData);
+};
   const response = await fetch(url, options);
   return await response.json();
 };
