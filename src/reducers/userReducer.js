@@ -1,5 +1,6 @@
 const initialState = {
   info: {},
+  weeklyStats: {},
   pomStatus: false
 };
 
@@ -15,6 +16,12 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         pomStatus: action.bool
+      };
+
+    case 'SET_WEEKLY_STATS':
+      return {
+        ...state,
+        weeklyStats: action.stats
       };
 
     default:
