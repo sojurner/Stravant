@@ -4,7 +4,6 @@ import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
 
 import './Leaderboard.css';
-
 export class LeaderBoard extends Component {
   componentDidMount() {
     this.getClubActivity(this.props.currentUser.info.accessToken);
@@ -17,8 +16,13 @@ export class LeaderBoard extends Component {
 
   render() {
     const { clubActivity } = this.props.clubs;
-    console.log(clubActivity);
-    const sortedByDistance = Object.keys(clubActivity).sort(
+    const unfilteredKeys = Object.keys(clubActivity).filter(
+      key => key === 'mostRecent'
+    );
+    const filteredKeys = Object.keys(clubActivity).filter(
+      key => key !== 'mostRecent'
+    );
+    const sortedByDistance = filteredKeys.sort(
       (nameA, nameB) =>
         clubActivity[nameB].totalDistance - clubActivity[nameA].totalDistance
     );
