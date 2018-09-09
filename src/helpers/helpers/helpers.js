@@ -16,15 +16,17 @@ export const userDailyStats = stats => {
 export const clubData = (info, activities) => {
   const matchingClub = info.find(club => club.name === 'Stravant Club');
   const mappedActivities = activities.reduce((userActivity, activity) => {
+    userActivity['mostRecent'] = {
+      name: activities[0].athlete.firstname,
+      distance: activities[0].distance / 1609,
+      activity: activities[0].name
+    };
+
     if (!userActivity[activity.athlete.firstname]) {
       userActivity[activity.athlete.firstname] = {
         totalDistance: 0,
         totalTime: 0,
-        membersRecent: '',
-        mostRecent: {
-          distance: activities[0].distance / 1609,
-          activity: activities[0].name
-        }
+        membersRecent: ''
       };
     }
     const distance = activity.distance / 1609;
