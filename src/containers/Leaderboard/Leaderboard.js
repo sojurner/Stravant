@@ -26,7 +26,6 @@ export class LeaderBoard extends Component {
       (nameA, nameB) =>
         clubActivity[nameB].totalDistance - clubActivity[nameA].totalDistance
     );
-    console.log(clubActivity[sortedByDistance[0]]);
     const table = sortedByDistance.map(person => {
       return (
         <tr>
@@ -43,8 +42,8 @@ export class LeaderBoard extends Component {
       const roundedDistance = Math.round(distance * 100) / 100;
       const recentActivity = `${name} did a ${roundedDistance}
       mile ${activity}`;
-    return (
-      <div>
+      return (
+        <div>
           <h3>{recentActivity}</h3>
         </div>
       );
