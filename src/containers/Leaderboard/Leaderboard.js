@@ -4,7 +4,6 @@ import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
 
 import './Leaderboard.css';
-
 export class LeaderBoard extends Component {
   componentDidMount() {
     this.getClubActivity(this.props.currentUser.info.accessToken);
@@ -17,12 +16,16 @@ export class LeaderBoard extends Component {
 
   render() {
     const { clubActivity } = this.props.clubs;
-    console.log(clubActivity);
-    const sortedByDistance = Object.keys(clubActivity).sort(
+    const unfilteredKeys = Object.keys(clubActivity).filter(
+      key => key === 'mostRecent'
+    );
+    const filteredKeys = Object.keys(clubActivity).filter(
+      key => key !== 'mostRecent'
+    );
+    const sortedByDistance = filteredKeys.sort(
       (nameA, nameB) =>
         clubActivity[nameB].totalDistance - clubActivity[nameA].totalDistance
     );
-    console.log(clubActivity[sortedByDistance[0]]);
     const table = sortedByDistance.map(person => {
       return (
         <tr>
@@ -34,9 +37,21 @@ export class LeaderBoard extends Component {
       );
     });
 
+    const activity = unfilteredKeys.map(recent => {
+      const { distance, name, activity } = clubActivity.mostRecent;
+      const roundedDistance = Math.round(distance * 100) / 100;
+      const recentActivity = `${name} did a ${roundedDistance}
+      mile ${activity}`;
+      return (
+        <div>
+          <h3>{recentActivity}</h3>
+        </div>
+      );
+    });
+
     return (
       <div>
-        {/* <h3>{clubActivity[sortedByDistance[0]].mostRecent}</h3> */}
+        {activity}
         <table width="500">
           <tbody>
             <tr>
