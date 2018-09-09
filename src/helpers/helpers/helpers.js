@@ -47,3 +47,42 @@ export const clubData = (info, activities) => {
   };
   return clubInfo;
 };
+
+export const weeklyData = data => {
+  let daysOfWeek = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday'
+  ];
+  const resultObj = data.reduce((weekObj, day) => {
+    day.forEach(date => {
+      const realDate = `${date.start_date[5] + date.start_date[6]}/${date
+        .start_date[8] + date.start_date[9]}/${date.start_date[0] +
+        date.start_date[1] +
+        date.start_date[2] +
+        date.start_date[3]}`;
+
+      let dated = new Date(realDate);
+      const dayOfWeek = dated.toLocaleDateString('en-US', { weekday: 'long' });
+      if (!weekObj[dayOfWeek]) {
+        weekObj[dayOfWeek] = 0;
+      }
+      weekObj[dayOfWeek] += date.distance;
+    });
+    return weekObj;
+  }, {});
+
+  return daysOfWeek.reduce((dayObj, day) => {
+    if (!resultObj[day]) {
+      resultObj[day] = 0;
+    } else {
+      resultObj[day] = resultObj[day];
+    }
+    dayObj = resultObj;
+    return dayObj;
+  }, {});
+};
