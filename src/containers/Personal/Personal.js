@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { PieChart } from 'react-easy-chart';
+
 import './Personal.css';
 
-class Personal extends Component {
+export class Personal extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +44,7 @@ class Personal extends Component {
           className="personal-piechart"
           data={[
             { key: 'Goal', value: 100, color: '#DC143C' },
-            { key: 'Current', value: 300, color: '#aaac84' }
+            { key: 'Current', value: 444, color: '#aaac84' }
           ]}
           innerHoleSize={200}
           mouseOverHandler={this.mouseOverHandler}
@@ -75,4 +77,6 @@ class Personal extends Component {
   }
 }
 
-export default Personal;
+const mapStateToProps = state => ({});
+
+export default connect(mapStateToProps)(Personal);
