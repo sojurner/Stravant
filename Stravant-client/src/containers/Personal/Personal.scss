@@ -1,0 +1,32 @@
+.personal-stats {
+  display: flex;
+  justify-content: center;
+}
+
+path {
+  cursor: pointer;
+}
+
+.personal-stats {
+  position: absolute;
+}
+
+.legend {
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  font-size: 0.8em;
+  padding: 2rem;
+  // margin: auto;
+  // display: flex;
+}
+
+.pie-chart-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  left: 0.6rem;
+}
