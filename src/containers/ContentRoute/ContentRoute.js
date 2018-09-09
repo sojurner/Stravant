@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import { CompareAll } from '../CompareAll/CompareAll';
+import Comparison from '../Comparison/Comparison';
 import Personal from '../Personal/Personal';
 import Leaderboard from '../Leaderboard/Leaderboard';
 
@@ -11,7 +11,7 @@ class ContentRoute extends Component {
       <Switch>
         <Route exact path="/" />
         <Route exact path="/personal" component={Personal} />
-        <Route exact path="/compare" component={CompareAll} />
+        <Route exact path="/compare" component={Comparison} />
         <Route exact path="/leaderboard" component={Leaderboard} />
       </Switch>
     );
