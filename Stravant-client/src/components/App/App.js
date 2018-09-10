@@ -42,7 +42,6 @@ export class App extends Component {
 
   render() {
     const { currentUser } = this.props;
-    const localStore = localStorage.getItem('code');
     const stravant = 'S†ra√an†';
 
     return (
@@ -57,7 +56,8 @@ export class App extends Component {
               <img
                 className="avatar"
                 src={require('../../images/male-avatar.png')}
-                height="100"
+                height="150"
+                width="150"
               />
             )}
           {currentUser &&
@@ -65,28 +65,38 @@ export class App extends Component {
               <img
                 className="avatar"
                 src={require('../../images/female-avatar.png')}
-                height="100"
+                height="250"
+                width="200"
               />
             )}
 
           {!window.location.search.includes('code') && (
-            <span>
+            <span className="logos">
+              <div className="spinning-globe" />
               <img
                 src={require('../../images/connect-logo.png')}
-                height="50"
-                width="200"
+                height="75"
+                width="250"
                 className="connect-logo"
                 onClick={this.handleClick}
               />
-              <img
-                src={require('../../images/powered-by-strava.png')}
-                height="70"
-                width="250"
-                className="strava-powered"
-              />
-              <i class="fab fa-strava" />
             </span>
           )}
+          <div className="required-logo">
+            <img
+              src={require('../../images/powered-by-strava.png')}
+              height="40"
+              width="150"
+              className="strava-powered"
+            />
+            <i class="fab fa-strava" />
+            <img
+              src={require('../../images/turing-logo.png')}
+              height="70"
+              width="70"
+              className="strava-powered"
+            />
+          </div>
         </div>
       </BrowserRouter>
     );
