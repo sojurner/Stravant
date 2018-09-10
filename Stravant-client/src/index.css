@@ -1,3 +1,10 @@
+html {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(254, 210, 191);
+}
+
 body {
   margin: 0;
   padding: 0;
