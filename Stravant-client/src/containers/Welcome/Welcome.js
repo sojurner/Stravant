@@ -10,7 +10,10 @@ export class Welcome extends Component {
   constructor() {
     super();
     this.state = {
-      timer: 0
+      mSecond: 0,
+      second: 0,
+      minute: 0,
+      hour: 0
     };
   }
   componentDidMount() {
@@ -31,16 +34,34 @@ export class Welcome extends Component {
   };
 
   togglePom = () => {
-    const { togglePomState, currentUser, pomStatus } = this.props;
-    if (pomStatus) {
-      this.setState({ timer: 0 });
-    }
+    const { togglePomState, currentUser } = this.props;
     togglePomState(!currentUser.pomStatus);
   };
 
-  startTimer = () => {
-    let time = this.state.timer + 1;
-    this.setState({ timer: time });
+  startMSecond = () => {
+    let time = this.state.mSecond + 1;
+    time < 10
+      ? this.setState({ mSecond: time })
+      : this.setState({ mSecond: 0 });
+  };
+
+  startSecond = () => {
+    let time = this.state.second + 1;
+    time < 60 ? this.setState({ second: time }) : this.setState({ second: 0 });
+  };
+
+  startMinute = () => {
+    let time = this.state.minute + 1;
+    time < 60 ? this.setState({ minute: time }) : this.setState({ minute: 0 });
+  };
+
+  startHour = () => {
+    let time = this.state.hour + 1;
+    this.setState({ hour: time });
+  };
+
+  resetTimer = () => {
+    this.setState({ mSecond: 0, second: 0, minute: 0, hour: 0 });
   };
 
   signOutUser = () => {
@@ -50,23 +71,43 @@ export class Welcome extends Component {
 
   render() {
     const { info, pomStatus } = this.props.currentUser;
+    const { second, minute, hour, mSecond } = this.state;
     return (
       <div className="welcome-page">
-        {this.state.timer > 0 && pomStatus && <h4>{this.state.timer}</h4>}
-        {this.state.timer > 0 &&
-          !pomStatus && (
+        {second > 0 &&
+          pomStatus && (
             <h4>
-              You took a {this.state.timer}
-              sec pom
+              <span className="time hour">{hour}</span>
+              :h~
+              <span className="time minute">{minute}</span>
+              :m~
+              <span className="time second">{second}</span>
+              :s~
+              <span className="time mSecond">{mSecond}</span>
+              :ms~
             </h4>
           )}
+        {hour > 0 ||
+          minute > 0 ||
+          (second > 0 &&
+            !pomStatus && (
+              <h4>
+                That was a {hour}
+                h, {minute}
+                m, {second}s POM!!
+              </h4>
+            ))}
+
         {info && <h2>HI {info.firstName}</h2>}
         <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
         {pomStatus ? (
           <button
             onClick={() => {
               this.togglePom();
-              clearInterval(this.time);
+              clearInterval(this.mSeconds);
+              clearInterval(this.seconds);
+              clearInterval(this.minutes);
+              clearInterval(this.hours);
             }}
           >
             Done!
@@ -75,12 +116,23 @@ export class Welcome extends Component {
           <button
             onClick={() => {
               this.togglePom();
-              this.time = setInterval(this.startTimer, 1000);
+              this.mSeconds = setInterval(this.startMSecond, 100);
+              this.seconds = setInterval(this.startSecond, 1000);
+              this.minutes = setInterval(this.startMinute, 60000);
+              this.hours = setInterval(this.startHour, 600000);
             }}
           >
-            POM TIME
+            POM ME!!
           </button>
         )}
+        {hour > 0 ||
+          minute > 0 ||
+          (second > 0 &&
+            !pomStatus && (
+              <button className="reset-time" onClick={this.resetTimer}>
+                Reset
+              </button>
+            ))}
       </div>
     );
   }
