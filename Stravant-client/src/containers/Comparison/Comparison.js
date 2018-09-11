@@ -11,7 +11,8 @@ export class Comparison extends Component {
     this.state = {
       xCoordinates: 0,
       yCoordinates: 0,
-      dataDisplay: ''
+      dataDisplay: '',
+      toggleDisplay: false
     };
   }
 
@@ -28,15 +29,30 @@ export class Comparison extends Component {
     setWeeklyStats(accumulativeStats);
   };
 
+  trackMouseCoordinates = event => {
+    console.log(event);
+    this.setState({ xCoordinates: event.screenX, yCoordinates: event.screenY });
+  };
+
+  handleClick = event => {
+    console.log(event);
+  };
+
   render() {
+    const { yCoordinates, xCoordinates } = this.state;
     const { weeklyStats } = this.props.currentUser;
     const dataToPlot = Object.keys(weeklyStats)
       .map(day => {
         return { x: day, y: weeklyStats[day] };
       })
       .reverse();
+    const styles = {
+      position: 'absolute',
+      top: yCoordinates - 50,
+      left: xCoordinates - 100
+    };
     return (
-      <div>
+      <div className="compare-data-text" onClick={this.trackMouseCoordinates}>
         <AreaChart
           xType={'text'}
           axes
@@ -44,11 +60,21 @@ export class Comparison extends Component {
           dataPoints
           areaColors={['crimson']}
           verticalGrid
-          width={350}
-          height={250}
+          onClick={this.handleClick}
+          clickHandler={event =>
+            this.setState({
+              xCoordinates: event.screenX,
+              yCoordinates: event.screenY,
+              dataDisplay: `${Math.round((event.y / 1609) * 100) / 100} miles`,
+              toggleDisplay: !this.state.toggleDisplay
+            })
+          }
+          width={450}
+          height={350}
           interpolate={'cardinal'}
           data={[dataToPlot]}
         />
+        <p style={styles}>{this.state.dataDisplay}</p>
       </div>
     );
   }
