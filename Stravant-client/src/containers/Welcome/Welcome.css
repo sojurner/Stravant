@@ -25,3 +25,29 @@
 
 .msecond {
   color: #826868; }
+
+.speech-bubble {
+  font-family: daybold;
+  color: #ffc1b8;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  position: relative;
+  background: #c5696a;
+  border-radius: 0.4em;
+  padding: 1rem;
+  opacity: 0.9; }
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 21px solid transparent;
+  border-right-color: #c5696a;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10.5px;
+  margin-left: -21px;
+  opacity: 0.9; }
