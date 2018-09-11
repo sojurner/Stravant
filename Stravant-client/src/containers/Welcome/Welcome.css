@@ -7,4 +7,21 @@
 
 .welcome-title {
   color: crimson;
-  font-family: daybold; }
+  font-family: daybold;
+  margin: 1rem auto;
+  font-size: 5rem; }
+
+.time {
+  font-size: 3rem; }
+
+.hour {
+  color: blue; }
+
+.minute {
+  color: aquamarine; }
+
+.second {
+  color: orangered; }
+
+.msecond {
+  color: #826868; }

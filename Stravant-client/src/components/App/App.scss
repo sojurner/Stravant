@@ -1,3 +1,18 @@
+.App {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.logos {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.required-logo {
+  margin: 6rem 0;
+}
 .connect-logo {
   opacity: 1;
   cursor: pointer;
@@ -19,11 +34,26 @@
   filter: brightness(150%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.spinning-globe {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 3rem auto;
+  background: center / cover url(../../images/earth.png);
+  box-shadow: inset 0 0 25px rgb(176, 121, 121);
+  animation: world 35s linear infinite;
+}
+
+.spinning-globe:hover {
+  box-shadow: inset 0 0 25px rgb(139, 66, 66);
+}
+
+@keyframes world {
+  0% {
+    background-position: 0 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    background-position: 719px 0;
   }
 }
