@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import ContentRoute from '../../containers/ContentRoute/ContentRoute';
 import { NavBar } from '../../containers/NavBar/NavBar';
 import Welcome from '../../containers/Welcome/Welcome';
+import * as pomActions from '../../actions/pomAction';
 import * as userActions from '../../actions/userAction';
 import { stravaApi } from '../../data/strava_config';
 import './App.css';
@@ -11,7 +12,8 @@ export class App extends Component {
   constructor() {
     super();
     this.state = {
-      code: ''
+      code: '',
+      showHistory: false
     };
   }
 
@@ -40,39 +42,29 @@ export class App extends Component {
     window.location = url;
   };
 
+  signOutUser = () => {
+    localStorage.removeItem('code');
+    window.location = 'http://localhost:3000/';
+  };
+
   render() {
-    const { currentUser } = this.props;
+    const { info, pomHistory, pomStatus } = this.props.currentUser;
+    const { code, showHistory } = this.state;
     const stravant = 'S†ra√an†';
 
     return (
       <BrowserRouter>
         <div className="App">
-          <h1 className="welcome-title">{stravant}</h1>
-          {this.state.code && <Welcome />}
-          {this.state.code && <NavBar />}
-          {this.state.code && <ContentRoute />}
-          {currentUser &&
-            currentUser.gender === 'M' && (
-              <img
-                className="avatar"
-                src={require('../../images/male-avatar.png')}
-                height="150"
-                width="150"
-              />
-            )}
-          {currentUser &&
-            currentUser.gender === 'F' && (
-              <img
-                className="avatar"
-                src={require('../../images/female-avatar.png')}
-                height="250"
-                width="200"
-              />
-            )}
-
-          {!window.location.search.includes('code') && (
+          <span className="header">
+            <h1 className="welcome-title">{stravant}</h1>
+            <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
+          </span>
+          {code && <NavBar />}
+          {code && <Welcome />}
+          {code && <ContentRoute />}
+          {window.location.search.length < 16 && (
             <span className="logos">
-              <div className="spinning-globe" />
+              <div className="spinning-globe">Credits to Nick</div>
               <img
                 src={require('../../images/connect-logo.png')}
                 height="75"
@@ -90,6 +82,7 @@ export class App extends Component {
               className="strava-powered"
             />
             <i class="fab fa-strava" />
+
             <img
               src={require('../../images/turing-logo.png')}
               height="70"
@@ -104,13 +97,14 @@ export class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentUser: state.currentUser.info
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
   setAccessToken: token => dispatch(userActions.setAccessToken(token)),
-  togglePomState: bool => dispatch(userActions.togglePomState(bool)),
-  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats))
+  togglePomState: bool => dispatch(pomActions.togglePomState(bool)),
+  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats)),
+  setPomHistory: history => dispatch(pomActions.setPomHistory(history))
 });
 
 export default connect(

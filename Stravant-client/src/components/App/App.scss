@@ -42,6 +42,10 @@
   background: center / cover url(../../images/earth.png);
   box-shadow: inset 0 0 25px rgb(176, 121, 121);
   animation: world 35s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a49188;
 }
 
 .spinning-globe:hover {
@@ -56,4 +60,17 @@
   100% {
     background-position: 719px 0;
   }
+}
+
+.header {
+  display: flex;
+}
+
+.fa-sign-in-alt {
+  align-self: center;
+  color: #fc4c01;
+}
+
+.avatar {
+  cursor: pointer;
 }
