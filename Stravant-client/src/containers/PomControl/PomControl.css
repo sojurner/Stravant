@@ -1,0 +1,25 @@
+.pom-instruction {
+  position: absolute; }
+
+img {
+  cursor: pointer; }
+
+i {
+  cursor: pointer; }
+
+.modal-timer {
+  z-index: 1;
+  background-color: #fed2bf;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  animation: fadein 1s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+i {
+  font-size: 2rem; }
