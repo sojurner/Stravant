@@ -55,7 +55,8 @@ const recursiveRetrival = async (token, num) => {
     }
   };
   const response = await fetch(url, options);
-  return await response.json();
+  const result = await response.json();
+  return result;
 };
 
 export const getUserClubs = async token => {
@@ -69,6 +70,7 @@ export const getUserClubs = async token => {
   };
   const response = await fetch(url, options);
   const result = await response.json();
+  console.log(result);
   const activityData = await getClubActivity(result[0].id, token);
   return scrape.clubData(result, activityData);
 };
