@@ -448,3 +448,31 @@ export const weeklyDataParams = [
   [],
   []
 ];
+
+export const clubActionParam = {
+  clubName: 'Stravant Club',
+  clubId: 473825,
+  membersStats: {
+    mostRecent: {
+      name: 'Paul',
+      distance: 1.4110627719080175,
+      activity: 'Morning Run'
+    },
+    Paul: { totalDistance: 7.87, totalTime: 101, membersRecent: 'Morning Run' },
+    Benjamin: {
+      totalDistance: 1.17,
+      totalTime: 20,
+      membersRecent: 'Light rail trip'
+    },
+    Jesse: {
+      totalDistance: 278.77,
+      totalTime: 5297,
+      membersRecent: 'Evening Run'
+    },
+    Pamela: {
+      totalDistance: 62.88999999999999,
+      totalTime: 635,
+      membersRecent: 'Afternoon Run'
+    }
+  }
+};
