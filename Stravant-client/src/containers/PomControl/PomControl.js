@@ -61,17 +61,24 @@ export class PomControl extends Component {
   };
 
   resetTimer = () => {
-    this.setState({ mSecond: 0, second: 0, minute: 0, hour: 0, save: true });
-  };
-
-  showPoms = () => {
     const { setPomHistory } = this.props;
+    const { minute, second, hour } = this.state;
+    const timeState = {
+      second: second,
+      minute: minute,
+      hour: hour
+    };
     if (localStorage.getItem('pomHistory')) {
       const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
-      const newItem = { ...storageItem, [moment().format('llll')]: this.state };
+      const newItem = {
+        ...storageItem,
+        [moment().format('llll')]: timeState
+      };
       localStorage.setItem('pomHistory', JSON.stringify(newItem));
     } else {
-      const itemToStorage = { [moment().format('llll')]: this.state };
+      const itemToStorage = {
+        [moment().format('llll')]: timeState
+      };
       localStorage.setItem('pomHistory', JSON.stringify(itemToStorage));
     }
     const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
