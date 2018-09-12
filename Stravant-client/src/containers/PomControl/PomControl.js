@@ -13,20 +13,23 @@ export class PomControl extends Component {
       second: 0,
       minute: 0,
       hour: 0,
+      start: false,
       save: false,
       showHistory: false,
-      description: false
+      description: false,
+      pomSummary: ''
     };
   }
 
-  componentDidUpdate() {
-    console.log(this.state.showHistory);
-  }
+  componentDidUpdate() {}
 
   togglePom = string => {
-    this.setState({ save: false });
+    const toggledState = !this.state.start;
+    if (!this.state.start) {
+      this.setState({ [string]: toggledState });
     const { togglePomState, pomInfo } = this.props;
     togglePomState(!pomInfo.pomStatus);
+    }
   };
 
   startMSecond = () => {
