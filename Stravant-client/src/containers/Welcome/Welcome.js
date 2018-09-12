@@ -38,9 +38,8 @@ export class Welcome extends Component {
     const toggleGreeting = !greeting;
     const coord = {
       position: 'absolute',
-
-      left: window.screenX + e.screenX / 0.94,
-      top: window.screenY + e.screenY / 1.8
+      left: e.pageX + 30,
+      top: e.pageY - 50
     };
     this.setState({
       greeting: toggleGreeting,
@@ -59,8 +58,8 @@ export class Welcome extends Component {
               <img
                 className="avatar"
                 src={require('../../images/male-avatar.png')}
-                height="150"
-                width="150"
+                height="100"
+                width="100"
                 onClick={this.handleClick}
               />
             )}
@@ -69,8 +68,8 @@ export class Welcome extends Component {
               <img
                 className="avatar"
                 src={require('../../images/female-avatar.png')}
-                height="150"
-                width="150"
+                height="100"
+                width="100"
                 onClick={this.handleClick}
               />
             )}

@@ -11,21 +11,6 @@
   margin: 1rem auto;
   font-size: 5rem; }
 
-.time {
-  font-size: 3rem; }
-
-.hour {
-  color: blue; }
-
-.minute {
-  color: aquamarine; }
-
-.second {
-  color: orangered; }
-
-.msecond {
-  color: #826868; }
-
 .speech-bubble {
   font-family: daybold;
   color: #ffc1b8;
