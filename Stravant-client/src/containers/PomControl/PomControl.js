@@ -27,8 +27,8 @@ export class PomControl extends Component {
     const toggledState = !this.state.start;
     if (!this.state.start) {
       this.setState({ [string]: toggledState });
-    const { togglePomState, pomInfo } = this.props;
-    togglePomState(!pomInfo.pomStatus);
+      const { togglePomState, pomInfo } = this.props;
+      togglePomState(!pomInfo.pomStatus);
     }
   };
 
@@ -115,52 +115,69 @@ export class PomControl extends Component {
       left: window.screenX + 10,
       top: window.screenY - 20
     };
+
+    const summaryStyle = {
+      position: 'absolute',
+      left: window.screenX + 25,
+      top: window.screenY + 60
+    };
+
+    const modal = {
+      position: 'absolute',
+      left: window.screenX + 100,
+      top: window.screenY - 20
+    };
     const {
       mSecond,
       second,
       minute,
       hour,
-      greeting,
+      start,
       showHistory,
       description,
-      save
+      save,
+      pomSummary
     } = this.state;
     return (
       <div>
-        {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) && (
-          <span>
-            <i
-              class="far fa-hand-paper"
-              onClick={() => {
-                this.togglePom('stop');
-                clearInterval(this.mSeconds);
-                clearInterval(this.seconds);
-                clearInterval(this.minutes);
-                clearInterval(this.hours);
-              }}
-            />
-            {
-              <button className="reset-time" onClick={this.resetTimer}>
-                Save!
-              </button>
-            }
-            <h4 className="modal-timer">
-              <span className="time hour">{hour}</span>
-              :h~
-              <span className="time minute">{minute}</span>
-              :m~
-              <span className="time second">{second}</span>
-              :s~
-              <span className="time mSecond">{mSecond}</span>
-              :ms~
-            </h4>
-          </span>
-        )}
+        {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) &&
+          start && (
+            <section className="modal" style={modal}>
+              <i class="fas fa-window-close" onClick={this.resetTimer} />
+              <div className="time">
+                <span className="time hour">{hour} h</span>
+                <span className="time minute">
+                  ..
+                  {minute} m
+                </span>
+                <span className="time second">
+                  ..
+                  {second} s
+                </span>
+                <span className="time mSecond">
+                  ..
+                  {mSecond} ms
+                </span>
+              </div>
+              <div className="save-stop">
+                <i
+                  class="far fa-hand-paper"
+                  onClick={() => {
+                    clearInterval(this.mSeconds);
+                    clearInterval(this.seconds);
+                    clearInterval(this.minutes);
+                    clearInterval(this.hours);
+                  }}
+                />
+              </div>
+            </section>
+          )}
         {save && (
-          <h4>
-            That was a {hour}
-            h, {minute}
-            m, {second}s POM!!
+          <h4 style={summaryStyle}>
+            <div>Most recent:</div>
+            ---
+            {pomSummary}
+            ---
           </h4>
         )}
         {/* {pomStatus ? (
@@ -175,27 +192,30 @@ export class PomControl extends Component {
             }}
           />
         ) : ( */}
-        {!pomStatus && (
-          <img
-            src={require('../../images/pomodoro-icon.png')}
-            style={styles}
-            height="100px"
-            width="100px"
-            className="pomodoro"
-            onMouseEnter={this.handleDescription}
-            onMouseLeave={this.handleDescription}
-            onClick={() => {
-              this.togglePom('start');
-              this.mSeconds = setInterval(this.startMSecond, 101);
-              this.seconds = setInterval(this.startSecond, 1001);
-              this.minutes = setInterval(this.startMinute, 60001);
-              this.hours = setInterval(this.startHour, 3600001);
-            }}
-          />
+
+        <img
+          src={require('../../images/pomodoro-icon.png')}
+          style={styles}
+          height="100px"
+          width="100px"
+          className="pomodoro"
+          onMouseEnter={this.handleDescription}
+          onMouseLeave={this.handleDescription}
+          onClick={() => {
+            this.togglePom('start');
+            this.mSeconds = setInterval(this.startMSecond, 101);
+            this.seconds = setInterval(this.startSecond, 1001);
+            this.minutes = setInterval(this.startMinute, 60001);
+            this.hours = setInterval(this.startHour, 3600001);
+          }}
+        />
+
+        {!pomHistory && <p>You have no record Poms</p>}
+        {!showHistory ? (
+          <button onClick={this.showPoms}>Show Poms</button>
+        ) : (
+          <button onClick={this.showPoms}>Hide</button>
         )}
-
-        <button onClick={this.showPoms}>Show Poms</button>
-
         {(!second || !mSecond || !hour || !minute) &&
           description && <p className="pom-instruction">Start Pom?</p>}
         {showHistory && (
