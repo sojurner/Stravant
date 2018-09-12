@@ -55,7 +55,8 @@ const recursiveRetrival = async (token, num) => {
     }
   };
   const response = await fetch(url, options);
-  return await response.json();
+  const result = await response.json();
+  return result;
 };
 
 export const getUserClubs = async token => {

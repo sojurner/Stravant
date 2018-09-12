@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentRoute should MatchSnapshot when path matches Compare 1`] = `
+<Switch>
+  <Route
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/personal"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/compare"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/leaderboard"
+  />
+</Switch>
+`;
+
+exports[`ContentRoute should MatchSnapshot when path matches leaderboard 1`] = `
+<Switch>
+  <Route
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/personal"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/compare"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/leaderboard"
+  />
+</Switch>
+`;
+
+exports[`ContentRoute should matchsnapshot when path matches personal 1`] = `
+<Switch>
+  <Route
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/personal"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/compare"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/leaderboard"
+  />
+</Switch>
+`;

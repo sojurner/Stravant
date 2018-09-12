@@ -11,7 +11,9 @@ export class App extends Component {
   constructor() {
     super();
     this.state = {
-      code: ''
+      code: '',
+      showHistory: false,
+      data: null
     };
   }
 
@@ -29,6 +31,12 @@ export class App extends Component {
       window.location.reload(refreshUrl);
       localStorage.removeItem('code');
     }
+
+    this.callBackendApi()
+      .then(response => this.setState({ data: response.express }))
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleClick = () => {
@@ -40,39 +48,38 @@ export class App extends Component {
     window.location = url;
   };
 
-  render() {
-    const { currentUser } = this.props;
-    const stravant = 'S†ra√an†';
+  callBackendApi = async () => {
+    const response = await fetch('/express_backend');
+    const body = await response.json();
+    if (response.status !== 200) {
+      throw Error(body.message);
+    }
+    return body;
+  };
 
+  signOutUser = () => {
+    localStorage.removeItem('code');
+    window.location = 'http://localhost:3000/';
+  };
+
+  render() {
+    const { code } = this.state;
+    const stravant = 'S†ra√an†';
+    console.log(this.props.currentUser);
     return (
       <BrowserRouter>
         <div className="App">
-          <h1 className="welcome-title">{stravant}</h1>
-          {this.state.code && <Welcome />}
-          {this.state.code && <NavBar />}
-          {this.state.code && <ContentRoute />}
-          {currentUser &&
-            currentUser.gender === 'M' && (
-              <img
-                className="avatar"
-                src={require('../../images/male-avatar.png')}
-                height="150"
-                width="150"
-              />
-            )}
-          {currentUser &&
-            currentUser.gender === 'F' && (
-              <img
-                className="avatar"
-                src={require('../../images/female-avatar.png')}
-                height="250"
-                width="200"
-              />
-            )}
-
-          {!window.location.search.includes('code') && (
+          <p>{this.state.data}</p>
+          <span className="header">
+            <h1 className="welcome-title">{stravant}</h1>
+            <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
+          </span>
+          {code && <NavBar />}
+          {code && <Welcome />}
+          {code && <ContentRoute />}
+          {window.location.search.length < 16 && (
             <span className="logos">
-              <div className="spinning-globe" />
+              <div className="spinning-globe">Credits to Nick</div>
               <img
                 src={require('../../images/connect-logo.png')}
                 height="75"
@@ -90,6 +97,7 @@ export class App extends Component {
               className="strava-powered"
             />
             <i class="fab fa-strava" />
+
             <img
               src={require('../../images/turing-logo.png')}
               height="70"
@@ -103,14 +111,12 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.currentUser.info
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setAccessToken: token => dispatch(userActions.setAccessToken(token)),
-  togglePomState: bool => dispatch(userActions.togglePomState(bool)),
-  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats))
+export const mapDispatchToProps = dispatch => ({
+  setAccessToken: token => dispatch(userActions.setAccessToken(token))
 });
 
 export default connect(

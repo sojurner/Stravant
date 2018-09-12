@@ -6,6 +6,7 @@ export const userInfo = info => {
     gender: info.athlete.sex,
     profilePic: info.athlete.profile
   };
+
   return modifiedObj;
 };
 

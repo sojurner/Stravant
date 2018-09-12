@@ -29,7 +29,7 @@ export class Personal extends Component {
     setTotalStats(userStats);
   };
 
-  mouseOverHandler = (data, event) => {
+  mouseOverHandler = data => {
     this.setState({
       key: data.data.key
     });

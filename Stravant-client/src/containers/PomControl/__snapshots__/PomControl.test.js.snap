@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PomControl should match snapShot 1`] = `
+<div>
+  <img
+    className="pomodoro"
+    height="100px"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    src="pomodoro-icon.png"
+    style={
+      Object {
+        "left": 10,
+        "position": "absolute",
+        "top": -20,
+      }
+    }
+    width="100px"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Show Poms
+  </button>
+</div>
+`;
+
+exports[`PomControl should match snapshot 1`] = `
+<div>
+  <img
+    className="pomodoro"
+    height="100px"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    src="pomodoro-icon.png"
+    style={
+      Object {
+        "left": 10,
+        "position": "absolute",
+        "top": -20,
+      }
+    }
+    width="100px"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Show Poms
+  </button>
+</div>
+`;
