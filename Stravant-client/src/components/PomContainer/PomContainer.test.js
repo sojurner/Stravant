@@ -41,4 +41,12 @@ describe('PomContainer', () => {
   it('should matchsnapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it.skip('should call removePom on click', () => {
+    wrapper = mount(
+      <PomContainer pomHistory={mockPomHistory} removePom={mockRemove} />
+    );
+    wrapper.find(i).simulate('clickl');
+    expect(mockRemove).toHaveBeenCalled();
+  });
 });

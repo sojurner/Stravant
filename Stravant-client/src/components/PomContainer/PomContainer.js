@@ -2,7 +2,6 @@ import React from 'react';
 import './PomContainer.css';
 
 export const PomContainer = ({ pomHistory, removePom }) => {
-  console.log(pomHistory);
   const pomContainer = Object.keys(pomHistory).map(time => {
     const pomTime = `${pomHistory[time].second}sec ${
       pomHistory[time].minute
