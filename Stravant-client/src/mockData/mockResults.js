@@ -37,3 +37,42 @@ export const weeklyResult = {
   Tuesday: 0,
   Wednesday: 0
 };
+
+export const scrapedUserInfo = {
+  accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+  firstName: 'Paul',
+  gender: 'M',
+  profilePic:
+    'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg',
+  userId: 34515396
+};
+
+export const scrapedUserStats = { Biked: 0, Ran: 6.472964574269732, Swam: 0 };
+
+export const scrapedClubData = {
+  clubId: 473825,
+  clubName: 'Stravant Club',
+  membersStats: {
+    Pamela: {
+      membersRecent: 'Morning Run',
+      totalDistance: 4.27,
+      totalTime: 47
+    },
+    Paul: { membersRecent: 'Afternoon Run', totalDistance: 0.31, totalTime: 3 },
+    mostRecent: {
+      activity: 'Morning Run',
+      distance: 4.270478558110628,
+      name: 'Pamela'
+    }
+  }
+};
+
+export const scrapedWeeklyData = {
+  Friday: 3784.3,
+  Monday: 2680.2,
+  Saturday: 3950,
+  Sunday: 0,
+  Thursday: 0,
+  Tuesday: 0,
+  Wednesday: 0
+};
