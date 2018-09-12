@@ -83,7 +83,21 @@ export class PomControl extends Component {
     }
     const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
     setPomHistory(storageItem);
+    const timeSummary = `${second}s  ${minute}m  ${hour}h`;
+    this.setState({
+      mSecond: 0,
+      second: 0,
+      minute: 0,
+      hour: 0,
+      start: false,
+      save: true,
+      pomSummary: timeSummary
+    });
+  };
+
+  showPoms = () => {
     const { showHistory } = this.state;
+
     const toggledHistory = !showHistory;
     this.setState({ showHistory: toggledHistory });
   };
