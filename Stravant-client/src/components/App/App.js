@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import ContentRoute from '../../containers/ContentRoute/ContentRoute';
 import { NavBar } from '../../containers/NavBar/NavBar';
 import Welcome from '../../containers/Welcome/Welcome';
-import * as pomActions from '../../actions/pomAction';
 import * as userActions from '../../actions/userAction';
 import { stravaApi } from '../../data/strava_config';
 import './App.css';
@@ -13,7 +12,8 @@ export class App extends Component {
     super();
     this.state = {
       code: '',
-      showHistory: false
+      showHistory: false,
+      data: null
     };
   }
 
@@ -31,6 +31,12 @@ export class App extends Component {
       window.location.reload(refreshUrl);
       localStorage.removeItem('code');
     }
+
+    this.callBackendApi()
+      .then(response => this.setState({ data: response.express }))
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleClick = () => {
@@ -42,19 +48,28 @@ export class App extends Component {
     window.location = url;
   };
 
+  callBackendApi = async () => {
+    const response = await fetch('/express_backend');
+    const body = await response.json();
+    if (response.status !== 200) {
+      throw Error(body.message);
+    }
+    return body;
+  };
+
   signOutUser = () => {
     localStorage.removeItem('code');
     window.location = 'http://localhost:3000/';
   };
 
   render() {
-    const { info, pomHistory, pomStatus } = this.props.currentUser;
-    const { code, showHistory } = this.state;
+    const { code } = this.state;
     const stravant = 'S†ra√an†';
-
+    console.log(this.props.currentUser);
     return (
       <BrowserRouter>
         <div className="App">
+          <p>{this.state.data}</p>
           <span className="header">
             <h1 className="welcome-title">{stravant}</h1>
             <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
@@ -96,15 +111,12 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setAccessToken: token => dispatch(userActions.setAccessToken(token)),
-  togglePomState: bool => dispatch(pomActions.togglePomState(bool)),
-  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats)),
-  setPomHistory: history => dispatch(pomActions.setPomHistory(history))
+export const mapDispatchToProps = dispatch => ({
+  setAccessToken: token => dispatch(userActions.setAccessToken(token))
 });
 
 export default connect(
