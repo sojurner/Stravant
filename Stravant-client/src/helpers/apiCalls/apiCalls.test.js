@@ -105,7 +105,7 @@ describe('apiCalls', () => {
       });
     });
 
-    it.skip('should call fetch with the correct params', async () => {
+    it('should call fetch with the correct params', async () => {
       await apiCalls.getUserClubs(stravaApi.access_token);
 
       expect(window.fetch).toHaveBeenCalledWith('jnjpap');
