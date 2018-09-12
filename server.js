@@ -1,4 +1,5 @@
 var express = require('express');
+var socketIo = require('socket.io');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -9,15 +10,6 @@ app.get('/express_backend', (req, res) => {
   res.send({ express: 'your express is connected to react' });
 });
 
-var server = app.listen(5000);
+const io = socketIo(server);
 
-app.use(express.static('public'));
-
-var socket = require('socket.io');
-var io = socket(server);
-
-io.sockets.on('connection', newConnection);
-
-function newConnection(socket) {
-  console.log(socket);
-}
+io.on('connection', socket => {});
