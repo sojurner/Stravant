@@ -448,3 +448,57 @@ export const weeklyDataParams = [
   [],
   []
 ];
+
+export const clubActionParam = {
+  clubName: 'Stravant Club',
+  clubId: 473825,
+  membersStats: {
+    mostRecent: {
+      name: 'Paul',
+      distance: 1.4110627719080175,
+      activity: 'Morning Run'
+    },
+    Paul: { totalDistance: 7.87, totalTime: 101, membersRecent: 'Morning Run' },
+    Benjamin: {
+      totalDistance: 1.17,
+      totalTime: 20,
+      membersRecent: 'Light rail trip'
+    },
+    Jesse: {
+      totalDistance: 278.77,
+      totalTime: 5297,
+      membersRecent: 'Evening Run'
+    },
+    Pamela: {
+      totalDistance: 62.88999999999999,
+      totalTime: 635,
+      membersRecent: 'Afternoon Run'
+    }
+  }
+};
+
+export const pomHistoryParam = {
+  'Wed, Sep 12, 2018 11:45 AM': { second: 2, minute: 0, hour: 0 },
+  'Wed, Sep 12, 2018 12:23 PM': { second: 1, minute: 0, hour: 0 }
+};
+
+export const accessTokenParam = {
+  accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+  userId: 34515396,
+  firstName: 'Paul',
+  gender: 'M',
+  profilePic:
+    'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg'
+};
+
+export const weeklyActionParam = {
+  Wednesday: 2270.4,
+  Monday: 2680.2,
+  Saturday: 3950,
+  Friday: 3784.3,
+  Tuesday: 0,
+  Thursday: 0,
+  Sunday: 0
+};
+
+export const totalStatsParam = { Biked: 0, Ran: 7.883778744561839, Swam: 0 };

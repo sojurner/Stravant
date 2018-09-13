@@ -1,11 +1,11 @@
 export const currentUser = {
   info: {
     accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
-    userId: 34515396,
     firstName: 'Paul',
     gender: 'M',
     profilePic:
-      'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg'
+      'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg',
+    userId: 34515396
   },
   totalStats: {},
   weeklyStats: {}
@@ -22,25 +22,30 @@ export const pomStatus = {
 };
 
 export const clubInfo = {
-  clubInfo: { clubName: 'Stravant Club', clubId: 473825 },
   clubActivity: {
-    mostRecent: {
-      name: 'Pamela',
-      distance: 4.270478558110628,
-      activity: 'Morning Run'
+    Benjamin: {
+      membersRecent: 'Light rail trip',
+      totalDistance: 1.17,
+      totalTime: 20
+    },
+    Jesse: {
+      membersRecent: 'Evening Run',
+      totalDistance: 278.77,
+      totalTime: 5297
     },
     Pamela: {
+      membersRecent: 'Afternoon Run',
       totalDistance: 62.88999999999999,
-      totalTime: 635,
-      membersRecent: 'Afternoon Run'
+      totalTime: 635
     },
-    Paul: { totalDistance: 6.46, totalTime: 78, membersRecent: 'Morning Run' },
-    Jesse: {
-      totalDistance: 277.78000000000003,
-      totalTime: 5292,
-      membersRecent: 'Morning Run'
+    Paul: { membersRecent: 'Morning Run', totalDistance: 7.87, totalTime: 101 },
+    mostRecent: {
+      activity: 'Morning Run',
+      distance: 1.4110627719080175,
+      name: 'Paul'
     }
-  }
+  },
+  clubInfo: { clubId: 473825, clubName: 'Stravant Club' }
 };
 
 export const mockStore = {

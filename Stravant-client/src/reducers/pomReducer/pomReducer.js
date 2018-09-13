@@ -14,11 +14,11 @@ export const pomReducer = (state = initialState, action) => {
         pomHistory: action.history
       };
 
-    case 'SET_LAST_POM':
-      return {
-        ...state,
-        lastPom: action.str
-      };
+    // case 'SET_LAST_POM':
+    //   return {
+    //     ...state,
+    //     lastPom: action.str
+    //   };
 
     default:
       return state;

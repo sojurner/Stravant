@@ -34,9 +34,7 @@ export class App extends Component {
 
     this.callBackendApi()
       .then(response => this.setState({ data: response.express }))
-      .catch(error => {
-        console.log(error);
-      });
+      .catch(error => {});
   }
 
   handleClick = () => {
@@ -65,7 +63,7 @@ export class App extends Component {
   render() {
     const { code } = this.state;
     const stravant = 'S†ra√an†';
-    console.log(this.props.currentUser);
+
     return (
       <BrowserRouter>
         <div className="App">

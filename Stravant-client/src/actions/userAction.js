@@ -8,7 +8,8 @@ export const setWeeklyStats = stats => ({
   stats
 });
 
-export const setTotalStats = stats => ({
-  type: 'SET_TOTAL_STATS',
-  stats
-});
+export const setTotalStats = stats =>
+  console.log(stats) || {
+    type: 'SET_TOTAL_STATS',
+    stats
+  };

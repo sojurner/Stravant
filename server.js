@@ -9,7 +9,3 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.get('/express_backend', (req, res) => {
   res.send({ express: 'your express is connected to react' });
 });
-
-const io = socketIo(server);
-
-io.on('connection', socket => {});

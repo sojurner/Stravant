@@ -8,7 +8,8 @@ export const setPomHistory = history => ({
   history
 });
 
-export const setLastPom = str => ({
-  type: 'SET_LAST-POM',
-  str
-});
+// export const setLastPom = str =>
+//   console.log(str) || {
+//     type: 'SET_LAST-POM',
+//     str
+//   };
