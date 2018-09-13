@@ -51,4 +51,17 @@ describe('userReducer', () => {
       expected
     );
   });
+
+  it('should return proper state if setTotalStats is dispatched', () => {
+    param = params.totalStatsParam;
+    expected = {
+      info: {},
+      totalStats: { Biked: 0, Ran: 7.883778744561839, Swam: 0 },
+      weeklyStats: {}
+    };
+
+    expect(userReducer(initialState, actions.setTotalStats(param))).toEqual(
+      expected
+    );
+  });
 });
