@@ -48,18 +48,19 @@ export class Comparison extends Component {
     const { weeklyStats } = this.props.currentUser;
     const dataToPlot = Object.keys(weeklyStats)
       .map(day => {
-        return { x: day, y: weeklyStats[day] };
+        return { x: day.slice(0, 3), y: weeklyStats[day] };
       })
       .reverse();
     const styles = {
       position: 'absolute',
-      top: yCoordinates - 50,
-      left: xCoordinates - 100
+      top: yCoordinates - 140,
+      left: xCoordinates + 10
     };
     return (
       <div className="compare-data-text" onClick={this.trackMouseCoordinates}>
         <AreaChart
           xType={'text'}
+          yDomainRange={[0, 5000]}
           axes
           grid
           dataPoints
