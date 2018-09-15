@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
+// import { createActivity } from '../../helpers/apiCalls/apiCalls';
 import { PomContainer } from '../../components/PomContainer/PomContainer';
 import * as pomActions from '../../actions/pomAction';
 import './PomControl.css';
@@ -14,22 +15,37 @@ export class PomControl extends Component {
       minute: 0,
       hour: 0,
       start: false,
+      stop: true,
       save: false,
+      hide: false,
       showHistory: false,
       description: false,
       pomSummary: ''
     };
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    console.log(this.state.hide);
+  }
+
+  componentDidMount() {
+    const { setPomHistory } = this.props;
+    if (localStorage.getItem('pomHistory')) {
+      const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
+      setPomHistory(storageItem);
+    }
+  }
 
   togglePom = string => {
-    const toggledState = !this.state.start;
-    if (!this.state.start) {
-      this.setState({ [string]: toggledState });
-      const { togglePomState, pomInfo } = this.props;
-      togglePomState(!pomInfo.pomStatus);
+    const { start, hide } = this.state;
+    if (start) {
+      const toggleHide = !hide;
+      this.setState({ hide: toggleHide });
+    } else {
+      this.setState({ [string]: true, stop: false });
     }
+    const { togglePomState, pomInfo } = this.props;
+    togglePomState(!pomInfo.pomStatus);
   };
 
   startMSecond = () => {
@@ -54,10 +70,17 @@ export class PomControl extends Component {
     this.setState({ hour: time });
   };
 
-  handleDescription = () => {
-    const { description } = this.state;
-    const toggledDesc = !description;
-    this.setState({ description: toggledDesc });
+  stopTime = () => {
+    console.log('sdf');
+    this.setState({ start: false, stop: true });
+  };
+
+  addDescription = string => {
+    this.setState({ description: string });
+  };
+
+  removeDescription = () => {
+    this.setState({ description: '' });
   };
 
   resetTimer = () => {
@@ -83,6 +106,7 @@ export class PomControl extends Component {
     }
     const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
     setPomHistory(storageItem);
+
     const timeSummary = `${second}s  ${minute}m  ${hour}h`;
     this.setState({
       mSecond: 0,
@@ -97,7 +121,6 @@ export class PomControl extends Component {
 
   showPoms = () => {
     const { showHistory } = this.state;
-
     const toggledHistory = !showHistory;
     this.setState({ showHistory: toggledHistory });
   };
@@ -109,23 +132,31 @@ export class PomControl extends Component {
   };
 
   render() {
-    const { pomStatus, pomHistory } = this.props.pomInfo;
+    const { pomHistory } = this.props.pomInfo;
     const styles = {
-      position: 'absolute',
-      left: window.screenX + 10,
-      top: window.screenY - 20
-    };
+      pomStyle: {
+        position: 'absolute',
+        left: window.screenX + 10,
+        top: window.screenY - 20
+      },
 
-    const summaryStyle = {
-      position: 'absolute',
-      left: window.screenX + 25,
-      top: window.screenY + 60
-    };
+      summaryStyle: {
+        position: 'absolute',
+        left: window.screenX + 25,
+        top: window.screenY + 90
+      },
 
-    const modal = {
-      position: 'absolute',
-      left: window.screenX + 100,
-      top: window.screenY - 20
+      suggestStyle: {
+        position: 'absolute',
+        left: window.screenX + 25,
+        top: window.screenY + 60
+      },
+
+      modalStyle: {
+        position: 'absolute',
+        left: window.screenX + 100,
+        top: window.screenY - 20
+      }
     };
     const {
       mSecond,
@@ -133,17 +164,19 @@ export class PomControl extends Component {
       minute,
       hour,
       start,
+      stop,
       showHistory,
       description,
+      hide,
       save,
       pomSummary
     } = this.state;
     return (
       <div>
         {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) &&
+          !hide &&
           start && (
-            <section className="modal" style={modal}>
-              <i class="fas fa-window-close" onClick={this.resetTimer} />
+            <section className="modal" style={styles.modalStyle}>
               <div className="time">
                 <span className="time hour">{hour} h</span>
                 <span className="time minute">
@@ -163,67 +196,82 @@ export class PomControl extends Component {
                 <i
                   class="far fa-hand-paper"
                   onClick={() => {
-                    clearInterval(this.mSeconds);
-                    clearInterval(this.seconds);
-                    clearInterval(this.minutes);
-                    clearInterval(this.hours);
+                    this.stopTime();
+                    if (!stop) {
+                      clearInterval(this.mSeconds);
+                      clearInterval(this.seconds);
+                      clearInterval(this.minutes);
+                      clearInterval(this.hours);
+                      this.resetTimer();
+                    }
                   }}
+                  onMouseEnter={() => this.addDescription('stop')}
+                  onMouseLeave={this.removeDescription}
                 />
               </div>
             </section>
           )}
+
+        {!showHistory ? (
+          <button onClick={this.showPoms}>Show Poms</button>
+        ) : (
+          <button onClick={this.showPoms}>Hide</button>
+        )}
         {save && (
-          <h4 style={summaryStyle}>
+          <h4 style={styles.summaryStyle}>
             <div>Most recent:</div>
             ---
             {pomSummary}
             ---
           </h4>
         )}
-        {/* {pomStatus ? (
-          <i
-            class="far fa-hand-paper"
-            onClick={() => {
-              this.togglePom();
-              clearInterval(this.mSeconds);
-              clearInterval(this.seconds);
-              clearInterval(this.minutes);
-              clearInterval(this.hours);
-            }}
-          />
-        ) : ( */}
-
         <img
           src={require('../../images/pomodoro-icon.png')}
-          style={styles}
+          style={styles.pomStyle}
           height="100px"
           width="100px"
           className="pomodoro"
-          onMouseEnter={this.handleDescription}
-          onMouseLeave={this.handleDescription}
+          onMouseEnter={() => this.addDescription('start')}
+          onMouseLeave={this.removeDescription}
           onClick={() => {
             this.togglePom('start');
-            this.mSeconds = setInterval(this.startMSecond, 101);
-            this.seconds = setInterval(this.startSecond, 1001);
-            this.minutes = setInterval(this.startMinute, 60001);
-            this.hours = setInterval(this.startHour, 3600001);
+            if (!start && stop) {
+              this.mSeconds = setInterval(this.startMSecond, 101);
+              this.seconds = setInterval(this.startSecond, 1001);
+              this.minutes = setInterval(this.startMinute, 60001);
+              this.hours = setInterval(this.startHour, 3600001);
+            }
           }}
         />
-
         {!pomHistory && <p>You have no record Poms</p>}
-        {!showHistory ? (
-          <button onClick={this.showPoms}>Show Poms</button>
-        ) : (
-          <button onClick={this.showPoms}>Hide</button>
+        {description === 'start' &&
+          !hide &&
+          !start && (
+            <p style={styles.suggestStyle} className="pom-instruction">
+              Start Pom?
+            </p>
+          )}
+        {description === 'start' &&
+          !hide &&
+          start && (
+            <p style={styles.suggestStyle} className="pom-instruction">
+              Hide Pom?
+            </p>
+          )}
+        {description === 'stop' && (
+          <p style={styles.suggestStyle} className="stop-instruction">
+            End Pom?
+          </p>
         )}
-        {(!second || !mSecond || !hour || !minute) &&
-          description && <p className="pom-instruction">Start Pom?</p>}
+
+        {hide && (
+          <p style={styles.suggestStyle} className="stop-instruction">
+            Show Pom?
+          </p>
+        )}
+
         {showHistory && (
-          <PomContainer
-            removePom={this.removePom}
-            pomStatus={pomStatus}
-            pomHistory={pomHistory}
-          />
+          <PomContainer removePom={this.removePom} pomHistory={pomHistory} />
         )}
       </div>
     );

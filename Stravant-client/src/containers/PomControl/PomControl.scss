@@ -1,5 +1,4 @@
 .pom-instruction {
-  position: absolute;
 }
 
 img {
@@ -16,6 +15,14 @@ i {
   position: absolute;
   text-align: center;
   animation: fadein 1s;
+}
+
+.fa-hand-paper {
+  font-size: 4rem;
+}
+
+.fa-hand-paper:hover {
+  color: rgb(131, 52, 52);
 }
 
 @keyframes fadein {
