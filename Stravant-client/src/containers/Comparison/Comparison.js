@@ -66,21 +66,15 @@ export class Comparison extends Component {
           dataPoints
           areaColors={['crimson']}
           verticalGrid
-          onClick={this.handleClick}
-          clickHandler={event =>
-            this.setState({
-              xCoordinates: event.screenX,
-              yCoordinates: event.screenY,
-              dataDisplay: `${Math.round((event.y / 1609) * 100) / 100} miles`,
-              toggleDisplay: !this.state.toggleDisplay
-            })
-          }
-          width={450}
-          height={350}
+          clickHandler={this.handleClick}
+          width={500}
+          height={500}
           interpolate={'cardinal'}
           data={[dataToPlot]}
         />
-        <p style={styles}>{this.state.dataDisplay}</p>
+        <p className="area-data-details" style={styles}>
+          {this.state.dataDisplay}
+        </p>
       </div>
     );
   }
