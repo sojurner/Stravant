@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
-import { Router, browserHistory } from 'react-router';
 import Comparison from '../Comparison/Comparison';
 import Personal from '../Personal/Personal';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import PomControl from '../../containers/PomControl/PomControl';
-import { removePom } from '../../actions/pomAction';
+
 export class ContentRoute extends Component {
   render() {
     return (
