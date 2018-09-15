@@ -12,12 +12,16 @@ export const userInfo = info => {
 
 export const userStats = stats => {
   return {
-    Biked: stats.all_ride_totals.distance / 1609,
-    Ran: stats.all_run_totals.distance / 1609,
-    Swam: stats.all_swim_totals.distance / 1609
+    runningTotal: {
+      'Distance (miles)':
+        stats.all_run_totals.distance / stats.all_run_totals.count / 1609,
+      'Time (min)':
+        stats.all_run_totals.moving_time / 60 / stats.all_run_totals.count,
+      'Elevation (feet)':
+        stats.all_run_totals.elevation_gain / stats.all_run_totals.count
+    }
   };
 };
-
 export const clubData = (info, activities) => {
   const matchingClub = info.find(club => club.name === 'Stravant Club');
   const mappedActivities = activities.reduce((userActivity, activity) => {
