@@ -11,7 +11,6 @@ export const userInfo = info => {
 };
 
 export const userStats = stats => {
-  console.log(stats);
   return {
     runningTotal: {
       'Distance (miles)':
