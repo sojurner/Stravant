@@ -1,2 +1,15 @@
 .data-point {
   cursor: pointer; }
+
+.area-data-details {
+  font-family: daybold;
+  font-size: 1.5rem;
+  padding: 0.2rem;
+  color: bisque;
+  border: 3px dotted #b0b0f7;
+  background-color: #cb8484;
+  border-radius: 0.5rem; }
+
+text {
+  font-size: 1.2rem;
+  font-family: daybold; }
