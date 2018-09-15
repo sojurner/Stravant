@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PieChart, Legend } from 'react-easy-chart';
+import { PieChart, Legend, ToolTip } from 'react-easy-chart';
 import * as apiFetch from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
 import './Personal.css';
+import { type } from 'os';
 
 export class Personal extends Component {
   constructor() {
@@ -30,8 +31,11 @@ export class Personal extends Component {
   };
 
   mouseOverHandler = data => {
+    console.log(data);
     this.setState({
-      key: data.data.key
+      key: data.data.key,
+      value: data.data.value,
+      showToolTip: true
     });
   };
 
@@ -40,47 +44,46 @@ export class Personal extends Component {
   };
 
   render() {
-    // const mockData = { running: 32, swimming: 56, biking: 100 };
     const { totalStats } = this.props.currentUser;
-    const filteredActivity = Object.keys(totalStats).filter(
-      key => totalStats[key] !== 0
-    );
-    const pieData = filteredActivity.map((activity, index) => {
-      return {
-        key: activity,
-        value: Math.round(totalStats[activity] * 100) / 100,
-        color: `rgb(${index}04, 1${index}9, 2${index}4)`
-      };
-    });
+    const filteredActivity = Object.keys(totalStats).map(type => {
+      const destructured = totalStats[type];
+      let dataArr = [];
+      let configArr = [];
+      Object.keys(destructured).forEach((stat, index) => {
+        const filtered = {
+          key: stat,
+          value: Math.round(destructured[stat] * 100) / 100,
+          color: `rgb(${index}04, 1${index}9, 2${index}4)`
+        };
 
-    const textDisplay = filteredActivity.map((activity, index) => {
-      if (this.state.showToolTip && this.state.key === activity) {
-        return (
-          <p className="personal-stats">
-            {activity} {this.state.value} miles!!
-          </p>
-        );
-      }
+        const config = { color: `rgb(${index}04, 1${index}9, 2${index}4)` };
+        dataArr.push(filtered);
+        configArr.push(config);
+      });
+      return (
+        <div>
+          <PieChart
+            className="personal-piechart"
+            data={dataArr}
+            innerHoleSize={150}
+            mouseOverHandler={this.mouseOverHandler}
+            mouseOutHandler={event => this.mouseOutHandler(event)}
+            padding={10}
+          />
+          <Legend data={dataArr} config={configArr} dataId={'key'} />
+        </div>
+      );
     });
 
     return (
       <div className="pie-chart-wrap">
-        <PieChart
-          className="personal-piechart"
-          data={pieData}
-          innerHoleSize={150}
-          mouseOverHandler={this.mouseOverHandler}
-          mouseOutHandler={event => this.mouseOutHandler(event)}
-          padding={10}
-          clickHandler={d =>
-            this.setState({
-              showToolTip: true,
-              value: `${d.data.value}`
-            })
-          }
-        />
-        <Legend data={pieData} dataId={'key'} />
-        {textDisplay}
+        {filteredActivity}
+        {this.state.value &&
+          this.state.showToolTip && (
+            <p className="data-details">
+              {`${this.state.key}: ${this.state.value}`}
+            </p>
+          )}
       </div>
     );
   }
