@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
-
 import './Leaderboard.css';
-import { userInfo } from '../../helpers/helpers/helpers';
+
 export class LeaderBoard extends Component {
   componentDidMount() {
     this.getClubActivity(this.props.currentUser.info.accessToken);
