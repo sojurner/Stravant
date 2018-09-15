@@ -67,26 +67,36 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          {code && <NavBar />}
           <p>{this.state.data}</p>
           <span className="header">
             <h1 className="welcome-title">{stravant}</h1>
             <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
           </span>
-          {code && <NavBar />}
           {code && <Welcome />}
           {code && <ContentRoute />}
-          {window.location.search.length < 16 && (
-            <span className="logos">
-              <div className="spinning-globe">Credits to Nick</div>
-              <img
-                src={require('../../images/connect-logo.png')}
-                height="75"
-                width="250"
-                className="connect-logo"
-                onClick={this.handleClick}
-              />
-            </span>
-          )}
+          {window.location.search.length < 16 &&
+            !this.props.currentUser.info.accessToken && (
+              <span className="logos">
+                {/* <div className="spinning-globe">Credits to Nick</div> */}
+                <img
+                  src={
+                    'https://cdn.dribbble.com/users/215249/screenshots/2502915/strava-2015.gif'
+                  }
+                  height="300"
+                  width="500"
+                  className="home-gif"
+                />
+
+                <img
+                  src={require('../../images/connect-logo.png')}
+                  height="75"
+                  width="250"
+                  className="connect-logo"
+                  onClick={this.handleClick}
+                />
+              </span>
+            )}
           <div className="required-logo">
             <img
               src={require('../../images/powered-by-strava.png')}
