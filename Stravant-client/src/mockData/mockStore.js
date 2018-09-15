@@ -53,3 +53,16 @@ export const mockStore = {
   ...pomStatus,
   ...clubInfo
 };
+
+export const mockCurrentUser = {
+  info: {
+    accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+    userId: 34515396,
+    firstName: 'Paul',
+    gender: 'M',
+    profilePic:
+      'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg'
+  },
+  totalStats: {},
+  weeklyStats: {}
+};
