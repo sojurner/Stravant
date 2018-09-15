@@ -22,3 +22,32 @@ path {
 li {
   display: flex;
   left: 0.6rem; }
+
+.data-details {
+  position: absolute;
+  top: 12rem;
+  left: 23rem;
+  font-family: daybold;
+  font-size: 1.5rem;
+  color: #ffc1b8;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  background: #c5696a;
+  border-radius: 0.4em;
+  padding: 1rem;
+  opacity: 0.9; }
+
+.data-details:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 21px solid transparent;
+  border-right-color: #c5696a;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -10.5px;
+  margin-left: -21px;
+  opacity: 0.9; }

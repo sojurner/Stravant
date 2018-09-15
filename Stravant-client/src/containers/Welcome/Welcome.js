@@ -33,18 +33,21 @@ export class Welcome extends Component {
     localStorage.setItem('code', JSON.stringify({ code }));
   };
 
-  handleClick = e => {
-    const { greeting } = this.state;
-    const toggleGreeting = !greeting;
+  handleClick = (e, str) => {
+    console.log(e);
     const coord = {
       position: 'absolute',
       left: e.pageX + 30,
       top: e.pageY - 50
     };
-    this.setState({
-      greeting: toggleGreeting,
-      coordinates: coord
-    });
+    if (str === 'remove') {
+      this.setState({ greeting: false });
+    } else {
+      this.setState({
+        greeting: true,
+        coordinates: coord
+      });
+    }
   };
 
   render() {
@@ -60,7 +63,9 @@ export class Welcome extends Component {
                 src={require('../../images/male-avatar.png')}
                 height="100"
                 width="100"
-                onClick={this.handleClick}
+                onClick={e => this.handleClick(e, 'show')}
+                // onMouseEnter={this.handleClick}
+                onMouseOut={e => this.handleClick(e, 'remove')}
               />
             )}
           {info &&
@@ -79,7 +84,6 @@ export class Welcome extends Component {
             </h4>
           )}
         </span>
-        <PomControl />
       </div>
     );
   }

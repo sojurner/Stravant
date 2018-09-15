@@ -3,6 +3,9 @@ html {
   justify-content: center;
   height: 100vh;
   background-color: rgb(254, 210, 191);
+  background-image: url('https://orig00.deviantart.net/d41f/f/2016/035/e/f/firewatch_inspired_art_by_rizzlepixs-d9qhibd.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 body {

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { mapStateToProps, mapDispatchToProps, App } from './App';
 import * as store from '../../mockData/mockStore';
 import { setAccessToken } from '../../actions/userAction';

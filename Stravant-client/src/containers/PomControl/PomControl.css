@@ -1,6 +1,3 @@
-.pom-instruction {
-  position: absolute; }
-
 img {
   cursor: pointer; }
 
@@ -14,6 +11,12 @@ i {
   position: absolute;
   text-align: center;
   animation: fadein 1s; }
+
+.fa-hand-paper {
+  font-size: 4rem; }
+
+.fa-hand-paper:hover {
+  color: #833434; }
 
 @keyframes fadein {
   from {
