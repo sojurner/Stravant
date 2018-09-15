@@ -35,7 +35,12 @@ export class Comparison extends Component {
   };
 
   handleClick = event => {
-    console.log(event);
+    this.setState({
+      xCoordinates: event.pageX,
+      yCoordinates: event.pageY,
+      dataDisplay: `${Math.round((event.y / 1609) * 100) / 100} miles`,
+      toggleDisplay: !this.state.toggleDisplay
+    });
   };
 
   render() {
