@@ -4,6 +4,7 @@ import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
 
 import './Leaderboard.css';
+import { userInfo } from '../../helpers/helpers/helpers';
 export class LeaderBoard extends Component {
   componentDidMount() {
     this.getClubActivity(this.props.currentUser.info.accessToken);
@@ -53,6 +54,14 @@ export class LeaderBoard extends Component {
       <div>
         {activity}
         <table width="500">
+          {!Object.keys(clubActivity).length && (
+            <img
+              src={'https://media.giphy.com/media/26xBNwL69IM5ng3f2/source.gif'}
+              height="100"
+              width="100"
+              className="connect-logo"
+            />
+          )}
           <tbody>
             <tr>
               <th>Name</th>
@@ -68,12 +77,12 @@ export class LeaderBoard extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser,
   clubs: state.clubs
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setClubActivity: activities =>
     dispatch(clubActions.setClubActivity(activities))
 });
