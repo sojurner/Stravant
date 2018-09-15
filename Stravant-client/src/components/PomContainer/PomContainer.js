@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { removePom } from '../../actions/pomAction';
+
 import './PomContainer.css';
 
-export const PomContainer = ({ pomHistory, removePom }) => {
+export class PomContainer extends Component {
+  render() {
+    const { pomHistory, removePom } = this.props;
+
   const pomContainer = Object.keys(pomHistory).map(time => {
     const pomTime = `${pomHistory[time].second}sec ${
       pomHistory[time].minute
