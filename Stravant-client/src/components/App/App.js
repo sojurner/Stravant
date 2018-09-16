@@ -35,7 +35,9 @@ export class App extends Component {
 
     this.callBackendApi()
       .then(response => this.setState({ data: response.express }))
-      .catch(error => {});
+      .catch(error => {
+        this.setState({ error: error.message });
+      });
   }
 
   handleClick = () => {
