@@ -45,6 +45,7 @@ export class Personal extends Component {
 
   render() {
     const { totalStats } = this.props.currentUser;
+    console.log(totalStats);
     const filteredActivity = Object.keys(totalStats).map(type => {
       const destructured = totalStats[type];
       let dataArr = [];
