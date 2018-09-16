@@ -12,7 +12,7 @@ export class Welcome extends Component {
     super();
     this.state = {
       coordinates: {},
-      greeting: false
+      greeting: true
     };
   }
 
@@ -61,11 +61,11 @@ export class Welcome extends Component {
               <img
                 className="avatar"
                 src={require('../../images/male-avatar.png')}
-                height="100"
-                width="100"
-                onClick={e => this.handleClick(e, 'show')}
+                height="70"
+                width="70"
+                // onClick={e => this.handleClick(e, 'show')}
                 // onMouseEnter={this.handleClick}
-                onMouseOut={e => this.handleClick(e, 'remove')}
+                // onMouseOut={e => this.handleClick(e, 'remove')}
               />
             )}
           {info &&
@@ -78,16 +78,13 @@ export class Welcome extends Component {
                 onClick={this.handleClick}
               />
             )}
-          {greeting && (
-            <h4 className="speech-bubble" style={this.state.coordinates}>
-              Hi {info.firstName}
-            </h4>
-          )}
+          {greeting && <h4 className="speech-bubble">Hi {info.firstName}</h4>}
         </span>
       </div>
     );
   }
 }
+
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
   pomStatus: state.pomStatus
