@@ -3,6 +3,12 @@
   cursor: pointer;
 }
 
+.avatar {
+  position: fixed;
+  left: 1%;
+  top: 1%;
+}
+
 .fa-sign-in-alt:hover {
   color: #826868;
 }
@@ -17,27 +23,31 @@
 .speech-bubble {
   font-family: daybold;
   color: rgb(255, 193, 184);
-  letter-spacing: 2px;
   font-size: 1.5rem;
-  position: relative;
-  background: #c5696a;
+  letter-spacing: 2px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin: 5rem 0 0 3rem;
+  background: #00aabb;
   border-radius: 0.4em;
-  padding: 1rem;
+  padding: 0.5rem;
   opacity: 0.9;
+  width: 5rem;
 }
 
 .speech-bubble:after {
   content: '';
+  content: '';
   position: absolute;
-  left: 0;
-  top: 50%;
+  top: 0;
+  left: 50%;
   width: 0;
   height: 0;
-  border: 21px solid transparent;
-  border-right-color: #c5696a;
+  border: 20px solid transparent;
+  border-bottom-color: #00aabb;
+  border-top: 0;
   border-left: 0;
-  border-bottom: 0;
-  margin-top: -10.5px;
-  margin-left: -21px;
-  opacity: 0.9;
+  margin-left: -30px;
+  margin-top: -20px;
 }
