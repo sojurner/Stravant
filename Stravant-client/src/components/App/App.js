@@ -13,7 +13,8 @@ export class App extends Component {
     this.state = {
       code: '',
       showHistory: false,
-      data: null
+      data: null,
+      error: ''
     };
   }
 
