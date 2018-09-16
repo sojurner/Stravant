@@ -7,9 +7,20 @@
   padding: 0.2rem;
   color: bisque;
   border: 3px dotted #b0b0f7;
-  background-color: #cb8484;
+  background-color: black;
   border-radius: 0.5rem; }
 
 text {
   font-size: 1.2rem;
   font-family: daybold; }
+
+.compare-data-text {
+  margin: auto; }
+
+text {
+  fill: #e67c7c;
+  y: 500px; }
+
+.label {
+  fill: red;
+  margin: 1rem; }

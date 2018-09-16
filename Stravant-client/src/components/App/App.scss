@@ -11,7 +11,10 @@
 }
 
 .required-logo {
-  margin: 6rem 0;
+  position: fixed;
+  left: 42%;
+  bottom: 0;
+  margin-bottom: 1rem;
 }
 .connect-logo {
   opacity: 1;
@@ -70,11 +73,61 @@
   display: flex;
 }
 
-.fa-sign-in-alt {
-  align-self: center;
-  color: #fc4c01;
+.fa-sign-out-alt {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 3.5rem;
+  margin: 1rem 1.5rem;
+  color: #963005;
 }
 
+.fa-sign-out-alt:hover {
+  color: #9b593d;
+}
 .avatar {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  .required-logo {
+    left: 35%;
+  }
+
+  .fa-sign-out-alt {
+    font-size: 5vw;
+    margin: 1.5rem 1.5rem;
+    color: #963005;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .home-gif {
+    width: 70%;
+    height: 40%;
+    margin: 2rem 0 0 0;
+  }
+
+  .welcome-title {
+    font-size: 4rem;
+  }
+
+  .required-logo {
+    position: fixed;
+    bottom: 0;
+    margin: 0.8rem auto;
+    left: 20%;
+    right: 0;
+  }
+
+  .turing-logo {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .connect-logo {
+    height: 3rem;
+    width: 60%;
+    margin: 4rem 0 0 0;
+  }
 }

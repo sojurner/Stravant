@@ -62,21 +62,30 @@ export class Personal extends Component {
       });
       return (
         <div>
-          <PieChart
-            className="personal-piechart"
+          <h3 className="running-avg">Running Averages</h3>
+          <Legend
+            className="legend-key"
             data={dataArr}
-            innerHoleSize={150}
+            config={configArr}
+            dataId={'key'}
+          />
+          <PieChart
+            size={375}
+            data={dataArr}
+            innerHoleSize={130}
             mouseOverHandler={this.mouseOverHandler}
             mouseOutHandler={event => this.mouseOutHandler(event)}
             padding={10}
           />
-          <Legend data={dataArr} config={configArr} dataId={'key'} />
         </div>
       );
     });
 
     return (
       <div className="pie-chart-wrap">
+        {!totalStats['runningTotal'] && (
+          <div className="spinning-globe">Credits to Nick</div>
+        )}
         {filteredActivity}
         {this.state.value &&
           this.state.showToolTip && (

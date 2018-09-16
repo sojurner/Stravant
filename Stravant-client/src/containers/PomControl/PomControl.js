@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import openSocket from 'socket.io-client';
 import moment from 'moment';
 // import { createActivity } from '../../helpers/apiCalls/apiCalls';
 import { PomContainer } from '../../components/PomContainer/PomContainer';
 import * as pomActions from '../../actions/pomAction';
+import { getLastPomTime } from '../../helpers/helpers/helpers';
+
 import './PomControl.css';
 
+var socket = openSocket('http://localhost:5000');
 export class PomControl extends Component {
   constructor() {
     super();
@@ -18,14 +22,10 @@ export class PomControl extends Component {
       stop: true,
       save: false,
       hide: false,
-      showHistory: false,
       description: false,
-      pomSummary: ''
+      pomSummary: '',
+      socketMessage: ''
     };
-  }
-
-  componentDidUpdate() {
-    console.log(this.state.hide);
   }
 
   componentDidMount() {
@@ -36,16 +36,22 @@ export class PomControl extends Component {
     }
   }
 
-  togglePom = string => {
+  togglePom = (event, string) => {
     const { start, hide } = this.state;
     if (start) {
       const toggleHide = !hide;
       this.setState({ hide: toggleHide });
     } else {
+      this.sendSocketMsg(event);
       this.setState({ [string]: true, stop: false });
     }
     const { togglePomState, pomInfo } = this.props;
     togglePomState(!pomInfo.pomStatus);
+  };
+
+  sendSocketMsg = () => {
+    const { firstName } = this.props.currentUser.info;
+    socket.emit('pomStart', `${firstName} just started on Pom!`);
   };
 
   startMSecond = () => {
@@ -71,7 +77,18 @@ export class PomControl extends Component {
   };
 
   stopTime = () => {
-    console.log('sdf');
+    const { firstName } = this.props.currentUser.info;
+    const { pomHistory } = this.props.pomInfo;
+    const timeKeys = Object.keys(pomHistory);
+    const lastPom = timeKeys[timeKeys.length - 1];
+    const currentTime = moment().format('llll');
+    if (lastPom) {
+      const difference = getLastPomTime(currentTime, lastPom);
+      socket.emit(
+        'pomEnd',
+        `${firstName} finished the Pom!  Your last pom was ${difference}`
+      );
+    }
     this.setState({ start: false, stop: true });
   };
 
@@ -119,12 +136,6 @@ export class PomControl extends Component {
     });
   };
 
-  showPoms = () => {
-    const { showHistory } = this.state;
-    const toggledHistory = !showHistory;
-    this.setState({ showHistory: toggledHistory });
-  };
-
   removePom = (history, time) => {
     delete history[time];
     this.props.setPomHistory(history);
@@ -132,6 +143,9 @@ export class PomControl extends Component {
   };
 
   render() {
+    socket.on('pomClick', msg => {
+      this.setState({ socketMessage: msg });
+    });
     const { pomHistory } = this.props.pomInfo;
     const styles = {
       pomStyle: {
@@ -165,11 +179,11 @@ export class PomControl extends Component {
       hour,
       start,
       stop,
-      showHistory,
       description,
       hide,
       save,
-      pomSummary
+      pomSummary,
+      socketMessage
     } = this.state;
     return (
       <div>
@@ -211,12 +225,6 @@ export class PomControl extends Component {
               </div>
             </section>
           )}
-
-        {!showHistory ? (
-          <button onClick={this.showPoms}>Show Poms</button>
-        ) : (
-          <button onClick={this.showPoms}>Hide</button>
-        )}
         {save && (
           <h4 style={styles.summaryStyle}>
             <div>Most recent:</div>
@@ -225,6 +233,7 @@ export class PomControl extends Component {
             ---
           </h4>
         )}
+        {socketMessage && <h4>{socketMessage}</h4>}
         <img
           src={require('../../images/pomodoro-icon.png')}
           style={styles.pomStyle}
@@ -233,8 +242,8 @@ export class PomControl extends Component {
           className="pomodoro"
           onMouseEnter={() => this.addDescription('start')}
           onMouseLeave={this.removeDescription}
-          onClick={() => {
-            this.togglePom('start');
+          onClick={event => {
+            this.togglePom(event, 'start');
             if (!start && stop) {
               this.mSeconds = setInterval(this.startMSecond, 101);
               this.seconds = setInterval(this.startSecond, 1001);
@@ -269,10 +278,7 @@ export class PomControl extends Component {
             Show Pom?
           </p>
         )}
-
-        {showHistory && (
-          <PomContainer removePom={this.removePom} pomHistory={pomHistory} />
-        )}
+        <PomContainer removePom={this.removePom} pomHistory={pomHistory} />
       </div>
     );
   }

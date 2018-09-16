@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { AreaChart } from 'react-easy-chart';
 import { connect } from 'react-redux';
-import './Comparison.css';
+import './Weekly.css';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
 
-export class Comparison extends Component {
+export class Weekly extends Component {
   constructor() {
     super();
     this.state = {
@@ -30,7 +30,6 @@ export class Comparison extends Component {
   };
 
   trackMouseCoordinates = event => {
-    console.log(event);
     this.setState({ xCoordinates: event.screenX, yCoordinates: event.screenY });
   };
 
@@ -38,7 +37,7 @@ export class Comparison extends Component {
     this.setState({
       xCoordinates: event.pageX,
       yCoordinates: event.pageY,
-      dataDisplay: `${Math.round((event.y / 1609) * 100) / 100} miles`,
+      dataDisplay: `${event.y} miles`,
       toggleDisplay: !this.state.toggleDisplay
     });
   };
@@ -48,7 +47,10 @@ export class Comparison extends Component {
     const { weeklyStats } = this.props.currentUser;
     const dataToPlot = Object.keys(weeklyStats)
       .map(day => {
-        return { x: day.slice(0, 3), y: weeklyStats[day] };
+        return {
+          x: day.slice(0, 3),
+          y: Math.round((weeklyStats[day] / 1609) * 100) / 100
+        };
       })
       .reverse();
     const styles = {
@@ -60,15 +62,17 @@ export class Comparison extends Component {
       <div className="compare-data-text" onClick={this.trackMouseCoordinates}>
         <AreaChart
           xType={'text'}
-          yDomainRange={[0, 5000]}
+          axisLabels={{ x: 'Days of Week', y: 'Distance (Miles)' }}
+          margin={{ top: 10, right: 10, bottom: 60, left: 60 }}
+          yDomainRange={[0, 3]}
           axes
           grid
           dataPoints
-          areaColors={['crimson']}
+          areaColors={['yellow']}
           verticalGrid
           clickHandler={this.handleClick}
-          width={500}
-          height={500}
+          width={375}
+          height={450}
           interpolate={'cardinal'}
           data={[dataToPlot]}
         />
@@ -91,4 +95,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Comparison);
+)(Weekly);

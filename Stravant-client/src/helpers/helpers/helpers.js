@@ -97,3 +97,58 @@ export const weeklyData = data => {
     return dayObj;
   }, {});
 };
+
+export const getLastPomTime = (currTime, pomTime) => {
+  let currentHour;
+  let currentMin;
+  let lastPomHour;
+  let lastPomMin;
+
+  if (!pomTime)
+    if (currTime.includes('PM') && currTime.length < 25) {
+      currentHour = parseInt(currTime.slice(18, 19)) + 12;
+      currentMin = parseInt(currTime.slice(20, 22));
+    }
+
+  if (currTime.includes('PM') && currTime.length > 24) {
+    currentHour = parseInt(currTime.slice(18, 20)) + 12;
+    currentMin = parseInt(currTime.slice(20, 23));
+  }
+
+  if (currTime.includes('AM') && currTime.length > 24) {
+    currentHour = parseInt(currTime.slice(18, 20));
+    currentMin = parseInt(currTime.slice(21, 23));
+  }
+
+  if (pomTime.includes('PM') && pomTime.length < 25) {
+    lastPomHour = parseInt(pomTime.slice(18, 19)) + 12;
+    lastPomMin = parseInt(pomTime.slice(20, 22));
+  }
+
+  if (pomTime.includes('PM') && pomTime.length > 24) {
+    lastPomHour = parseInt(pomTime.slice(18, 20)) + 12;
+    lastPomMin = parseInt(pomTime.slice(20, 23));
+  }
+
+  if (pomTime.includes('AM') && pomTime.length > 24) {
+    lastPomHour = parseInt(pomTime.slice(18, 20));
+    lastPomMin = parseInt(pomTime.slice(21, 23));
+    console.log(lastPomHour);
+  }
+
+  let hourDifference = currentHour - lastPomHour;
+  let minDifference = currentMin - lastPomMin;
+
+  if (currentMin < lastPomMin) {
+    hourDifference = hourDifference - 1;
+    minDifference = lastPomMin - currentMin;
+  }
+
+  if (hourDifference > 1) {
+    return `${hourDifference} hours and ${minDifference} minutes ago (Take a Pom!)`;
+  } else if (hourDifference === 1) {
+    return `an hour and ${minDifference} minutes ago (Take a Pom Soon!)`;
+  } else {
+    return `${minDifference} min ago (You're good)`;
+  }
+};

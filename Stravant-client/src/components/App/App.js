@@ -13,7 +13,8 @@ export class App extends Component {
     this.state = {
       code: '',
       showHistory: false,
-      data: null
+      data: null,
+      error: ''
     };
   }
 
@@ -34,7 +35,9 @@ export class App extends Component {
 
     this.callBackendApi()
       .then(response => this.setState({ data: response.express }))
-      .catch(error => {});
+      .catch(error => {
+        this.setState({ error: error.message });
+      });
   }
 
   handleClick = () => {
@@ -71,14 +74,15 @@ export class App extends Component {
           <p>{this.state.data}</p>
           <span className="header">
             <h1 className="welcome-title">{stravant}</h1>
-            <i className="fas fa-sign-in-alt" onClick={this.signOutUser} />
+            {code && (
+              <i class="fas fa-sign-out-alt" onClick={this.signOutUser} />
+            )}
           </span>
           {code && <Welcome />}
           {code && <ContentRoute />}
           {window.location.search.length < 16 &&
             !this.props.currentUser.info.accessToken && (
               <span className="logos">
-                {/* <div className="spinning-globe">Credits to Nick</div> */}
                 <img
                   src={
                     'https://cdn.dribbble.com/users/215249/screenshots/2502915/strava-2015.gif'
@@ -90,6 +94,7 @@ export class App extends Component {
 
                 <img
                   src={require('../../images/connect-logo.png')}
+                  alt="connect to strava account"
                   height="75"
                   width="250"
                   className="connect-logo"
@@ -100,6 +105,7 @@ export class App extends Component {
           <div className="required-logo">
             <img
               src={require('../../images/powered-by-strava.png')}
+              alt="required strava logo"
               height="40"
               width="150"
               className="strava-powered"
@@ -108,9 +114,10 @@ export class App extends Component {
 
             <img
               src={require('../../images/turing-logo.png')}
+              alt="turing logo"
               height="70"
               width="70"
-              className="strava-powered"
+              className="turing-logo"
             />
           </div>
         </div>
