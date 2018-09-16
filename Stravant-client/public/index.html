@@ -51,13 +51,15 @@
   <script>
     $(function () {
       var socket = io();
-      $('form').submit(function () {
+      $('form').submit(function (event) {
+        event.preventDefault()
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
         return false;
       });
       socket.on('chat message', function (msg) {
-        $('#messages').append($('<li>').text(msg));
+        console.log('msg')
+        $('#messages').append($('body').text(msg));
         window.scrollTo(0, document.body.scrollHeight);
       });
     });
