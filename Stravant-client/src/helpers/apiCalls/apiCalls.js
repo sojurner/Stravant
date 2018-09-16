@@ -75,7 +75,7 @@ export const getUserClubs = async token => {
 };
 
 const getClubActivity = async (clubId, token) => {
-  const url = `https://www.strava.com/api/v3/clubs/${clubId}/activities?per_page=200`;
+  const url = `https://www.strava.com/api/v3/clubs/${clubId}/activities?page=1&per_page=200`;
   const options = {
     method: 'GET',
     headers: {
