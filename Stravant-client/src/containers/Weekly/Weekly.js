@@ -68,7 +68,7 @@ export class Weekly extends Component {
           axes
           grid
           dataPoints
-          areaColors={['yellow']}
+          areaColors={['#7c5433']}
           verticalGrid
           clickHandler={this.handleClick}
           width={375}

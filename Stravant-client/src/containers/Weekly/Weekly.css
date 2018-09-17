@@ -15,11 +15,10 @@ text {
   font-family: daybold; }
 
 .compare-data-text {
-  margin: auto; }
+  margin: 2.7rem auto; }
 
 text {
-  fill: #e67c7c;
-  y: 500px; }
+  fill: #f8f9f9; }
 
 .label {
   fill: red;

@@ -22,10 +22,10 @@ describe('Leaderboard', () => {
     );
   });
 
-  it('should map the store correctly', () => {
-    const mockStore = store.mockStore;
-    const expected = { clubs: undefined, currentUser: undefined };
-    const mapped = mapStateToProps(mockStore);
-    expect(mapped.currentUser).toEqual(mockStore.currentUser);
-  });
+  // it('should map the store correctly', () => {
+  //   const mockStore = store.mockStore;
+  //   const expected = { clubs: undefined, currentUser: undefined };
+  //   const mapped = mapStateToProps(mockStore);
+  //   expect(mapped.currentUser).toEqual(mockStore.currentUser);
+  // });
 });

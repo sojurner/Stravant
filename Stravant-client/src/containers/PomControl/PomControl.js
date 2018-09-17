@@ -147,31 +147,31 @@ export class PomControl extends Component {
       this.setState({ socketMessage: msg });
     });
     const { pomHistory } = this.props.pomInfo;
-    const styles = {
-      pomStyle: {
-        position: 'absolute',
-        left: window.screenX + 10,
-        top: window.screenY - 20
-      },
+    // const styles = {
+    //   pomStyle: {
+    //     position: 'absolute',
+    //     left: window.screenX + 10,
+    //     top: window.screenY - 20
+    //   },
 
-      summaryStyle: {
-        position: 'absolute',
-        left: window.screenX + 25,
-        top: window.screenY + 90
-      },
+    //   summaryStyle: {
+    //     position: 'absolute',
+    //     left: window.screenX + 25,
+    //     top: window.screenY + 90
+    //   },
 
-      suggestStyle: {
-        position: 'absolute',
-        left: window.screenX + 25,
-        top: window.screenY + 60
-      },
+    //   suggestStyle: {
+    //     position: 'absolute',
+    //     left: window.screenX + 25,
+    //     top: window.screenY + 60
+    //   },
 
-      modalStyle: {
-        position: 'absolute',
-        left: window.screenX + 100,
-        top: window.screenY - 20
-      }
-    };
+    //   modalStyle: {
+    //     position: 'absolute',
+    //     left: window.screenX + 100,
+    //     top: window.screenY - 20
+    //   }
+    // };
     const {
       mSecond,
       second,
@@ -186,98 +186,90 @@ export class PomControl extends Component {
       socketMessage
     } = this.state;
     return (
-      <div>
-        {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) &&
-          !hide &&
-          start && (
-            <section className="modal" style={styles.modalStyle}>
-              <div className="time">
-                <span className="time hour">{hour} h</span>
-                <span className="time minute">
-                  ..
-                  {minute} m
-                </span>
-                <span className="time second">
-                  ..
-                  {second} s
-                </span>
-                <span className="time mSecond">
-                  ..
-                  {mSecond} ms
-                </span>
-              </div>
-              <div className="save-stop">
-                <i
-                  class="far fa-hand-paper"
-                  onClick={() => {
-                    this.stopTime();
-                    if (!stop) {
-                      clearInterval(this.mSeconds);
-                      clearInterval(this.seconds);
-                      clearInterval(this.minutes);
-                      clearInterval(this.hours);
-                      this.resetTimer();
-                    }
-                  }}
-                  onMouseEnter={() => this.addDescription('stop')}
-                  onMouseLeave={this.removeDescription}
-                />
-              </div>
-            </section>
-          )}
-        {save && (
-          <h4 style={styles.summaryStyle}>
-            <div>Most recent:</div>
-            ---
-            {pomSummary}
-            ---
-          </h4>
-        )}
-        {socketMessage && <h4>{socketMessage}</h4>}
-        <img
-          src={require('../../images/pomodoro-icon.png')}
-          style={styles.pomStyle}
-          height="100px"
-          width="100px"
-          className="pomodoro"
-          onMouseEnter={() => this.addDescription('start')}
-          onMouseLeave={this.removeDescription}
-          onClick={event => {
-            this.togglePom(event, 'start');
-            if (!start && stop) {
-              this.mSeconds = setInterval(this.startMSecond, 101);
-              this.seconds = setInterval(this.startSecond, 1001);
-              this.minutes = setInterval(this.startMinute, 60001);
-              this.hours = setInterval(this.startHour, 3600001);
-            }
-          }}
-        />
-        {!pomHistory && <p>You have no record Poms</p>}
-        {description === 'start' &&
-          !hide &&
-          !start && (
-            <p style={styles.suggestStyle} className="pom-instruction">
-              Start Pom?
-            </p>
-          )}
-        {description === 'start' &&
-          !hide &&
-          start && (
-            <p style={styles.suggestStyle} className="pom-instruction">
-              Hide Pom?
-            </p>
-          )}
-        {description === 'stop' && (
-          <p style={styles.suggestStyle} className="stop-instruction">
-            End Pom?
-          </p>
-        )}
+      <div className="pom-control">
+        <h3 className="track-poms">Track Pomodoros</h3>
+        <section className="pom-details">
+          {socketMessage && <h4 className="socket-msg">{socketMessage}</h4>}
+          <i
+            class="fas fa-play-circle"
+            onMouseEnter={() => this.addDescription('start')}
+            onMouseLeave={this.removeDescription}
+            onClick={event => {
+              this.togglePom(event, 'start');
+              if (!start && stop) {
+                this.mSeconds = setInterval(this.startMSecond, 101);
+                this.seconds = setInterval(this.startSecond, 1001);
+                this.minutes = setInterval(this.startMinute, 60001);
+                this.hours = setInterval(this.startHour, 3600001);
+              }
+            }}
+          >
+            {' '}
+          </i>
 
-        {hide && (
-          <p style={styles.suggestStyle} className="stop-instruction">
-            Show Pom?
-          </p>
-        )}
+          {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) &&
+            !hide &&
+            start && (
+              <i
+                class="fas fa-stop-circle"
+                onClick={() => {
+                  this.stopTime();
+                  this.removeDescription();
+                  if (!stop) {
+                    clearInterval(this.mSeconds);
+                    clearInterval(this.seconds);
+                    clearInterval(this.minutes);
+                    clearInterval(this.hours);
+                    this.resetTimer();
+                  }
+                }}
+                onMouseEnter={() => this.addDescription('stop')}
+                onMouseLeave={this.removeDescription}
+              />
+            )}
+
+          {(second > 0 || mSecond > 0 || hour > 0 || minute > 0) &&
+            !hide &&
+            start && (
+              <div className="time">
+                <span className="hour">
+                  {hour}
+                  <div className="abbr">h </div>{' '}
+                </span>
+                <span className="minute">
+                  {minute}
+                  <div className="abbr">m </div>{' '}
+                </span>
+                <span className="second">
+                  {second}
+                  <div className="abbr">s </div>{' '}
+                </span>
+                <span className="mSecond">{mSecond}</span>
+              </div>
+            )}
+          {!pomHistory && <p>You have no record Poms</p>}
+          {description === 'start' &&
+            !hide &&
+            !start && <p className="pom-instruction">Start Pom?</p>}
+          {description === 'start' &&
+            !hide &&
+            start && <p className="pom-instruction">Hide Pom?</p>}
+          {description === 'stop' && (
+            <p className="stop-instruction">End Pom?</p>
+          )}
+
+          {hide && <p className="stop-instruction">Show Pom?</p>}
+
+          {save && (
+            <h4>
+              <div>Most recent:</div>
+              ---
+              {pomSummary}
+              ---
+            </h4>
+          )}
+        </section>
+
         <PomContainer removePom={this.removePom} pomHistory={pomHistory} />
       </div>
     );

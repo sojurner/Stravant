@@ -3,17 +3,24 @@
   flex-direction: horizontal;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 20rem; }
+  width: 20rem;
+  font-family: daybold; }
 
 .pom-cards {
   min-width: 10rem;
+  max-width: 10rem;
+  padding: 0.1rem 0.5rem;
   margin: 0 0.2rem;
   border: 2px solid black;
-  background-color: #ffb99b; }
+  background-color: #acaaaa;
+  font-size: 1.5rem; }
 
 .pom-cards:hover {
-  background-color: #ffc18a; }
+  background-color: #d0c4c4; }
 
-.fa-trash-alt:hover {
-  color: orangered;
+.fa-xbox {
+  color: #7c564d; }
+
+.fa-xbox:hover {
+  color: #c27062;
   cursor: pointer; }

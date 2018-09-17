@@ -1,43 +1,38 @@
 .App {
   display: flex;
   align-content: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
+
+.fa-bars {
+  display: none; }
 
 .logos {
   flex-direction: column;
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 .required-logo {
   position: fixed;
   left: 42%;
   bottom: 0;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .connect-logo {
   opacity: 1;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .connect-logo:hover {
-  filter: brightness(150%);
-}
+  filter: brightness(150%); }
 
 .strava-powered:hover {
-  filter: grayscale(15%);
-}
+  filter: grayscale(15%); }
 
 .fa-strava {
   font-size: 3rem;
-  color: #fc4c01;
-}
+  color: #fc4c01; }
 
 .fa-strava:hover {
-  filter: brightness(150%);
-}
+  filter: brightness(150%); }
 
 .spinning-globe {
   width: 200px;
@@ -50,29 +45,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a49188;
-}
+  color: #a49188; }
 
 .spinning-globe:hover {
-  box-shadow: inset 0 0 25px #8b4242;
-}
+  box-shadow: inset 0 0 25px #8b4242; }
 
 @keyframes world {
   0% {
-    background-position: 0 0;
-  }
+    background-position: 0 0; }
   100% {
-    background-position: 719px 0;
-  }
-}
+    background-position: 719px 0; } }
 
 .home-gif {
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .header {
-  display: flex;
-}
+  display: flex; }
 
 .fa-sign-out-alt {
   position: fixed;
@@ -80,51 +68,46 @@
   right: 0;
   font-size: 3.5rem;
   margin: 1rem 1.5rem;
-  color: #963005;
-}
+  color: #963005; }
 
 .fa-sign-out-alt:hover {
-  color: #9b593d;
-}
+  color: #9b593d; }
 
 .avatar {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 @media screen and (max-width: 1050px) {
   .required-logo {
-    left: 35%;
-  }
+    left: 35%; }
   .fa-sign-out-alt {
     font-size: 5vw;
     margin: 1.5rem 1.5rem;
-    color: #963005;
-  }
-}
+    color: #963005; } }
 
 @media screen and (max-width: 510px) {
   .home-gif {
     width: 70%;
     height: 40%;
-    margin: 2rem 0 0 0;
-  }
+    margin: 2rem 0 0 0; }
   .welcome-title {
     font-size: 4rem;
-  }
+    margin: -1rem auto; }
   .required-logo {
     position: fixed;
     bottom: 0;
     margin: 0.8rem auto;
     left: 20%;
-    right: 0;
-  }
+    right: 0; }
   .turing-logo {
     height: 2.5rem;
-    width: 2.5rem;
-  }
+    width: 2.5rem; }
   .connect-logo {
     height: 3rem;
     width: 60%;
-    margin: 4rem 0 0 0;
-  }
-}
+    margin: 4rem 0 0 0; }
+  .fa-bars {
+    display: block; }
+  .fa-sign-out-alt {
+    font-size: 8vw;
+    margin: 1rem 1rem;
+    color: #963005; } }

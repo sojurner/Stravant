@@ -44,7 +44,7 @@ export class LeaderBoard extends Component {
       mile ${activity}`;
       return (
         <div>
-          <h3>{recentActivity}</h3>
+          <h3 className="recent-dash">{recentActivity}</h3>
         </div>
       );
     });
@@ -64,9 +64,9 @@ export class LeaderBoard extends Component {
           <tbody>
             <tr>
               <th>Name</th>
-              <th>Last Activity</th>
-              <th>Distance (miles)</th>
-              <th>Time exercised (minutes)</th>
+              <th>Recent</th>
+              <th>Distance(mi)</th>
+              <th>Duration(m)</th>
             </tr>
             {table}
           </tbody>

@@ -14,7 +14,10 @@ export class App extends Component {
       code: '',
       showHistory: false,
       data: null,
-      error: ''
+      error: '',
+      toggleBars: false,
+      toggleX: false,
+      toggleNav: false
     };
   }
 
@@ -64,7 +67,7 @@ export class App extends Component {
   };
 
   render() {
-    const { code } = this.state;
+    const { code, toggleNav, toggleBars } = this.state;
     const stravant = 'S†ra√an†';
 
     return (
@@ -111,14 +114,6 @@ export class App extends Component {
               className="strava-powered"
             />
             <i class="fab fa-strava" />
-
-            <img
-              src={require('../../images/turing-logo.png')}
-              alt="turing logo"
-              height="70"
-              width="70"
-              className="turing-logo"
-            />
           </div>
         </div>
       </BrowserRouter>

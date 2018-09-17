@@ -14,31 +14,12 @@ exports[`App should matchsnapshot 1`] = `
       >
         S†ra√an†
       </h1>
-      <i
-        className="fas fa-sign-in-alt"
-        onClick={[Function]}
-      />
-    </span>
-    <span
-      className="logos"
-    >
-      <div
-        className="spinning-globe"
-      >
-        Credits to Nick
-      </div>
-      <img
-        className="connect-logo"
-        height="75"
-        onClick={[Function]}
-        src="connect-logo.png"
-        width="250"
-      />
     </span>
     <div
       className="required-logo"
     >
       <img
+        alt="required strava logo"
         className="strava-powered"
         height="40"
         src="powered-by-strava.png"
@@ -46,73 +27,6 @@ exports[`App should matchsnapshot 1`] = `
       />
       <i
         class="fab fa-strava"
-      />
-      <img
-        className="strava-powered"
-        height="70"
-        src="turing-logo.png"
-        width="70"
-      />
-    </div>
-  </div>
-</BrowserRouter>
-`;
-
-exports[`App should render NavBar and Welcome and ContentRoute if state of code exists 1`] = `
-<BrowserRouter>
-  <div
-    className="App"
-  >
-    <p />
-    <span
-      className="header"
-    >
-      <h1
-        className="welcome-title"
-      >
-        S†ra√an†
-      </h1>
-      <i
-        className="fas fa-sign-in-alt"
-        onClick={[Function]}
-      />
-    </span>
-    <Component />
-    <Connect(Welcome) />
-    <ContentRoute />
-    <span
-      className="logos"
-    >
-      <div
-        className="spinning-globe"
-      >
-        Credits to Nick
-      </div>
-      <img
-        className="connect-logo"
-        height="75"
-        onClick={[Function]}
-        src="connect-logo.png"
-        width="250"
-      />
-    </span>
-    <div
-      className="required-logo"
-    >
-      <img
-        className="strava-powered"
-        height="40"
-        src="powered-by-strava.png"
-        width="150"
-      />
-      <i
-        class="fab fa-strava"
-      />
-      <img
-        className="strava-powered"
-        height="70"
-        src="turing-logo.png"
-        width="70"
       />
     </div>
   </div>
