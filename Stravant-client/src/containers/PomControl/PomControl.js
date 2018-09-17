@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import openSocket from 'socket.io-client';
 import moment from 'moment';
-// import { createActivity } from '../../helpers/apiCalls/apiCalls';
+import PropTypes from 'prop-types';
 import { PomContainer } from '../../components/PomContainer/PomContainer';
 import * as pomActions from '../../actions/pomAction';
 import { getLastPomTime } from '../../helpers/helpers/helpers';
@@ -275,6 +275,15 @@ export class PomControl extends Component {
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+PomControl.propTypes = {
+  currentUser: object,
+  pomInfo: object,
+  setPomHistory: func,
+  togglePomState: func
+};
 
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
