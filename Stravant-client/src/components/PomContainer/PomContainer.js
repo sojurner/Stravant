@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { removePom } from '../../actions/pomAction';
 
 import './PomContainer.css';
@@ -22,6 +24,13 @@ export class PomContainer extends Component {
     return <div className="pom-container">{pomContainer}</div>;
   }
 }
+
+const { func, object } = PropTypes;
+
+PomContainer.propTypes = {
+  removePom: func,
+  pomHistory: object
+};
 
 export const mapStateToProps = state => ({
   pomHistory: state.pomInfo.pomHistory
