@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weekly should match snapshot 1`] = `
+<div
+  className="compare-data-text"
+  onClick={[Function]}
+>
+  <AreaChart
+    areaColors={
+      Array [
+        "#7c5433",
+      ]
+    }
+    axes={true}
+    axisLabels={
+      Object {
+        "x": "Days of Week",
+        "y": "Distance (Miles)",
+      }
+    }
+    clickHandler={[Function]}
+    data={
+      Array [
+        Array [],
+      ]
+    }
+    dataPoints={true}
+    datePattern="%d-%b-%y"
+    grid={true}
+    height={450}
+    interpolate="cardinal"
+    margin={
+      Object {
+        "bottom": 60,
+        "left": 60,
+        "right": 10,
+        "top": 10,
+      }
+    }
+    mouseMoveHandler={[Function]}
+    mouseOutHandler={[Function]}
+    mouseOverHandler={[Function]}
+    verticalGrid={true}
+    width={375}
+    xType="text"
+    yDomainRange={
+      Array [
+        0,
+        3,
+      ]
+    }
+    yType="linear"
+  />
+  <p
+    className="area-data-details"
+    style={
+      Object {
+        "left": 10,
+        "position": "absolute",
+        "top": -140,
+      }
+    }
+  />
+</div>
+`;

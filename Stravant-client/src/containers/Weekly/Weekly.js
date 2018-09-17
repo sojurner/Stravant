@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import './Weekly.css';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
-
 export class Weekly extends Component {
   constructor() {
     super();
@@ -84,11 +83,11 @@ export class Weekly extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats))
 });
 
