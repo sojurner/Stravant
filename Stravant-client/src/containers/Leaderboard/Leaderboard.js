@@ -11,6 +11,7 @@ export class LeaderBoard extends Component {
 
   getClubActivity = async token => {
     const clubActivities = await apiCalls.getUserClubs(token);
+    console.log(clubActivities);
     this.props.setClubActivity(clubActivities);
   };
 

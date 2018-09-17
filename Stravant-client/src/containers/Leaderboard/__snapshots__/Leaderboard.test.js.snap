@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Leaderboard should match snapShot 1`] = `
+<div>
+  <div>
+    <h3
+      className="recent-dash"
+    >
+      Paul did a 1.41
+            mile Morning Run
+    </h3>
+  </div>
+  <table
+    width="500"
+  >
+    <tbody>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Recent
+        </th>
+        <th>
+          Distance(mi)
+        </th>
+        <th>
+          Duration(m)
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Jesse
+        </td>
+        <td>
+          Evening Run
+        </td>
+        <td>
+          278.77
+        </td>
+        <td>
+          5297
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Pamela
+        </td>
+        <td>
+          Afternoon Run
+        </td>
+        <td>
+          62.89
+        </td>
+        <td>
+          635
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Paul
+        </td>
+        <td>
+          Morning Run
+        </td>
+        <td>
+          7.87
+        </td>
+        <td>
+          101
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Benjamin
+        </td>
+        <td>
+          Light rail trip
+        </td>
+        <td>
+          1.17
+        </td>
+        <td>
+          20
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
