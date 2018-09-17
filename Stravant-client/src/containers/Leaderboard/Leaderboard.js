@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
 import './Leaderboard.css';
@@ -75,6 +76,14 @@ export class LeaderBoard extends Component {
     );
   }
 }
+
+const { func, object } = PropTypes;
+
+LeaderBoard.propTypes = {
+  currentUser: object,
+  clubs: object,
+  setClubActivity: func.isRequired
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser,
