@@ -4,9 +4,7 @@ import {
   mapDispatchToProps,
   LeaderBoard
 } from './Leaderboard';
-import { setClubActivity } from '../../actions/clubAction';
 import * as store from '../../mockData/mockStore';
-import { getUserClubs } from '../../helpers/apiCalls/apiCalls';
 
 jest.mock('../../helpers/apiCalls/apiCalls');
 
