@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AreaChart } from 'react-easy-chart';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './Weekly.css';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
@@ -82,6 +83,13 @@ export class Weekly extends Component {
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+Weekly.propTypes = {
+  currentUser: object,
+  setWeeklyStats: func
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser
