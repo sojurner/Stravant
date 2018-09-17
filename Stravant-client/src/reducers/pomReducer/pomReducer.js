@@ -13,14 +13,14 @@ export const pomReducer = (state = initialState, action) => {
         ...state,
         pomHistory: action.history
       };
-    case 'REMOVE_POM':
-      const history = action.history;
-      delete history[action.time];
 
-      return {
-        ...state,
-        pomHistory: history
-      };
+    // case 'REMOVE_POM':
+    //   const history = action.history;
+    //   delete history[action.time];
+    //   return {
+    //     ...state,
+    //     pomHistory: history
+    //   };
 
     default:
       return state;

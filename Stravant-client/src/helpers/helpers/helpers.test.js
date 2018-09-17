@@ -5,6 +5,9 @@ import * as mockParams from '../../mockData/mockParams';
 describe('userInfo', () => {
   let mockParam;
   let expected;
+  let mockCurrTime;
+  let lastPomtime;
+
   beforeEach(() => {});
 
   it('should scrape the userInfo received from fetch', () => {
@@ -40,5 +43,85 @@ describe('userInfo', () => {
 
     const weeklyDataObj = helpers.weeklyData(mockParam);
     expect(weeklyDataObj).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the afternoon before 10 and last pom time was in in the afternoon before 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 5:30 PM';
+    lastPomtime = 'Mon, Sep 17, 2018 4:00 PM';
+
+    const expected = 'an hour and 30 minutes ago (Take a Pom Soon!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the afternoon and after 10 and last pom time was in in the afternoon before 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 10:30 PM';
+    lastPomtime = 'Mon, Sep 17, 2018 4:00 PM';
+
+    const expected = '6 hours and NaN minutes ago (Take a Pom!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the morning and after 10 and last pom time was in in the afternoon before 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 10:30 AM';
+    lastPomtime = 'Mon, Sep 17, 2018 4:00 PM';
+
+    const expected = '30 min ago (Keep at it!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the morning and after 10 and last pom time was in in the afternoon before 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 10:30 AM';
+    lastPomtime = 'Mon, Sep 17, 2018 4:00 PM';
+
+    const expected = '30 min ago (Keep at it!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the morning and after 10 and last pom time was in in the afternoon after 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 11:30 PM';
+    lastPomtime = 'Mon, Sep 17, 2018 10:20 PM';
+
+    const expected = 'an hour and NaN minutes ago (Take a Pom Soon!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the morning and after 10 and last pom time was in in the morning after 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 11:30 PM';
+    lastPomtime = 'Mon, Sep 17, 2018 10:20 AM';
+
+    const expected = '13 hours and NaN minutes ago (Take a Pom!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current time is in the morning and after 10 and last pom time was in in the afternoon after 10', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 11:30 PM';
+    lastPomtime = 'Mon, Sep 17, 2018 12:20 AM';
+
+    const expected = '11 hours and NaN minutes ago (Take a Pom!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
+  });
+
+  it('should properly scrape the pomData received from fetch if current minute is less than last pom minute', () => {
+    mockCurrTime = 'Mon, Sep 17, 2018 10:30 AM';
+    lastPomtime = 'Mon, Sep 17, 2018 4:45 PM';
+
+    const expected = '15 min ago (Keep at it!)';
+
+    const response = helpers.getLastPomTime(mockCurrTime, lastPomtime);
+    expect(response).toEqual(expected);
   });
 });

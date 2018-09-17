@@ -88,3 +88,34 @@ exports[`Leaderboard should match snapShot 1`] = `
   </table>
 </div>
 `;
+
+exports[`Leaderboard should matchSnapshot if there is no club activity 1`] = `
+<div>
+  <table
+    width="500"
+  >
+    <img
+      className="connect-logo"
+      height="100"
+      src="https://media.giphy.com/media/26xBNwL69IM5ng3f2/source.gif"
+      width="100"
+    />
+    <tbody>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Recent
+        </th>
+        <th>
+          Distance(mi)
+        </th>
+        <th>
+          Duration(m)
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

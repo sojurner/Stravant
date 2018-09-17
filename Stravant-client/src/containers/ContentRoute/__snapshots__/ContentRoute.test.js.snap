@@ -14,12 +14,46 @@ exports[`ContentRoute should MatchSnapshot when path matches Compare 1`] = `
   <Route
     component={[Function]}
     exact={true}
-    path="/compare"
+    path="/weekly"
   />
   <Route
     component={[Function]}
     exact={true}
     path="/leaderboard"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/pomodoro"
+  />
+</Switch>
+`;
+
+exports[`ContentRoute should MatchSnapshot when path matches Pomodoro 1`] = `
+<Switch>
+  <Route
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/personal"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/weekly"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/leaderboard"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/pomodoro"
   />
 </Switch>
 `;
@@ -38,12 +72,17 @@ exports[`ContentRoute should MatchSnapshot when path matches leaderboard 1`] = `
   <Route
     component={[Function]}
     exact={true}
-    path="/compare"
+    path="/weekly"
   />
   <Route
     component={[Function]}
     exact={true}
     path="/leaderboard"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/pomodoro"
   />
 </Switch>
 `;
@@ -62,12 +101,17 @@ exports[`ContentRoute should matchsnapshot when path matches personal 1`] = `
   <Route
     component={[Function]}
     exact={true}
-    path="/compare"
+    path="/weekly"
   />
   <Route
     component={[Function]}
     exact={true}
     path="/leaderboard"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/pomodoro"
   />
 </Switch>
 `;

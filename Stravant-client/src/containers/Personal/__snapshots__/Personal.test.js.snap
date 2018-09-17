@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Personal should match Mounted Snapshot 1`] = `
+<div
+  className="pie-chart-wrap"
+>
+  <div
+    className="spinning-globe"
+  />
+</div>
+`;
+
+exports[`Personal should matchSnapshot 1`] = `
+<div
+  className="pie-chart-wrap"
+>
+  <div
+    className="spinning-globe"
+  />
+</div>
+`;

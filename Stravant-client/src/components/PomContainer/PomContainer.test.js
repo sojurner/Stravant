@@ -1,5 +1,10 @@
 import React from 'react';
-import { PomContainer } from './PomContainer';
+import {
+  PomContainer,
+  mapDispatchToProps,
+  mapStateToProps
+} from './PomContainer';
+import * as store from '../../mockData/mockStore';
 
 describe('PomContainer', () => {
   let wrapper;
@@ -33,7 +38,7 @@ describe('PomContainer', () => {
     ];
 
     mockRemove = jest.fn();
-    wrapper = shallow(
+    wrapper = mount(
       <PomContainer pomHistory={mockPomHistory} removePom={mockRemove} />
     );
   });
@@ -42,11 +47,28 @@ describe('PomContainer', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should call removePom on click', () => {
+  it('should call removePom on click', () => {
     wrapper = mount(
       <PomContainer pomHistory={mockPomHistory} removePom={mockRemove} />
     );
-    wrapper.find(i).simulate('clickl');
+    wrapper.find('i').simulate('click');
     expect(mockRemove).toHaveBeenCalled();
+  });
+
+  it('should map to the store properly', () => {
+    const mockStore = store.pomStatus;
+
+    const mapped = mapStateToProps(mockStore);
+
+    expect(mapped.pomHistory).toEqual(mockStore.pomInfo.pomHistory);
+  });
+
+  it('should call dispatch function when using a function from mapDispatchtoProps', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.removePom();
+
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });

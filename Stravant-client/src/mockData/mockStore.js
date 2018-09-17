@@ -12,12 +12,14 @@ export const currentUser = {
 };
 
 export const pomStatus = {
-  pomStatus: true,
-  lastPom: '',
-  pomHistory: {
-    'Tue, Sep 11, 2018 8:39 PM': { second: 19, minute: 0, hour: 0 },
-    'Tue, Sep 11, 2018 8:40 PM': { second: 3, minute: 0, hour: 0 },
-    'Tue, Sep 11, 2018 10:22 PM': { second: 3, minute: 0, hour: 0 }
+  pomInfo: {
+    pomStatus: true,
+    lastPom: '',
+    pomHistory: {
+      'Tue, Sep 11, 2018 8:39 PM': { second: 19, minute: 0, hour: 0 },
+      'Tue, Sep 11, 2018 8:40 PM': { second: 3, minute: 0, hour: 0 },
+      'Tue, Sep 11, 2018 10:22 PM': { second: 3, minute: 0, hour: 0 }
+    }
   }
 };
 
@@ -65,4 +67,21 @@ export const mockCurrentUser = {
   },
   totalStats: {},
   weeklyStats: {}
+};
+
+export const mockEmptyClubInfo = {
+  clubActivity: {},
+  clubInfo: { clubId: 473825, clubName: 'Stravant Club' }
+};
+
+export const mockTotalStats = {
+  currentUser: {
+    totalStats: {
+      runningTotal: {
+        'Distance (miles)': 1.2474473941223474,
+        'Time (min)': 11.299999999999999,
+        'Elevation (feet)': 1.7142857142857142
+      }
+    }
+  }
 };

@@ -2,6 +2,7 @@ const initialState = {
   clubInfo: {},
   clubActivity: {}
 };
+
 export const clubReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_CLUB_ACTIVITY':

@@ -34,7 +34,6 @@ export class Welcome extends Component {
   };
 
   handleClick = (e, str) => {
-    console.log(e);
     const coord = {
       position: 'absolute',
       left: e.pageX + 30,

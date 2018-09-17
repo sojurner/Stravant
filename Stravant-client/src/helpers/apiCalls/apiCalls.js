@@ -17,7 +17,6 @@ export const exchangeUserToken = async code => {
   const response = await fetch(url, options);
 
   const result = await response.json();
-  console.log(result);
   return result;
 };
 
@@ -32,7 +31,8 @@ export const getAggregateStats = async (token, id) => {
   };
   const response = await fetch(url, options);
   const result = await response.json();
-  return scrape.userStats(result);
+  const scrapedStats = scrape.userStats(result);
+  return scrapedStats;
 };
 
 export const getWeeklyStats = async (token, num) => {
@@ -43,10 +43,11 @@ export const getWeeklyStats = async (token, num) => {
     num++;
   }
   const result = await Promise.all(weeklyStats);
-  return scrape.weeklyData(result);
+  const scrapedResult = scrape.weeklyData(result);
+  return scrapedResult;
 };
 
-const recursiveRetrival = async (token, num) => {
+export const recursiveRetrival = async (token, num) => {
   const before = Math.floor(Date.now() / 1000 - 86400 * num);
   const after = Math.floor(Date.now() / 1000 - 86400 - 86400 * num);
   const url = `https://www.strava.com/api/v3/athlete/activities?before=${before}&after=${after}`;
@@ -59,6 +60,7 @@ const recursiveRetrival = async (token, num) => {
   };
   const response = await fetch(url, options);
   const result = await response.json();
+  console.log(result);
   return result;
 };
 

@@ -4,9 +4,7 @@ import {
   mapDispatchToProps,
   LeaderBoard
 } from './Leaderboard';
-import { setClubActivity } from '../../actions/clubAction';
 import * as store from '../../mockData/mockStore';
-import { getUserClubs } from '../../helpers/apiCalls/apiCalls';
 
 jest.mock('../../helpers/apiCalls/apiCalls');
 
@@ -63,6 +61,17 @@ describe('Leaderboard', () => {
   });
 
   it('should match snapShot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should matchSnapshot if there is no club activity', () => {
+    wrapper = shallow(
+      <LeaderBoard
+        currentUser={store.mockCurrentUser}
+        clubs={store.mockEmptyClubInfo}
+        setClubActivity={mockSetActivity}
+      />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 

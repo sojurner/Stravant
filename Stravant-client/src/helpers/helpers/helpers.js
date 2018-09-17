@@ -99,16 +99,36 @@ export const weeklyData = data => {
 };
 
 export const getLastPomTime = (currTime, pomTime) => {
+  let current = currTime.indexOf('2018');
+  let modCurrent = currTime.slice(current + 5);
+
+  let lastPom = pomTime.indexOf('2018');
+  let modLastPom = pomTime.slice(current + 5);
+
   let currentHour;
   let currentMin;
   let lastPomHour;
   let lastPomMin;
 
-  if (!pomTime)
-    if (currTime.includes('PM') && currTime.length < 25) {
-      currentHour = parseInt(currTime.slice(18, 19)) + 12;
-      currentMin = parseInt(currTime.slice(20, 22));
-    }
+  // if(modCurrent.includes('PM') && modCurrent.length < 8){
+  //   currentHour = parseInt(currTime.slice(0, 1)) + 12;
+  //   currentMin = parseInt(currTime.slice(2, 4));
+  // }
+
+  // if(modCurrent.includes('PM') && modCurrent.length > 7){
+  //   currentHour = parseInt(currTime.slice(0, 2)) + 12;
+  //   currentMin = parseInt(currTime.slice(3, 5));
+  // }
+
+  // if(modCurrent.includes('AM') && modCurrent.length < 8){
+  //   currentHour = parseInt(currTime.slice(0, 1)) + 12;
+  //   currentMin = parseInt(currTime.slice(2, 4));
+  // }
+
+  if (currTime.includes('PM') && currTime.length < 25) {
+    currentHour = parseInt(currTime.slice(18, 19)) + 12;
+    currentMin = parseInt(currTime.slice(20, 22));
+  }
 
   if (currTime.includes('PM') && currTime.length > 24) {
     currentHour = parseInt(currTime.slice(18, 20)) + 12;
@@ -118,6 +138,11 @@ export const getLastPomTime = (currTime, pomTime) => {
   if (currTime.includes('AM') && currTime.length > 24) {
     currentHour = parseInt(currTime.slice(18, 20));
     currentMin = parseInt(currTime.slice(21, 23));
+  }
+
+  if (currTime.includes('AM') && currTime.length < 25) {
+    currentHour = parseInt(currTime.slice(18, 19));
+    currentMin = parseInt(currTime.slice(20, 22));
   }
 
   if (pomTime.includes('PM') && pomTime.length < 25) {
@@ -133,7 +158,11 @@ export const getLastPomTime = (currTime, pomTime) => {
   if (pomTime.includes('AM') && pomTime.length > 24) {
     lastPomHour = parseInt(pomTime.slice(18, 20));
     lastPomMin = parseInt(pomTime.slice(21, 23));
-    console.log(lastPomHour);
+  }
+
+  if (pomTime.includes('AM') && pomTime.length < 25) {
+    lastPomHour = parseInt(pomTime.slice(18, 19));
+    lastPomMin = parseInt(pomTime.slice(20, 22));
   }
 
   let hourDifference = currentHour - lastPomHour;
@@ -149,6 +178,6 @@ export const getLastPomTime = (currTime, pomTime) => {
   } else if (hourDifference === 1) {
     return `an hour and ${minDifference} minutes ago (Take a Pom Soon!)`;
   } else {
-    return `${minDifference} min ago (You're good)`;
+    return `${minDifference} min ago (Keep at it!)`;
   }
 };

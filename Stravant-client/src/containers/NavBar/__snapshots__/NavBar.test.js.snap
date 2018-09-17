@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match snapshot 1`] = `
+<nav
+  className="nav-bar"
+>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-link nav-personal"
+    exact={true}
+    to="/personal"
+  >
+    personal
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-link nav-weekly"
+    exact={true}
+    to="/weekly"
+  >
+    weekly
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-link nav-leaderboard"
+    exact={true}
+    to="/leaderboard"
+  >
+    leaderboard
+  </NavLink>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="nav-link nav-pomodoro"
+    exact={true}
+    to="/pomodoro"
+  >
+    pomodoro
+  </NavLink>
+</nav>
+`;
