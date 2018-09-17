@@ -23,11 +23,11 @@ export class PomContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   pomHistory: state.pomInfo.pomHistory
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   removePom: (history, time) => dispatch(removePom(history, time))
 });
 
