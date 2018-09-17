@@ -2,9 +2,10 @@ import React from 'react';
 import { MemoryRouter } from 'react-router';
 
 import ContentRoute from './ContentRoute';
-import Comparison from '../Comparison/Comparison';
+import Weekly from '../Weekly/Weekly';
 import { Personal } from '../Personal/Personal';
 import Leaderboard from '../Leaderboard/Leaderboard';
+import { PomControl } from '../PomControl/PomControl';
 import * as mockStore from '../../mockData/mockStore';
 import { Provider } from 'redux';
 
@@ -25,8 +26,16 @@ describe('ContentRoute', () => {
 
   it('should MatchSnapshot when path matches Compare', () => {
     let compareWrapper = shallow(
-      <ContentRoute path="/compare" component={Comparison} />
+      <ContentRoute path="/weekly" component={Weekly} />
     );
     expect(compareWrapper).toMatchSnapshot();
+  });
+
+  it('should MatchSnapshot when path matches Pomodoro', () => {
+    let pomWrapper = shallow(
+      <ContentRoute path="/pomodoro" component={PomControl} />
+    );
+
+    expect(pomWrapper).toMatchSnapshot();
   });
 });
