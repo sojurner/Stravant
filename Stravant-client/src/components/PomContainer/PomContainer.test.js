@@ -57,7 +57,6 @@ describe('PomContainer', () => {
 
   it('should map to the store properly', () => {
     const mockStore = store.pomStatus;
-    console.log(mockStore);
 
     const mapped = mapStateToProps(mockStore);
 
