@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PieChart, Legend, ToolTip } from 'react-easy-chart';
+import { PieChart, Legend } from 'react-easy-chart';
 import * as apiFetch from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
 import './Personal.css';
-import { type } from 'os';
 
 export class Personal extends Component {
   constructor() {
@@ -31,7 +30,6 @@ export class Personal extends Component {
   };
 
   mouseOverHandler = data => {
-    console.log(data);
     this.setState({
       key: data.data.key,
       value: data.data.value,
@@ -61,7 +59,7 @@ export class Personal extends Component {
         configArr.push(config);
       });
       return (
-        <div>
+        <div className="pie-div">
           <h3 className="running-avg">Running Averages</h3>
           <Legend
             className="legend-key"
@@ -83,9 +81,7 @@ export class Personal extends Component {
 
     return (
       <div className="pie-chart-wrap">
-        {!totalStats['runningTotal'] && (
-          <div className="spinning-globe">Credits to Nick</div>
-        )}
+        {!totalStats['runningTotal'] && <div className="spinning-globe" />}
         {filteredActivity}
         {this.state.value &&
           this.state.showToolTip && (
@@ -98,11 +94,11 @@ export class Personal extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setTotalStats: stats => dispatch(userActions.setTotalStats(stats))
 });
 
