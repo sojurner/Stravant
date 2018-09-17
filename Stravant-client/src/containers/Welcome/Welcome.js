@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PomControl from '../PomControl/PomControl';
-import * as userActions from '../../actions/userAction';
+import PropTypes from 'prop-types';
 
+import * as userActions from '../../actions/userAction';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as scrape from '../../helpers/helpers/helpers';
 
@@ -62,9 +62,6 @@ export class Welcome extends Component {
                 src={require('../../images/male-avatar.png')}
                 height="70"
                 width="70"
-                // onClick={e => this.handleClick(e, 'show')}
-                // onMouseEnter={this.handleClick}
-                // onMouseOut={e => this.handleClick(e, 'remove')}
               />
             )}
           {info &&
@@ -83,6 +80,15 @@ export class Welcome extends Component {
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+Welcome.propTypes = {
+  currentUser: object,
+  pomStatus: object,
+  setAccessToken: func,
+  setWeeklyStats: func
+};
 
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
