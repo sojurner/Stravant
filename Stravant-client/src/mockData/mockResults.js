@@ -47,7 +47,13 @@ export const scrapedUserInfo = {
   userId: 34515396
 };
 
-export const scrapedUserStats = { Biked: 0, Ran: 6.472964574269732, Swam: 0 };
+export const scrapedUserStats = {
+  runningTotal: {
+    'Distance (miles)': 1.2945929148539466,
+    'Elevation (feet)': 2,
+    'Time (min)': 11.213333333333335
+  }
+};
 
 export const scrapedClubData = {
   clubId: 473825,
