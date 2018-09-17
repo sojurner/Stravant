@@ -15,7 +15,10 @@ export const exchangeUserToken = async code => {
     }
   };
   const response = await fetch(url, options);
-  return await response.json();
+
+  const result = await response.json();
+  console.log(result);
+  return result;
 };
 
 export const getAggregateStats = async (token, id) => {

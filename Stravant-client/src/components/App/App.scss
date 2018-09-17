@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.fa-bars {
+  display: none;
+}
+
 .logos {
   flex-direction: column;
   display: flex;
@@ -110,6 +114,7 @@
 
   .welcome-title {
     font-size: 4rem;
+    margin: -1rem auto;
   }
 
   .required-logo {
@@ -129,5 +134,15 @@
     height: 3rem;
     width: 60%;
     margin: 4rem 0 0 0;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .fa-sign-out-alt {
+    font-size: 8vw;
+    margin: 1rem 1rem;
+    color: #963005;
   }
 }

@@ -14,7 +14,7 @@
 }
 
 .welcome-title {
-  color: crimson;
+  color: #c28994;
   font-family: daybold;
   margin: 1rem auto;
   font-size: 5rem;
@@ -50,4 +50,14 @@
   border-left: 0;
   margin-left: -30px;
   margin-top: -20px;
+}
+
+@media screen and (max-width: 650px) {
+  .avatar {
+    display: none;
+  }
+
+  .speech-bubble {
+    display: none;
+  }
 }

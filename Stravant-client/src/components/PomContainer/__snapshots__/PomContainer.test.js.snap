@@ -8,7 +8,7 @@ exports[`PomContainer should matchsnapshot 1`] = `
     className="pom-cards"
   >
     <i
-      class="fas fa-trash-alt"
+      class="fab fa-xbox"
       onClick={[Function]}
     />
     <h4>
@@ -16,7 +16,7 @@ exports[`PomContainer should matchsnapshot 1`] = `
        
     </h4>
     <p>
-      undefinedsec undefinedmin undefinedhour
+       undefinedh undefinedm undefineds
     </p>
   </div>
 </div>

@@ -22,8 +22,9 @@ path {
 .running-avg {
   text-align: center;
   font-family: daybold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: auto;
+  color: #a49188;
   margin: 0;
 }
 
@@ -43,7 +44,6 @@ li {
   font-size: 1.5rem;
   color: #ffc1b8;
   letter-spacing: 2px;
-  font-size: 1.5rem;
   background: #c5696a;
   border-radius: 0.4em;
   margin: 25rem 0;
@@ -88,5 +88,19 @@ li {
   }
   100% {
     background-position: 719px 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .pie-chart-wrap {
+    margin-top: 2rem;
+  }
+
+  .running-avg {
+    margin: 2rem;
+  }
+
+  .data-details {
+    margin: 30rem 0;
   }
 }

@@ -10,8 +10,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-repeat: no-repeat;
-  background-size: 120rem;
-  background-image: url('https://orig00.deviantart.net/d41f/f/2016/035/e/f/firewatch_inspired_art_by_rizzlepixs-d9qhibd.jpg');
+  background-size: 200rem;
+  background-image: url('https://images.unsplash.com/photo-1536983158350-93d27175e9a8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a7534aa2d61f0010f41e5d2f47543648&auto=format&fit=crop&w=2134&q=80');
 }
 
 body:after {

@@ -1,4 +1,19 @@
-.pom-instruction {
+.pom-instruction,
+.stop-instruction {
+  position: absolute;
+  bottom: 35%;
+  left: 47.8%;
+  font-size: 1.2rem;
+  font-family: daybold;
+  color: azure;
+}
+
+.track-poms {
+  font-family: daybold;
+  font-size: 3rem;
+  margin: 0.5rem 0 0 0;
+  text-align: center;
+  color: #d19e86;
 }
 
 img {
@@ -8,21 +23,74 @@ i {
   cursor: pointer;
 }
 
+.pom-details {
+  text-align: center;
+}
+
+.socket-msg {
+  position: absolute;
+  left: %;
+  font-size: 2rem;
+  font-family: daybold;
+}
+
 .modal-timer {
   z-index: 1;
-  background-color: #fed2bf;
+  background-color: #c2b8b5;
   padding: 1rem;
-  position: absolute;
   text-align: center;
-  animation: fadein 1s;
 }
 
-.fa-hand-paper {
+.fa-play-circle {
+  color: #c2bcba;
   font-size: 4rem;
+  margin: 6.5rem 2rem 1.5rem 2rem;
 }
 
-.fa-hand-paper:hover {
+.fa-stop-circle {
+  color: #d19e86;
+  font-size: 4rem;
+  margin: 1rem 2rem;
+}
+
+.pom-control {
+  margin: auto;
+  display: inline-block;
+}
+
+.fa-stop-circle:hover {
   color: rgb(131, 52, 52);
+  text-align: right;
+}
+
+.modal {
+  display: inline-block;
+}
+
+.fa-play-circle:hover {
+  color: #979290;
+}
+
+.time {
+  z-index: 1;
+  background: rgb(177, 148, 148);
+  border: 2px dotted black;
+  position: absolute;
+  padding: 3rem 1.5rem;
+  left: 48%;
+  margin: -12.5rem 0 0 -12.5rem;
+  top: 40%;
+  font-family: daybold;
+  font-size: 4.5rem;
+  animation: fadein 1s;
+  border-radius: 8px;
+  max-width: 25rem;
+  min-width: 25rem;
+}
+
+.abbr {
+  font-size: 2rem;
+  display: inline-block;
 }
 
 @keyframes fadein {
