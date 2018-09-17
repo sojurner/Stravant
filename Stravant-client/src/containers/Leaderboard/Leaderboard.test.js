@@ -66,6 +66,17 @@ describe('Leaderboard', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should matchSnapshot if there is no club activity', () => {
+    wrapper = shallow(
+      <LeaderBoard
+        currentUser={store.mockCurrentUser}
+        clubs={store.mockEmptyClubInfo}
+        setClubActivity={mockSetActivity}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it.skip('should make a fetch on componentDidMount', async () => {
     await wrapper.instance().getClubActivity();
     expect(getUserClubs).toHaveBeenCalled();
