@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { PieChart, Legend } from 'react-easy-chart';
+import PropTypes from 'prop-types';
 import * as apiFetch from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
 import './Personal.css';
@@ -93,6 +94,13 @@ export class Personal extends Component {
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+Personal.propTypes = {
+  currentUser: object,
+  setTotalStats: func
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser
