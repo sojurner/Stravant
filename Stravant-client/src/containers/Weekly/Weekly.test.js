@@ -21,6 +21,15 @@ describe('Weekly', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should match snapshot when there are weekly stats', () => {
+    mockStore = store.currentUserWithWeekStats;
+    wrapper = shallow(
+      <Weekly currentUser={mockStore} setWeeklyStats={mockSetWeekly} />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should set state of x and y coordinates', () => {
     const event = { screenX: 23, screenY: 150 };
 
