@@ -11,7 +11,6 @@ export class Welcome extends Component {
   constructor() {
     super();
     this.state = {
-      coordinates: {},
       greeting: true
     };
   }
@@ -31,25 +30,9 @@ export class Welcome extends Component {
     localStorage.setItem('code', JSON.stringify({ code }));
   };
 
-  handleClick = (e, str) => {
-    const coord = {
-      position: 'absolute',
-      left: e.pageX + 30,
-      top: e.pageY - 50
-    };
-    if (str === 'remove') {
-      this.setState({ greeting: false });
-    } else {
-      this.setState({
-        greeting: true,
-        coordinates: coord
-      });
-    }
-  };
-
   render() {
     const { info } = this.props.currentUser;
-    const { greeting } = this.state;
+
     return (
       <div className="welcome-page">
         <span>
@@ -69,10 +52,9 @@ export class Welcome extends Component {
                 src={require('../../images/female-avatar.png')}
                 height="100"
                 width="100"
-                onClick={this.handleClick}
               />
             )}
-          {greeting && <h4 className="speech-bubble">Hi {info.firstName}</h4>}
+          <h4 className="speech-bubble">Hi {info.firstName}</h4>
         </span>
       </div>
     );
@@ -83,17 +65,15 @@ const { object, func } = PropTypes;
 
 Welcome.propTypes = {
   currentUser: object,
-  setAccessToken: func,
-  setWeeklyStats: func
+  setAccessToken: func
 };
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setAccessToken: token => dispatch(userActions.setAccessToken(token)),
-  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats))
+export const mapDispatchToProps = dispatch => ({
+  setAccessToken: token => dispatch(userActions.setAccessToken(token))
 });
 
 export default connect(
