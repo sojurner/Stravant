@@ -22,12 +22,14 @@ export class App extends Component {
   }
 
   componentDidMount() {
-    const { search } = window.location;
-    console.log(window.location);
-    const codeIndex = search.indexOf('code') + 5;
-    const lastIndex = search.lastIndexOf('&');
-    if (search.includes('code')) {
-      this.setState({ code: search.slice(codeIndex, lastIndex) });
+    this.handleRedirect(window.location.search);
+  }
+
+  handleRedirect = async url => {
+    const codeIndex = url.indexOf('code') + 5;
+    const lastIndex = url.lastIndexOf('&');
+    if (url.includes('code')) {
+      this.setState({ code: url.slice(codeIndex, lastIndex) });
     }
     if (localStorage.getItem('code')) {
       const codeValue = JSON.parse(localStorage.getItem('code'));
@@ -42,7 +44,7 @@ export class App extends Component {
       .catch(error => {
         this.setState({ error: error.message });
       });
-  }
+  };
 
   handleClick = () => {
     const url = `https://www.strava.com/oauth/authorize?client_id=${
