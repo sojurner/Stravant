@@ -53,6 +53,8 @@ text {
   font-family: daybold;
   top: 65%;
   margin: -12.5rem 0 0 -12.5rem;
+  background-color: #a5a3a3;
+  border-radius: 0.8rem;
 }
 
 .weekly-title {
@@ -62,6 +64,12 @@ text {
   font-size: 1.7rem;
   top: 25%;
   color: whitesmoke;
+}
+
+@media screen and (max-width: 650px) {
+  .weekly-title {
+    top: 21%;
+  }
 }
 
 @media screen and (max-width: 510px) {
@@ -79,5 +87,9 @@ text {
 
   .x-axis {
     display: none;
+  }
+
+  .weekly-title {
+    top: 18%;
   }
 }

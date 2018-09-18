@@ -1,4 +1,5 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import { Weekly, mapStateToProps, mapDispatchToProps } from './Weekly';
 import * as store from '../../mockData/mockStore';
 

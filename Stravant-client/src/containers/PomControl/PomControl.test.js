@@ -1,4 +1,5 @@
 import React from 'react';
+import { shallow } from 'shallow';
 import { PomControl, mapStateToProps, mapDispatchToProps } from './PomControl';
 import * as mock from './mockData';
 import * as store from '../../mockData/mockStore';
@@ -6,7 +7,6 @@ import * as store from '../../mockData/mockStore';
 describe('PomControl', () => {
   let wrapper;
   let state;
-  let defaultState;
   let mockSetPom;
   let mockToggle;
 
@@ -24,19 +24,19 @@ describe('PomControl', () => {
     );
   });
 
-  defaultState = {
-    description: false,
-    hide: false,
-    hour: 0,
-    mSecond: 0,
-    minute: 0,
-    pomSummary: '7s  2m  1h',
-    save: true,
-    second: 0,
-    socketMessage: '',
-    start: false,
-    stop: true
-  };
+  // defaultState = {
+  //   description: false,
+  //   hide: false,
+  //   hour: 0,
+  //   mSecond: 0,
+  //   minute: 0,
+  //   pomSummary: '7s  2m  1h',
+  //   save: true,
+  //   second: 0,
+  //   socketMessage: '',
+  //   start: false,
+  //   stop: true
+  // };
 
   state = {
     mSecond: 4,
@@ -156,7 +156,6 @@ describe('PomControl', () => {
       }
     };
     const stringifiedLocal = JSON.stringify(local);
-    let expectedLocal = localStorage.store;
 
     wrapper.setState(state);
     localStorage.setItem('pomHistory', stringifiedLocal);

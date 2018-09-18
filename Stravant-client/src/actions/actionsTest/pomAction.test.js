@@ -1,4 +1,4 @@
-import { togglePomState, setPomHistory } from '../pomAction';
+import { togglePomState } from '../pomAction';
 import * as params from '../../mockData/mockParams';
 
 describe('Pom actions', () => {

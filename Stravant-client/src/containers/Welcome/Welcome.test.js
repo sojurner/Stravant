@@ -1,4 +1,5 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import { Welcome, mapStateToProps, mapDispatchToProps } from './Welcome';
 import * as store from '../../mockData/mockStore';
 
@@ -8,12 +9,10 @@ describe('Welcome', () => {
   let wrapper;
   let mockCurrentUser;
   let mockSetToken;
-  let mockSetWeekly;
 
   beforeEach(() => {
     localStorage.clear();
     mockSetToken = jest.fn();
-    mockSetWeekly = jest.fn();
     mockCurrentUser = store.currentUser;
 
     wrapper = shallow(

@@ -44,7 +44,9 @@ text {
   font-size: 2rem;
   font-family: daybold;
   top: 65%;
-  margin: -12.5rem 0 0 -12.5rem; }
+  margin: -12.5rem 0 0 -12.5rem;
+  background-color: #a5a3a3;
+  border-radius: 0.8rem; }
 
 .weekly-title {
   position: absolute;
@@ -54,6 +56,10 @@ text {
   top: 25%;
   color: whitesmoke; }
 
+@media screen and (max-width: 650px) {
+  .weekly-title {
+    top: 21%; } }
+
 @media screen and (max-width: 510px) {
   .compare-data-text {
     margin: 4rem auto 2.7rem auto; }
@@ -62,4 +68,6 @@ text {
   .y-axis {
     display: none; }
   .x-axis {
-    display: none; } }
+    display: none; }
+  .weekly-title {
+    top: 18%; } }

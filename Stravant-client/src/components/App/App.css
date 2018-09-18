@@ -91,7 +91,7 @@
     margin: 2rem 0 0 0; }
   .welcome-title {
     font-size: 4rem;
-    margin: -1rem auto; }
+    margin: -2rem auto 0 auto; }
   .required-logo {
     position: fixed;
     bottom: 0;
@@ -108,4 +108,10 @@
   .fa-bars {
     display: block; }
   .fa-sign-out-alt {
-    display: none; } }
+    display: none; }
+  .header {
+    margin-top: 1.5rem; } }
+
+@media screen and (max-height: 667px) {
+  .welcome-title {
+    margin: -4rem auto; } }

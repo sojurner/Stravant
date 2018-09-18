@@ -1,13 +1,15 @@
 .avatar {
   position: fixed;
   left: 1%;
-  top: 1%; }
+  top: 1%;
+}
 
 .welcome-title {
   color: #c28994;
   font-family: daybold;
-  margin: 1rem auto;
-  font-size: 5rem; }
+  margin: -1rem auto 2rem auto;
+  font-size: 5rem;
+}
 
 .speech-bubble {
   font-family: daybold;
@@ -22,7 +24,8 @@
   border-radius: 0.4em;
   padding: 0.5rem;
   opacity: 0.9;
-  width: 5rem; }
+  width: 5rem;
+}
 
 .speech-bubble:after {
   content: '';
@@ -37,10 +40,14 @@
   border-top: 0;
   border-left: 0;
   margin-left: -30px;
-  margin-top: -20px; }
+  margin-top: -20px;
+}
 
 @media screen and (max-width: 650px) {
   .avatar {
-    display: none; }
+    display: none;
+  }
   .speech-bubble {
-    display: none; } }
+    display: none;
+  }
+}

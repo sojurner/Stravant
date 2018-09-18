@@ -1,4 +1,5 @@
 import React from 'react';
+import { mount } from 'enzyme';
 import {
   PomContainer,
   mapDispatchToProps,
@@ -38,9 +39,6 @@ describe('PomContainer', () => {
     ];
 
     mockRemove = jest.fn();
-    wrapper = mount(
-      <PomContainer pomHistory={mockPomHistory} removePom={mockRemove} />
-    );
   });
 
   it('should matchsnapshot', () => {

@@ -90,8 +90,6 @@ export const weeklyData = data => {
   return daysOfWeek.reduce((dayObj, day) => {
     if (!resultObj[day]) {
       resultObj[day] = 0;
-    } else {
-      resultObj[day] = resultObj[day];
     }
     dayObj = resultObj;
     return dayObj;

@@ -1,12 +1,12 @@
 .pom-instruction,
 .stop-instruction {
   position: absolute;
-  bottom: 38%;
-  left: 47.5%;
+  top: 63%;
+  left: 50%;
   font-size: 1.2rem;
   font-family: daybold;
   color: azure;
-  margin: -0.6rem 0 0 -0.6rem;
+  margin: -2.4rem 0 0 -2.4rem;
 }
 
 .track-poms {
@@ -20,6 +20,7 @@
 img {
   cursor: pointer;
 }
+
 i {
   cursor: pointer;
 }
@@ -30,14 +31,13 @@ i {
 
 .socket-msg {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: daybold;
   margin: -12.5rem 0 0 -12.5rem;
   left: 50%;
   width: 25rem;
-  top: 30%;
-  border-radius: 5px;
-  background: rgb(177, 148, 148);
+  top: 70%;
+  color: #c2b8b5;
 }
 
 .modal-timer {
@@ -99,10 +99,10 @@ i {
   animation: fadein 0.5s;
   font-family: daybold;
   font-size: 2rem;
-  left: 49%;
-  top: 55%;
-  margin: -5rem 0 0 -5rem;
-  color: #c2bcba;
+  left: 48%;
+  top: 46%;
+  margin: -4rem 0 0 -4rem;
+  color: #ffffff;
 }
 
 .abbr {
@@ -145,6 +145,15 @@ i {
     top: 41%;
     margin: -5rem 0 0 -5rem;
   }
+
+  .socket-msg {
+    position: absolute;
+    font-size: 1rem;
+    margin: -1.5rem 0 0 -10rem;
+    left: 30%;
+    width: 25rem;
+    top: 35%;
+  }
 }
 
 @media screen and (max-height: 668px) {
@@ -152,5 +161,12 @@ i {
     left: 47%;
     top: 50%;
     margin: -5rem 0 0 -5rem;
+  }
+}
+@media screen and (max-height: 668px) {
+  .time {
+    font-size: 2.5rem;
+    top: 39.3%;
+    left: 44%;
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { BrowserRouter } from 'react-router-dom';
 import ContentRoute from '../../containers/ContentRoute/ContentRoute';
 import { NavBar } from '../../containers/NavBar/NavBar';
@@ -81,7 +82,7 @@ export class App extends Component {
           <span className="header">
             <h1 className="welcome-title">{stravant}</h1>
             {code && (
-              <i class="fas fa-sign-out-alt" onClick={this.signOutUser} />
+              <i className="fas fa-sign-out-alt" onClick={this.signOutUser} />
             )}
           </span>
           {code && <Welcome />}
@@ -116,13 +117,20 @@ export class App extends Component {
               width="150"
               className="strava-powered"
             />
-            <i class="fab fa-strava" />
+            <i className="fab fa-strava" />
           </div>
         </div>
       </BrowserRouter>
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+App.propTypes = {
+  currentUser: object,
+  setAccessToken: func
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser

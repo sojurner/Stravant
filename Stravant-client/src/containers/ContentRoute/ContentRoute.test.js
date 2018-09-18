@@ -1,13 +1,10 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
-
+import { shallow } from 'enzyme';
 import ContentRoute from './ContentRoute';
 import Weekly from '../Weekly/Weekly';
 import { Personal } from '../Personal/Personal';
 import Leaderboard from '../Leaderboard/Leaderboard';
 import { PomControl } from '../PomControl/PomControl';
-import * as mockStore from '../../mockData/mockStore';
-import { Provider } from 'redux';
 
 describe('ContentRoute', () => {
   it('should matchsnapshot when path matches personal', () => {

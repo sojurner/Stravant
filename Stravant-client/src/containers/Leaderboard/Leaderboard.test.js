@@ -1,4 +1,5 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import {
   mapStateToProps,
   mapDispatchToProps,
@@ -73,11 +74,6 @@ describe('Leaderboard', () => {
       />
     );
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it.skip('should make a fetch on componentDidMount', async () => {
-    await wrapper.instance().getClubActivity();
-    expect(getUserClubs).toHaveBeenCalled();
   });
 
   it('should map the store correctly to currentUser', () => {

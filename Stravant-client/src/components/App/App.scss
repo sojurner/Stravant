@@ -114,7 +114,7 @@
 
   .welcome-title {
     font-size: 4rem;
-    margin: -1rem auto;
+    margin: -2rem auto 0 auto;
   }
 
   .required-logo {
@@ -142,5 +142,15 @@
 
   .fa-sign-out-alt {
     display: none;
+  }
+
+  .header {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 667px) {
+  .welcome-title {
+    margin: -4rem auto;
   }
 }
