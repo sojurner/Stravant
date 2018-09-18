@@ -2181,6 +2181,726 @@ ReactWrapper {
 }
 `;
 
+exports[`Personal should match snapshot when state has value and show tool tip is true 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Personal
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {},
+            "weeklyStats": Object {},
+          }
+    }
+    setTotalStats={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="spinning-globe"
+/>,
+        Array [],
+        false,
+      ],
+      "className": "pie-chart-wrap",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "spinning-globe",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="spinning-globe"
+/>,
+          Array [],
+          false,
+        ],
+        "className": "pie-chart-wrap",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "spinning-globe",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Personal should matchSnapShot when there is totalStats 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Personal
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {
+              "runningTotal": Object {
+                "Distance (miles)": 1.2474473941223474,
+                "Elevation (feet)": 1.7142857142857142,
+                "Time (min)": 11.299999999999999,
+              },
+            },
+            "weeklyStats": Object {
+              "Friday": 3784.3,
+              "Monday": 0,
+              "Saturday": 0,
+              "Sunday": 0,
+              "Thursday": 0,
+              "Tuesday": 0,
+              "Wednesday": 0,
+            },
+          }
+    }
+    setTotalStats={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        false,
+        Array [
+          <div
+            className="pie-div"
+>
+            <h3
+                        className="running-avg"
+            >
+                        Running Averages
+            </h3>
+            <Legend
+                        className="legend-key"
+                        config={
+                                    Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                },
+                                              ]
+                        }
+                        data={
+                                    Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                  "key": "Distance (miles)",
+                                                  "value": 1.25,
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                  "key": "Time (min)",
+                                                  "value": 11.3,
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                  "key": "Elevation (feet)",
+                                                  "value": 1.71,
+                                                },
+                                              ]
+                        }
+                        dataId="key"
+                        tags={Array []}
+            />
+            <PieChart
+                        clickHandler={[Function]}
+                        data={
+                                    Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                  "key": "Distance (miles)",
+                                                  "value": 1.25,
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                  "key": "Time (min)",
+                                                  "value": 11.3,
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                  "key": "Elevation (feet)",
+                                                  "value": 1.71,
+                                                },
+                                              ]
+                        }
+                        innerHoleSize={130}
+                        labels={false}
+                        mouseMoveHandler={[Function]}
+                        mouseOutHandler={[Function]}
+                        mouseOverHandler={[Function]}
+                        padding={10}
+                        size={375}
+                        styles={Object {}}
+            />
+</div>,
+        ],
+        "",
+      ],
+      "className": "pie-chart-wrap",
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="running-avg"
+>
+              Running Averages
+</h3>,
+            <Legend
+              className="legend-key"
+              config={
+                            Array [
+                                          Object {
+                                            "color": "rgb(004, 109, 204)",
+                                          },
+                                          Object {
+                                            "color": "rgb(104, 119, 214)",
+                                          },
+                                          Object {
+                                            "color": "rgb(204, 129, 224)",
+                                          },
+                                        ]
+              }
+              data={
+                            Array [
+                                          Object {
+                                            "color": "rgb(004, 109, 204)",
+                                            "key": "Distance (miles)",
+                                            "value": 1.25,
+                                          },
+                                          Object {
+                                            "color": "rgb(104, 119, 214)",
+                                            "key": "Time (min)",
+                                            "value": 11.3,
+                                          },
+                                          Object {
+                                            "color": "rgb(204, 129, 224)",
+                                            "key": "Elevation (feet)",
+                                            "value": 1.71,
+                                          },
+                                        ]
+              }
+              dataId="key"
+              tags={Array []}
+/>,
+            <PieChart
+              clickHandler={[Function]}
+              data={
+                            Array [
+                                          Object {
+                                            "color": "rgb(004, 109, 204)",
+                                            "key": "Distance (miles)",
+                                            "value": 1.25,
+                                          },
+                                          Object {
+                                            "color": "rgb(104, 119, 214)",
+                                            "key": "Time (min)",
+                                            "value": 11.3,
+                                          },
+                                          Object {
+                                            "color": "rgb(204, 129, 224)",
+                                            "key": "Elevation (feet)",
+                                            "value": 1.71,
+                                          },
+                                        ]
+              }
+              innerHoleSize={130}
+              labels={false}
+              mouseMoveHandler={[Function]}
+              mouseOutHandler={[Function]}
+              mouseOverHandler={[Function]}
+              padding={10}
+              size={375}
+              styles={Object {}}
+/>,
+          ],
+          "className": "pie-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Running Averages",
+              "className": "running-avg",
+            },
+            "ref": null,
+            "rendered": "Running Averages",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "className": "legend-key",
+              "config": Array [
+                Object {
+                  "color": "rgb(004, 109, 204)",
+                },
+                Object {
+                  "color": "rgb(104, 119, 214)",
+                },
+                Object {
+                  "color": "rgb(204, 129, 224)",
+                },
+              ],
+              "data": Array [
+                Object {
+                  "color": "rgb(004, 109, 204)",
+                  "key": "Distance (miles)",
+                  "value": 1.25,
+                },
+                Object {
+                  "color": "rgb(104, 119, 214)",
+                  "key": "Time (min)",
+                  "value": 11.3,
+                },
+                Object {
+                  "color": "rgb(204, 129, 224)",
+                  "key": "Elevation (feet)",
+                  "value": 1.71,
+                },
+              ],
+              "dataId": "key",
+              "tags": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "clickHandler": [Function],
+              "data": Array [
+                Object {
+                  "color": "rgb(004, 109, 204)",
+                  "key": "Distance (miles)",
+                  "value": 1.25,
+                },
+                Object {
+                  "color": "rgb(104, 119, 214)",
+                  "key": "Time (min)",
+                  "value": 11.3,
+                },
+                Object {
+                  "color": "rgb(204, 129, 224)",
+                  "key": "Elevation (feet)",
+                  "value": 1.71,
+                },
+              ],
+              "innerHoleSize": 130,
+              "labels": false,
+              "mouseMoveHandler": [Function],
+              "mouseOutHandler": [Function],
+              "mouseOverHandler": [Function],
+              "padding": 10,
+              "size": 375,
+              "styles": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "",
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          Array [
+            <div
+              className="pie-div"
+>
+              <h3
+                            className="running-avg"
+              >
+                            Running Averages
+              </h3>
+              <Legend
+                            className="legend-key"
+                            config={
+                                          Array [
+                                                        Object {
+                                                          "color": "rgb(004, 109, 204)",
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(104, 119, 214)",
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(204, 129, 224)",
+                                                        },
+                                                      ]
+                            }
+                            data={
+                                          Array [
+                                                        Object {
+                                                          "color": "rgb(004, 109, 204)",
+                                                          "key": "Distance (miles)",
+                                                          "value": 1.25,
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(104, 119, 214)",
+                                                          "key": "Time (min)",
+                                                          "value": 11.3,
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(204, 129, 224)",
+                                                          "key": "Elevation (feet)",
+                                                          "value": 1.71,
+                                                        },
+                                                      ]
+                            }
+                            dataId="key"
+                            tags={Array []}
+              />
+              <PieChart
+                            clickHandler={[Function]}
+                            data={
+                                          Array [
+                                                        Object {
+                                                          "color": "rgb(004, 109, 204)",
+                                                          "key": "Distance (miles)",
+                                                          "value": 1.25,
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(104, 119, 214)",
+                                                          "key": "Time (min)",
+                                                          "value": 11.3,
+                                                        },
+                                                        Object {
+                                                          "color": "rgb(204, 129, 224)",
+                                                          "key": "Elevation (feet)",
+                                                          "value": 1.71,
+                                                        },
+                                                      ]
+                            }
+                            innerHoleSize={130}
+                            labels={false}
+                            mouseMoveHandler={[Function]}
+                            mouseOutHandler={[Function]}
+                            mouseOverHandler={[Function]}
+                            padding={10}
+                            size={375}
+                            styles={Object {}}
+              />
+</div>,
+          ],
+          "",
+        ],
+        "className": "pie-chart-wrap",
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="running-avg"
+>
+                Running Averages
+</h3>,
+              <Legend
+                className="legend-key"
+                config={
+                                Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                },
+                                              ]
+                }
+                data={
+                                Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                  "key": "Distance (miles)",
+                                                  "value": 1.25,
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                  "key": "Time (min)",
+                                                  "value": 11.3,
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                  "key": "Elevation (feet)",
+                                                  "value": 1.71,
+                                                },
+                                              ]
+                }
+                dataId="key"
+                tags={Array []}
+/>,
+              <PieChart
+                clickHandler={[Function]}
+                data={
+                                Array [
+                                                Object {
+                                                  "color": "rgb(004, 109, 204)",
+                                                  "key": "Distance (miles)",
+                                                  "value": 1.25,
+                                                },
+                                                Object {
+                                                  "color": "rgb(104, 119, 214)",
+                                                  "key": "Time (min)",
+                                                  "value": 11.3,
+                                                },
+                                                Object {
+                                                  "color": "rgb(204, 129, 224)",
+                                                  "key": "Elevation (feet)",
+                                                  "value": 1.71,
+                                                },
+                                              ]
+                }
+                innerHoleSize={130}
+                labels={false}
+                mouseMoveHandler={[Function]}
+                mouseOutHandler={[Function]}
+                mouseOverHandler={[Function]}
+                padding={10}
+                size={375}
+                styles={Object {}}
+/>,
+            ],
+            "className": "pie-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Running Averages",
+                "className": "running-avg",
+              },
+              "ref": null,
+              "rendered": "Running Averages",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "className": "legend-key",
+                "config": Array [
+                  Object {
+                    "color": "rgb(004, 109, 204)",
+                  },
+                  Object {
+                    "color": "rgb(104, 119, 214)",
+                  },
+                  Object {
+                    "color": "rgb(204, 129, 224)",
+                  },
+                ],
+                "data": Array [
+                  Object {
+                    "color": "rgb(004, 109, 204)",
+                    "key": "Distance (miles)",
+                    "value": 1.25,
+                  },
+                  Object {
+                    "color": "rgb(104, 119, 214)",
+                    "key": "Time (min)",
+                    "value": 11.3,
+                  },
+                  Object {
+                    "color": "rgb(204, 129, 224)",
+                    "key": "Elevation (feet)",
+                    "value": 1.71,
+                  },
+                ],
+                "dataId": "key",
+                "tags": Array [],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "clickHandler": [Function],
+                "data": Array [
+                  Object {
+                    "color": "rgb(004, 109, 204)",
+                    "key": "Distance (miles)",
+                    "value": 1.25,
+                  },
+                  Object {
+                    "color": "rgb(104, 119, 214)",
+                    "key": "Time (min)",
+                    "value": 11.3,
+                  },
+                  Object {
+                    "color": "rgb(204, 129, 224)",
+                    "key": "Elevation (feet)",
+                    "value": 1.71,
+                  },
+                ],
+                "innerHoleSize": 130,
+                "labels": false,
+                "mouseMoveHandler": [Function],
+                "mouseOutHandler": [Function],
+                "mouseOverHandler": [Function],
+                "padding": 10,
+                "size": 375,
+                "styles": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        "",
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
 exports[`Personal should matchSnapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],

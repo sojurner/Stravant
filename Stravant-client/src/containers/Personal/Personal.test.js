@@ -21,8 +21,15 @@ describe('Personal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should match snapshot when state has value and show tool tip is true', () => {
+    wrapper.setState({ value: 4, showToolTop: true });
+    wrapper.update();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should matchSnapShot when there is totalStats', () => {
-    mockCurrentUser = store.mockTotalStats;
+    mockCurrentUser = store.currentUserWithTotalStats;
     wrapper = shallow(
       <Personal currentUser={mockCurrentUser} setTotalStats={mockSetTotal} />
     );
@@ -37,6 +44,12 @@ describe('Personal', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should call setTotalStats when getUserStats is called', async () => {
+    await wrapper.instance().getUserStats();
+
+    expect(mockSetTotal).toHaveBeenCalled();
+  });
+
   it('should setState on mouseOverHandler', () => {
     wrapper.instance().mouseOverHandler({ data: { key: 1, value: 'paul' } });
 
@@ -49,15 +62,6 @@ describe('Personal', () => {
     wrapper.instance().mouseOutHandler();
 
     expect(wrapper.state('showToolTip')).toEqual(false);
-  });
-
-  it('should call mouse overHandler on mouse over', () => {
-    wrapper = mount(
-      <Personal currentUser={mockCurrentUser} setTotalStats={mockSetTotal} />
-    );
-    const foundDiv = wrapper.find('.running-avg');
-
-    expect(mouseOverHandler).toHaveBeenCalled();
   });
 
   it('should map to the store properly', () => {
