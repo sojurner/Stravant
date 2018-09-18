@@ -83,7 +83,7 @@ ShallowWrapper {
 >
           
           <i
-                    class="fas fa-play-circle"
+                    className="fas fa-play-circle"
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
@@ -150,7 +150,7 @@ ShallowWrapper {
           "children": Array [
             "",
             <i
-              class="fas fa-play-circle"
+              className="fas fa-play-circle"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
@@ -176,7 +176,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": " ",
-              "class": "fas fa-play-circle",
+              "className": "fas fa-play-circle",
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
@@ -255,7 +255,7 @@ ShallowWrapper {
 >
             
             <i
-                        class="fas fa-play-circle"
+                        className="fas fa-play-circle"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
@@ -322,7 +322,7 @@ ShallowWrapper {
             "children": Array [
               "",
               <i
-                class="fas fa-play-circle"
+                className="fas fa-play-circle"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -348,7 +348,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": " ",
-                "class": "fas fa-play-circle",
+                "className": "fas fa-play-circle",
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
@@ -516,7 +516,7 @@ ShallowWrapper {
 >
           
           <i
-                    class="fas fa-play-circle"
+                    className="fas fa-play-circle"
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
@@ -588,7 +588,7 @@ ShallowWrapper {
           "children": Array [
             "",
             <i
-              class="fas fa-play-circle"
+              className="fas fa-play-circle"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
@@ -618,7 +618,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": " ",
-              "class": "fas fa-play-circle",
+              "className": "fas fa-play-circle",
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
@@ -708,7 +708,7 @@ ShallowWrapper {
 >
             
             <i
-                        class="fas fa-play-circle"
+                        className="fas fa-play-circle"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
@@ -780,7 +780,7 @@ ShallowWrapper {
             "children": Array [
               "",
               <i
-                class="fas fa-play-circle"
+                className="fas fa-play-circle"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -810,7 +810,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": " ",
-                "class": "fas fa-play-circle",
+                "className": "fas fa-play-circle",
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
@@ -989,7 +989,7 @@ ShallowWrapper {
 >
           
           <i
-                    class="fas fa-play-circle"
+                    className="fas fa-play-circle"
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
@@ -997,7 +997,7 @@ ShallowWrapper {
                      
           </i>
           <i
-                    class="fas fa-stop-circle"
+                    className="fas fa-stop-circle"
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
@@ -1102,7 +1102,7 @@ ShallowWrapper {
           "children": Array [
             "",
             <i
-              class="fas fa-play-circle"
+              className="fas fa-play-circle"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
@@ -1110,7 +1110,7 @@ ShallowWrapper {
                
 </i>,
             <i
-              class="fas fa-stop-circle"
+              className="fas fa-stop-circle"
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
@@ -1172,7 +1172,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": " ",
-              "class": "fas fa-play-circle",
+              "className": "fas fa-play-circle",
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
@@ -1186,7 +1186,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "class": "fas fa-stop-circle",
+              "className": "fas fa-stop-circle",
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
@@ -1430,7 +1430,7 @@ ShallowWrapper {
 >
             
             <i
-                        class="fas fa-play-circle"
+                        className="fas fa-play-circle"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
@@ -1438,7 +1438,7 @@ ShallowWrapper {
                          
             </i>
             <i
-                        class="fas fa-stop-circle"
+                        className="fas fa-stop-circle"
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
@@ -1543,7 +1543,7 @@ ShallowWrapper {
             "children": Array [
               "",
               <i
-                class="fas fa-play-circle"
+                className="fas fa-play-circle"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1551,7 +1551,7 @@ ShallowWrapper {
                  
 </i>,
               <i
-                class="fas fa-stop-circle"
+                className="fas fa-stop-circle"
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
@@ -1613,7 +1613,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": " ",
-                "class": "fas fa-play-circle",
+                "className": "fas fa-play-circle",
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
@@ -1627,7 +1627,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "class": "fas fa-stop-circle",
+                "className": "fas fa-stop-circle",
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],

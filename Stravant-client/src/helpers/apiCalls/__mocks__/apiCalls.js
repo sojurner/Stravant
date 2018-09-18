@@ -114,6 +114,31 @@ const recursiveRetrivalResolution = [
   }
 ];
 
+const mockClubsResolution = [
+  {
+    resource_state: 2,
+    athlete: { resource_state: 2, firstname: 'Pamela', lastname: 'L.' },
+    name: 'Morning Run',
+    distance: 6871.2,
+    moving_time: 2620,
+    elapsed_time: 2821,
+    total_elevation_gain: 17,
+    type: 'Run',
+    workout_type: null
+  },
+  {
+    resource_state: 2,
+    athlete: { resource_state: 2, firstname: 'Paul', lastname: 'K.' },
+    name: 'Afternoon Run',
+    distance: 501.6,
+    moving_time: 149,
+    elapsed_time: 183,
+    total_elevation_gain: 0,
+    type: 'Run',
+    workout_type: 0
+  }
+];
+
 export const exchangeUserToken = async code => {
   return await new Promise(resolve => {
     return resolve({
@@ -126,6 +151,14 @@ export const getUserClubs = async token => {
   return await new Promise(resolve => {
     return resolve({
       json: () => Promise.resolve(userClubsResolution)
+    });
+  });
+};
+
+export const getClubActivity = async (arr, token) => {
+  return await new Promise(resolve => {
+    return resolve({
+      json: () => Promise.resolve(mockClubsResolution)
     });
   });
 };

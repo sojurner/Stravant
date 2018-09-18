@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'shallow';
+import { shallow } from 'enzyme';
 import { PomControl, mapStateToProps, mapDispatchToProps } from './PomControl';
 import * as mock from './mockData';
 import * as store from '../../mockData/mockStore';
@@ -176,7 +176,7 @@ describe('PomControl', () => {
       hour: 0,
       mSecond: 0,
       minute: 0,
-      pomSummary: '5s  4m  10h',
+      pomSummary: '10h 4m 5s',
       save: true,
       second: 0,
       socketMessage: '',

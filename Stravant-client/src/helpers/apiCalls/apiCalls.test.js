@@ -106,4 +106,47 @@ describe('apiCalls', () => {
       expect(result).toEqual(expected);
     });
   });
+
+  describe('getClubActivity', () => {
+    // let expected;
+    let result;
+
+    beforeEach(() => {
+      result = [
+        {
+          id: 473825,
+          resource_state: 2,
+          name: 'Stravant Club',
+          profile_medium:
+            'https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg',
+          profile:
+            'https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg',
+          cover_photo:
+            'https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg',
+          cover_photo_small:
+            'https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg',
+          sport_type: 'running',
+          city: 'Denver',
+          state: 'Colorado',
+          country: 'United States',
+          private: false,
+          member_count: 5,
+          featured: false,
+          verified: false,
+          url: 'stravant'
+        }
+      ];
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          json: () => Promise.resolve(result)
+        });
+      });
+    });
+
+    it('should call fetch method', async () => {
+      await apiCalls.getUserClubs('asdfsa1234');
+
+      expect(window.fetch).toHaveBeenCalled();
+    });
+  });
 });

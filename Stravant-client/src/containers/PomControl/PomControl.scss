@@ -1,7 +1,7 @@
 .pom-instruction,
 .stop-instruction {
   position: absolute;
-  top: 63%;
+  top: 64%;
   left: 50%;
   font-size: 1.2rem;
   font-family: daybold;
@@ -100,7 +100,7 @@ i {
   font-family: daybold;
   font-size: 2rem;
   left: 48%;
-  top: 46%;
+  top: 50%;
   margin: -4rem 0 0 -4rem;
   color: #ffffff;
 }
@@ -130,11 +130,7 @@ i {
   }
   .pom-instruction,
   .stop-instruction {
-    bottom: 51%;
-    left: 44%;
-    font-size: 1.2rem;
-    font-family: daybold;
-    color: azure;
+    display: none;
   }
   .track-poms {
     margin: 2rem 0 0 0;

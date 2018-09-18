@@ -78,7 +78,7 @@ export const getUserClubs = async token => {
   return scrape.clubData(result, activityData);
 };
 
-const getClubActivity = async (clubId, token) => {
+export const getClubActivity = async (clubId, token) => {
   const url = `https://www.strava.com/api/v3/clubs/${clubId}/activities?page=1&per_page=200`;
   const options = {
     method: 'GET',
@@ -88,5 +88,6 @@ const getClubActivity = async (clubId, token) => {
     }
   };
   const response = await fetch(url, options);
-  return await response.json();
+  const result = await response.json();
+  return result;
 };
