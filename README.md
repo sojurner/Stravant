@@ -1,5 +1,23 @@
 # Stravant
 
+```
+git clone https://github.com/sojurner/Stravant.git
+```
+
+```
+npm install
+```
+```
+node.serverjs
+```
+cd into Stravant-client
+
+```
+npm install
+```
+```
+npm start
+```
 
 HomeScreen
 ![image](https://user-images.githubusercontent.com/35910428/45703632-1df2a400-bb32-11e8-9296-efee0118f56c.png)
