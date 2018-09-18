@@ -9,13 +9,16 @@ import './PomContainer.css';
 export class PomContainer extends Component {
   render() {
     const { pomHistory, removePom } = this.props;
-    const pomContainer = Object.keys(pomHistory).map(time => {
+    const pomContainer = Object.keys(pomHistory).map((time, index) => {
       const pomTime = ` ${pomHistory[time].hour}h ${pomHistory[time].minute}m ${
         pomHistory[time].second
       }s`;
       return (
-        <div className="pom-cards">
-          <i class="fab fa-xbox" onClick={() => removePom(pomHistory, time)} />
+        <div key={index} className="pom-cards">
+          <i
+            className="fab fa-xbox"
+            onClick={() => removePom(pomHistory, time)}
+          />
           <h4>{time} </h4>
           <p>{pomTime}</p>
         </div>
