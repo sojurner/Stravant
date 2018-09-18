@@ -1,44 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar should match snapshot 1`] = `
-<nav
-  className="nav-bar"
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-personal"
+          exact={true}
+          to="/personal"
 >
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
-    className="nav-link nav-personal"
-    exact={true}
-    to="/personal"
-  >
-    personal
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
-    className="nav-link nav-weekly"
-    exact={true}
-    to="/weekly"
-  >
-    weekly
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
-    className="nav-link nav-leaderboard"
-    exact={true}
-    to="/leaderboard"
-  >
-    leaderboard
-  </NavLink>
-  <NavLink
-    activeClassName="active"
-    aria-current="page"
-    className="nav-link nav-pomodoro"
-    exact={true}
-    to="/pomodoro"
-  >
-    pomodoro
-  </NavLink>
-</nav>
+          personal
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-weekly"
+          exact={true}
+          to="/weekly"
+>
+          weekly
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-leaderboard"
+          exact={true}
+          to="/leaderboard"
+>
+          leaderboard
+</NavLink>,
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          className="nav-link nav-pomodoro"
+          exact={true}
+          to="/pomodoro"
+>
+          pomodoro
+</NavLink>,
+      ],
+      "className": "nav-bar",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "personal",
+          "className": "nav-link nav-personal",
+          "exact": true,
+          "to": "/personal",
+        },
+        "ref": null,
+        "rendered": "personal",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "weekly",
+          "className": "nav-link nav-weekly",
+          "exact": true,
+          "to": "/weekly",
+        },
+        "ref": null,
+        "rendered": "weekly",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "leaderboard",
+          "className": "nav-link nav-leaderboard",
+          "exact": true,
+          "to": "/leaderboard",
+        },
+        "ref": null,
+        "rendered": "leaderboard",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": "pomodoro",
+          "className": "nav-link nav-pomodoro",
+          "exact": true,
+          "to": "/pomodoro",
+        },
+        "ref": null,
+        "rendered": "pomodoro",
+        "type": [Function],
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-personal"
+            exact={true}
+            to="/personal"
+>
+            personal
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-weekly"
+            exact={true}
+            to="/weekly"
+>
+            weekly
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-leaderboard"
+            exact={true}
+            to="/leaderboard"
+>
+            leaderboard
+</NavLink>,
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="nav-link nav-pomodoro"
+            exact={true}
+            to="/pomodoro"
+>
+            pomodoro
+</NavLink>,
+        ],
+        "className": "nav-bar",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "personal",
+            "className": "nav-link nav-personal",
+            "exact": true,
+            "to": "/personal",
+          },
+          "ref": null,
+          "rendered": "personal",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "weekly",
+            "className": "nav-link nav-weekly",
+            "exact": true,
+            "to": "/weekly",
+          },
+          "ref": null,
+          "rendered": "weekly",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "leaderboard",
+            "className": "nav-link nav-leaderboard",
+            "exact": true,
+            "to": "/leaderboard",
+          },
+          "ref": null,
+          "rendered": "leaderboard",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": "pomodoro",
+            "className": "nav-link nav-pomodoro",
+            "exact": true,
+            "to": "/pomodoro",
+          },
+          "ref": null,
+          "rendered": "pomodoro",
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;
