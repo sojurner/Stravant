@@ -1,6 +1,6 @@
 # Stravant
 
-**Instructions ---
+### Instructions ---
 
 clone down this rpo
 ```
