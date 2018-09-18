@@ -2,19 +2,18 @@
 
 ### Instructions ---
 
-clone down this rpo
+Clone down this repository
 ```
 git clone https://github.com/sojurner/Stravant.git
 ```
 ```
 npm install
-node.serverjs
+node server.js
 ```
 cd into Stravant-client
 
 ```
 npm install
-
 npm start
 ```
 
