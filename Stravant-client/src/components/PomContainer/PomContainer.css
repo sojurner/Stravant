@@ -3,27 +3,44 @@
   flex-direction: horizontal;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 46.5rem;
+  margin: 1rem auto;
+  justify-content: center;
+  width: 54.5rem;
   font-family: daybold; }
 
 .pom-cards {
-  min-width: 10rem;
-  max-width: 10rem;
+  width: 15rem;
   padding: 0.1rem 0.5rem;
-  margin: 0 0.2rem;
+  margin: 0.2rem 0.2rem;
   border: 2px solid black;
   background-color: #acaaaa;
   font-size: 1.5rem; }
 
 .pom-cards:hover {
-  background-color: #d0c4c4; }
+  background-color: #d0c4c4;
+  box-shadow: 1px 1px 1px 1px #d0aaaa; }
 
 .fa-xbox {
-  color: #7c564d; }
+  color: #7c564d;
+  font-size: 1.5rem; }
 
 .fa-xbox:hover {
   color: #c27062;
   cursor: pointer; }
+
+h4 {
+  width: 12rem;
+  margin: 1rem auto;
+  text-align: center; }
+
+p {
+  margin: 1.5rem auto;
+  text-align: center;
+  color: #9d3c00; }
+
+@media screen and (max-width: 1000px) {
+  .pom-container {
+    width: 41rem; } }
 
 @media screen and (max-width: 800px) {
   .pom-container {
@@ -33,9 +50,10 @@
     overflow-y: auto;
     margin: auto;
     width: 18rem;
-    height: 12rem;
-    font-family: daybold; }
+    height: 23rem;
+    font-family: daybold;
+    justify-content: start; }
   .pom-cards {
-    margin: auto;
+    margin: 0.2rem auto;
     width: 20rem;
     max-width: 15rem; } }

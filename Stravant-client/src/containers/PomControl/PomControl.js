@@ -124,7 +124,7 @@ export class PomControl extends Component {
     const storageItem = JSON.parse(localStorage.getItem('pomHistory'));
     setPomHistory(storageItem);
 
-    const timeSummary = `${second}s  ${minute}m  ${hour}h`;
+    const timeSummary = `${hour}h ${minute}m ${second}s`;
     this.setState({
       mSecond: 0,
       second: 0,
@@ -137,7 +137,7 @@ export class PomControl extends Component {
 
     setTimeout(() => {
       this.setState({ pomSummary: '' });
-    }, 4000);
+    }, 8000);
   };
 
   removePom = (history, time) => {
@@ -243,15 +243,7 @@ export class PomControl extends Component {
 
           {hide && <p className="stop-instruction">Show Pom?</p>}
 
-          {save &&
-            pomSummary && (
-              <h4>
-                <div>Most recent:</div>
-                ---
-                {pomSummary}
-                ---
-              </h4>
-            )}
+          {save && pomSummary && <h4 className="summary">{pomSummary}</h4>}
         </section>
 
         <PomContainer removePom={this.removePom} pomHistory={pomHistory} />

@@ -39,16 +39,18 @@ li {
   letter-spacing: 2px;
   background: #c5696a;
   border-radius: 0.4em;
-  margin: 25rem 0;
+  margin: 26rem 0;
   padding: 1rem;
   opacity: 0.9; }
 
 .legend-container-fc25d28b8dda2e2172d549eafe0de054a26a4837 {
-  width: 11rem;
-  margin: 8.7rem 6.3rem;
+  width: 9rem;
+  margin: -3rem 0 0 -19rem;
   position: fixed;
+  top: 43%;
+  left: 50%;
   font-family: daybold;
-  font-size: 1.5rem; }
+  font-size: 1rem; }
 
 .legend {
   padding-top: 0.5rem;
@@ -78,8 +80,8 @@ li {
 
 @media screen and (max-width: 510px) {
   .pie-chart-wrap {
-    margin-top: 2rem; }
+    margin-top: 1.4rem; }
   .running-avg {
-    margin: 2rem; }
+    margin: 0.7rem; }
   .data-details {
     margin: 30rem 0; } }
