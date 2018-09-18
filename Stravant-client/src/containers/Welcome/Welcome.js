@@ -17,18 +17,16 @@ export class Welcome extends Component {
   }
 
   componentDidMount() {
-    const { search } = window.location;
-    const codeIndex = search.indexOf('code') + 5;
-    const lastIndex = search.lastIndexOf('&');
-    const userCode = search.slice(codeIndex, lastIndex);
-    this.exchangeToken(userCode);
+    this.exchangeToken(window.location.search);
   }
 
-  exchangeToken = async code => {
+  exchangeToken = async url => {
+    const codeIndex = url.indexOf('code') + 5;
+    const lastIndex = url.lastIndexOf('&');
+    const code = url.slice(codeIndex, lastIndex);
     const result = await apiCalls.exchangeUserToken(code);
     if (!result.message) {
-      const scrapedUserInfo = scrape.userInfo(result);
-      this.props.setAccessToken(scrapedUserInfo);
+      this.props.setAccessToken(result);
     }
     localStorage.setItem('code', JSON.stringify({ code }));
   };
@@ -85,14 +83,12 @@ const { object, func } = PropTypes;
 
 Welcome.propTypes = {
   currentUser: object,
-  pomStatus: object,
   setAccessToken: func,
   setWeeklyStats: func
 };
 
 const mapStateToProps = state => ({
-  currentUser: state.currentUser,
-  pomStatus: state.pomStatus
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

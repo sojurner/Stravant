@@ -30,9 +30,52 @@ text {
   margin: 1rem;
 }
 
-// @media screen and (max-width: 510px) {
-//   svg {
-//     width: 20rem;
-//     height: 20rem;
-//   }
-// }
+.compare-data-text {
+  margin: 0rem auto 2.7rem auto;
+}
+
+.x-axis {
+  position: absolute;
+  left: 47.5%;
+  top: 83%;
+  font-family: daybold;
+  font-size: 1.5rem;
+  color: rgb(90, 89, 89);
+  font-weight: 800;
+}
+
+.y-axis {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: fixed;
+  left: 49%;
+  font-size: 2rem;
+  font-family: daybold;
+  top: 65%;
+  margin: -12.5rem 0 0 -12.5rem;
+}
+
+.weekly-title {
+  position: absolute;
+  font-family: daybold;
+  left: 49%;
+  font-size: 1.7rem;
+  top: 25%;
+}
+
+@media screen and (max-width: 510px) {
+  .compare-data-text {
+    margin: 4rem auto 2.7rem auto;
+  }
+
+  .y-axis {
+    top: 60%;
+    left: 51%;
+  }
+
+  .x-axis {
+    top: 77%;
+    left: 38%;
+    font-size: 2rem;
+  }
+}

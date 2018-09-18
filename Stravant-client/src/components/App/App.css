@@ -108,6 +108,4 @@
   .fa-bars {
     display: block; }
   .fa-sign-out-alt {
-    font-size: 8vw;
-    margin: 1rem 1rem;
-    color: #963005; } }
+    display: none; } }

@@ -1,7 +1,7 @@
 export const userInfo = info => {
   const modifiedObj = {
     accessToken: info.access_token,
-    userId: info.athlete.id,
+    // userId: info.athlete.id,
     firstName: info.athlete.firstname,
     gender: info.athlete.sex,
     profilePic: info.athlete.profile

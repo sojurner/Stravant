@@ -1,32 +1,34 @@
-import React from 'react';
-import { mapStateToProps, mapDispatchToProps, App } from './App';
-import * as store from '../../mockData/mockStore';
-import { setAccessToken } from '../../actions/userAction';
+// import React from 'react';
+// import { mapStateToProps, mapDispatchToProps, App } from './App';
+// import * as store from '../../mockData/mockStore';
+// import { setAccessToken } from '../../actions/userAction';
 
-// it('renders without crashing', () => {
+// it('renders without crashing', done => {
 //   const div = document.createElement('div');
 //   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
+//   // ReactDOM.unmountComponentAtNode(div);
+//   // setTimeout(() => done());
 // });
 
 // jest.mock('../../helpers/apiCalls/apiCalls');
 
 // describe('App', () => {
+//   window.location = { search: 'localHost.com' };
+//   console.log(window.location);
+
 //   let wrapper;
 //   let mockStore;
+
 //   beforeEach(() => {
-//     global.window = { location: { search: 'http://localhost:3000.com' } };
 //     wrapper = shallow(<App currentUser={store.currentUser} />);
 //   });
-//   it('should matchsnapshot', done => {
-//     wrapper = mount(<App currentUser={store.currentUser} />);
-//     setTimeout(() => {
-//       wrapper.update();
-//       expect(wrapper).toMatchSnapshot();
 
-//       done();
-//     });
+//   it('should matchsnapshot', () => {
+//     wrapper = mount(<App currentUser={store.currentUser} />);
+
+//     expect(wrapper).toMatchSnapshot();
 //   });
+// });
 
 // it('should render NavBar and Welcome and ContentRoute if state of code exists', () => {
 //   wrapper.setState({ code: 'adfad' });
@@ -46,5 +48,4 @@ import { setAccessToken } from '../../actions/userAction';
 //   const mapped = mapDispatchToProps(mockDispatch);
 //   mapped.setAccessToken();
 //   expect(mockDispatch).toHaveBeenCalled();
-// });
 // });

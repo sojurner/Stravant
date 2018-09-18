@@ -57,8 +57,6 @@ describe('Personal', () => {
     );
     const foundDiv = wrapper.find('.running-avg');
 
-    console.log(foundDiv.props());
-
     expect(mouseOverHandler).toHaveBeenCalled();
   });
 

@@ -15,9 +15,9 @@ export const exchangeUserToken = async code => {
     }
   };
   const response = await fetch(url, options);
-
   const result = await response.json();
-  return result;
+  const scrapedResult = scrape.userInfo(result);
+  return scrapedResult;
 };
 
 export const getAggregateStats = async (token, id) => {
@@ -60,7 +60,6 @@ export const recursiveRetrival = async (token, num) => {
   };
   const response = await fetch(url, options);
   const result = await response.json();
-  console.log(result);
   return result;
 };
 

@@ -23,6 +23,7 @@ export class App extends Component {
 
   componentDidMount() {
     const { search } = window.location;
+    console.log(window.location);
     const codeIndex = search.indexOf('code') + 5;
     const lastIndex = search.lastIndexOf('&');
     if (search.includes('code')) {
@@ -67,7 +68,7 @@ export class App extends Component {
   };
 
   render() {
-    const { code, toggleNav, toggleBars } = this.state;
+    const { code } = this.state;
     const stravant = 'S†ra√an†';
 
     return (

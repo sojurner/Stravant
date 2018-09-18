@@ -1,65 +1,422 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Weekly should match snapshot 1`] = `
-<div
-  className="compare-data-text"
-  onClick={[Function]}
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Weekly
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {},
+            "weeklyStats": Object {},
+          }
+    }
+    setWeeklyStats={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        false,
+        <h3
+          className="weekly-title"
 >
-  <AreaChart
-    areaColors={
-      Array [
-        "#7c5433",
-      ]
-    }
-    axes={true}
-    axisLabels={
+          Weekly Progress
+</h3>,
+        <AreaChart
+          areaColors={
+                    Array [
+                              "#7c5433",
+                            ]
+          }
+          axes={true}
+          axisLabels={
+                    Object {
+                              "x": "",
+                              "y": "",
+                            }
+          }
+          clickHandler={[Function]}
+          data={
+                    Array [
+                              Array [],
+                            ]
+          }
+          dataPoints={true}
+          datePattern="%d-%b-%y"
+          grid={true}
+          height={450}
+          interpolate="cardinal"
+          margin={
+                    Object {
+                              "bottom": 60,
+                              "left": 60,
+                              "right": 10,
+                              "top": 10,
+                            }
+          }
+          mouseMoveHandler={[Function]}
+          mouseOutHandler={[Function]}
+          mouseOverHandler={[Function]}
+          verticalGrid={true}
+          width={375}
+          xType="text"
+          yDomainRange={
+                    Array [
+                              0,
+                              2.4,
+                            ]
+          }
+          yType="linear"
+/>,
+        <p
+          className="x-axis"
+>
+           Day of Week 
+</p>,
+        <p
+          className="y-axis"
+>
+          Distance
+</p>,
+        <p
+          className="area-data-details"
+          style={
+                    Object {
+                              "left": 10,
+                              "position": "absolute",
+                              "top": -140,
+                            }
+          }
+/>,
+      ],
+      "className": "compare-data-text",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      false,
       Object {
-        "x": "Days of Week",
-        "y": "Distance (Miles)",
-      }
-    }
-    clickHandler={[Function]}
-    data={
-      Array [
-        Array [],
-      ]
-    }
-    dataPoints={true}
-    datePattern="%d-%b-%y"
-    grid={true}
-    height={450}
-    interpolate="cardinal"
-    margin={
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Weekly Progress",
+          "className": "weekly-title",
+        },
+        "ref": null,
+        "rendered": "Weekly Progress",
+        "type": "h3",
+      },
       Object {
-        "bottom": 60,
-        "left": 60,
-        "right": 10,
-        "top": 10,
-      }
-    }
-    mouseMoveHandler={[Function]}
-    mouseOutHandler={[Function]}
-    mouseOverHandler={[Function]}
-    verticalGrid={true}
-    width={375}
-    xType="text"
-    yDomainRange={
-      Array [
-        0,
-        3,
-      ]
-    }
-    yType="linear"
-  />
-  <p
-    className="area-data-details"
-    style={
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "areaColors": Array [
+            "#7c5433",
+          ],
+          "axes": true,
+          "axisLabels": Object {
+            "x": "",
+            "y": "",
+          },
+          "clickHandler": [Function],
+          "data": Array [
+            Array [],
+          ],
+          "dataPoints": true,
+          "datePattern": "%d-%b-%y",
+          "grid": true,
+          "height": 450,
+          "interpolate": "cardinal",
+          "margin": Object {
+            "bottom": 60,
+            "left": 60,
+            "right": 10,
+            "top": 10,
+          },
+          "mouseMoveHandler": [Function],
+          "mouseOutHandler": [Function],
+          "mouseOverHandler": [Function],
+          "verticalGrid": true,
+          "width": 375,
+          "xType": "text",
+          "yDomainRange": Array [
+            0,
+            2.4,
+          ],
+          "yType": "linear",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
-        "left": 10,
-        "position": "absolute",
-        "top": -140,
-      }
-    }
-  />
-</div>
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Day of Week ",
+          "className": "x-axis",
+        },
+        "ref": null,
+        "rendered": " Day of Week ",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Distance",
+          "className": "y-axis",
+        },
+        "ref": null,
+        "rendered": "Distance",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "area-data-details",
+          "style": Object {
+            "left": 10,
+            "position": "absolute",
+            "top": -140,
+          },
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <h3
+            className="weekly-title"
+>
+            Weekly Progress
+</h3>,
+          <AreaChart
+            areaColors={
+                        Array [
+                                    "#7c5433",
+                                  ]
+            }
+            axes={true}
+            axisLabels={
+                        Object {
+                                    "x": "",
+                                    "y": "",
+                                  }
+            }
+            clickHandler={[Function]}
+            data={
+                        Array [
+                                    Array [],
+                                  ]
+            }
+            dataPoints={true}
+            datePattern="%d-%b-%y"
+            grid={true}
+            height={450}
+            interpolate="cardinal"
+            margin={
+                        Object {
+                                    "bottom": 60,
+                                    "left": 60,
+                                    "right": 10,
+                                    "top": 10,
+                                  }
+            }
+            mouseMoveHandler={[Function]}
+            mouseOutHandler={[Function]}
+            mouseOverHandler={[Function]}
+            verticalGrid={true}
+            width={375}
+            xType="text"
+            yDomainRange={
+                        Array [
+                                    0,
+                                    2.4,
+                                  ]
+            }
+            yType="linear"
+/>,
+          <p
+            className="x-axis"
+>
+             Day of Week 
+</p>,
+          <p
+            className="y-axis"
+>
+            Distance
+</p>,
+          <p
+            className="area-data-details"
+            style={
+                        Object {
+                                    "left": 10,
+                                    "position": "absolute",
+                                    "top": -140,
+                                  }
+            }
+/>,
+        ],
+        "className": "compare-data-text",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Weekly Progress",
+            "className": "weekly-title",
+          },
+          "ref": null,
+          "rendered": "Weekly Progress",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "areaColors": Array [
+              "#7c5433",
+            ],
+            "axes": true,
+            "axisLabels": Object {
+              "x": "",
+              "y": "",
+            },
+            "clickHandler": [Function],
+            "data": Array [
+              Array [],
+            ],
+            "dataPoints": true,
+            "datePattern": "%d-%b-%y",
+            "grid": true,
+            "height": 450,
+            "interpolate": "cardinal",
+            "margin": Object {
+              "bottom": 60,
+              "left": 60,
+              "right": 10,
+              "top": 10,
+            },
+            "mouseMoveHandler": [Function],
+            "mouseOutHandler": [Function],
+            "mouseOverHandler": [Function],
+            "verticalGrid": true,
+            "width": 375,
+            "xType": "text",
+            "yDomainRange": Array [
+              0,
+              2.4,
+            ],
+            "yType": "linear",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Day of Week ",
+            "className": "x-axis",
+          },
+          "ref": null,
+          "rendered": " Day of Week ",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Distance",
+            "className": "y-axis",
+          },
+          "ref": null,
+          "rendered": "Distance",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "area-data-details",
+            "style": Object {
+              "left": 10,
+              "position": "absolute",
+              "top": -140,
+            },
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;
