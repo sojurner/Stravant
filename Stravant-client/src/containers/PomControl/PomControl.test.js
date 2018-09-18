@@ -123,9 +123,11 @@ describe('PomControl', () => {
   it('should reset the state of times to true and save to 0', () => {
     wrapper.setState(state);
 
-    wrapper.instance().resetTimer();
+    setTimeout(() => {
+      wrapper.instance().resetTimer();
+    });
 
-    expect(wrapper.state()).toEqual(defaultState);
+    expect(wrapper.state('pomSummary')).toEqual('');
   });
 
   it('should set state of description whn addDescription is called', () => {
@@ -184,13 +186,6 @@ describe('PomControl', () => {
     });
   });
 
-  it('should remove a Pom from localStorage', () => {
-    wrapper.setState({ showHistory: false });
-    wrapper.instance().showPoms();
-
-    expect(wrapper.state('showHistory')).toEqual(true);
-  });
-
   it('should remove pom from store', () => {
     const local = {
       'Mon, Sep 10, 2018 9:12 PM': {
@@ -218,6 +213,7 @@ describe('PomControl', () => {
 
     wrapper.instance().removePom(local, 'Mon, Sep 10, 2018 9:12 PM');
     expect(localStorage.store).toEqual({ pomHistory: stringifiedExpected });
+    expect(mockSetPom).toHaveBeenCalled();
     expect(wrapper.state('pomSummary')).toEqual('');
   });
 
@@ -237,7 +233,7 @@ describe('PomControl', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should remove on hoveroff', () => {
+  it('should remove description on hoveroff', () => {
     const spy = jest.spyOn(wrapper.instance(), 'removeDescription');
     wrapper.instance().forceUpdate();
     const movieCard = wrapper.find('i');

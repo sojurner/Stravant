@@ -164,7 +164,6 @@ ShallowWrapper {
             false,
             false,
             false,
-            false,
           ],
           "className": "pom-details",
         },
@@ -186,7 +185,6 @@ ShallowWrapper {
             "rendered": " ",
             "type": "i",
           },
-          false,
           false,
           false,
           false,
@@ -338,7 +336,6 @@ ShallowWrapper {
               false,
               false,
               false,
-              false,
             ],
             "className": "pom-details",
           },
@@ -360,7 +357,6 @@ ShallowWrapper {
               "rendered": " ",
               "type": "i",
             },
-            false,
             false,
             false,
             false,
@@ -601,7 +597,6 @@ ShallowWrapper {
 </i>,
             false,
             false,
-            false,
             <p
               className="pom-instruction"
 >
@@ -632,7 +627,6 @@ ShallowWrapper {
             "rendered": " ",
             "type": "i",
           },
-          false,
           false,
           false,
           Object {
@@ -795,7 +789,6 @@ ShallowWrapper {
 </i>,
               false,
               false,
-              false,
               <p
                 className="pom-instruction"
 >
@@ -826,7 +819,6 @@ ShallowWrapper {
               "rendered": " ",
               "type": "i",
             },
-            false,
             false,
             false,
             Object {
@@ -1168,7 +1160,6 @@ ShallowWrapper {
             false,
             false,
             false,
-            false,
           ],
           "className": "pom-details",
         },
@@ -1371,7 +1362,6 @@ ShallowWrapper {
             ],
             "type": "div",
           },
-          false,
           false,
           false,
           false,
@@ -1611,7 +1601,6 @@ ShallowWrapper {
               false,
               false,
               false,
-              false,
             ],
             "className": "pom-details",
           },
@@ -1814,7 +1803,6 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-            false,
             false,
             false,
             false,
