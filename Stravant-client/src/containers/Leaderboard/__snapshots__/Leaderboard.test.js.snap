@@ -425,7 +425,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "0",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -494,7 +494,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -563,7 +563,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "2",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -632,7 +632,7 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": undefined,
+                "key": "3",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
@@ -1072,7 +1072,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "0",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -1141,7 +1141,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "1",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -1210,7 +1210,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "2",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
@@ -1279,7 +1279,7 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": undefined,
+                  "key": "3",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
