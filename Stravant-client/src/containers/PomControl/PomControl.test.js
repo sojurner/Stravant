@@ -1,7 +1,7 @@
 import React from 'react';
-import { PomControl } from './PomControl';
+import { PomControl, mapStateToProps, mapDispatchToProps } from './PomControl';
 import * as mock from './mockData';
-import { isDate } from 'moment';
+import * as store from '../../mockData/mockStore';
 
 describe('PomControl', () => {
   let wrapper;
@@ -26,14 +26,16 @@ describe('PomControl', () => {
 
   defaultState = {
     description: false,
+    hide: false,
     hour: 0,
     mSecond: 0,
     minute: 0,
     pomSummary: '7s  2m  1h',
     save: true,
     second: 0,
-    showHistory: false,
-    start: false
+    socketMessage: '',
+    start: false,
+    stop: true
   };
 
   state = {
@@ -49,10 +51,16 @@ describe('PomControl', () => {
   });
 
   it('should setState of save to false and togglePomState to have been called', () => {
-    wrapper.instance().togglePom('start');
+    expect(wrapper.state('start')).toEqual(false);
+
+    wrapper.instance().togglePom({}, 'start');
 
     expect(wrapper.state('start')).toEqual(true);
+    expect(wrapper.state('stop')).toEqual(false);
 
+    wrapper.instance().togglePom({}, 'hide');
+
+    expect(wrapper.state('hide')).toEqual(true);
     expect(mockToggle).toHaveBeenCalled();
   });
 
@@ -104,22 +112,35 @@ describe('PomControl', () => {
     expect(wrapper.state('hour')).toEqual(2);
   });
 
-  it('should toggle state of description', () => {
-    wrapper.instance().handleDescription();
+  it('should stop time and set State of start and stop', () => {
+    wrapper.setState({ start: true, stop: false });
+    wrapper.instance().stopTime();
 
-    expect(wrapper.state('description')).toEqual(true);
-
-    wrapper.instance().handleDescription();
-
-    expect(wrapper.state('description')).toEqual(false);
+    expect(wrapper.state('start')).toEqual(false);
+    expect(wrapper.state('stop')).toEqual(true);
   });
 
   it('should reset the state of times to true and save to 0', () => {
     wrapper.setState(state);
 
-    wrapper.instance().resetTimer();
+    setTimeout(() => {
+      wrapper.instance().resetTimer();
+    });
 
-    expect(wrapper.state()).toEqual(defaultState);
+    expect(wrapper.state('pomSummary')).toEqual('');
+  });
+
+  it('should set state of description whn addDescription is called', () => {
+    wrapper.instance().addDescription('paul');
+
+    expect(wrapper.state('description')).toEqual('paul');
+  });
+
+  it('should set state of description to an empty string when removeDescription is called', () => {
+    wrapper.setState({ description: 'paul' });
+
+    wrapper.instance().removeDescription();
+    expect(wrapper.state('description')).toEqual('');
   });
 
   it('should grab from local storage', () => {
@@ -150,13 +171,19 @@ describe('PomControl', () => {
     wrapper.instance().resetTimer();
 
     expect(localStorage.store).toEqual(expected);
-  });
-
-  it('should toggle state of history', () => {
-    wrapper.setState({ showHistory: false });
-    wrapper.instance().showPoms();
-
-    expect(wrapper.state('showHistory')).toEqual(true);
+    expect(wrapper.state()).toEqual({
+      description: false,
+      hide: false,
+      hour: 0,
+      mSecond: 0,
+      minute: 0,
+      pomSummary: '5s  4m  10h',
+      save: true,
+      second: 0,
+      socketMessage: '',
+      start: false,
+      stop: true
+    });
   });
 
   it('should remove pom from store', () => {
@@ -186,8 +213,108 @@ describe('PomControl', () => {
 
     wrapper.instance().removePom(local, 'Mon, Sep 10, 2018 9:12 PM');
     expect(localStorage.store).toEqual({ pomHistory: stringifiedExpected });
+    expect(mockSetPom).toHaveBeenCalled();
+    expect(wrapper.state('pomSummary')).toEqual('');
   });
-  it('should match snapShot', () => {
+
+  it('should start the timer on click', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'togglePom');
+    wrapper.instance().forceUpdate();
+    const movieCard = wrapper.find('i');
+    movieCard.simulate('click');
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should add Description on hover', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'addDescription');
+    wrapper.instance().forceUpdate();
+    const movieCard = wrapper.find('i');
+    movieCard.simulate('mouseEnter');
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should remove description on hoveroff', () => {
+    const spy = jest.spyOn(wrapper.instance(), 'removeDescription');
+    wrapper.instance().forceUpdate();
+    const movieCard = wrapper.find('i');
+    movieCard.simulate('mouseLeave');
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should match snapshot when state of time changes', () => {
+    wrapper.setState({ second: 1, hide: false, start: true, stop: false });
+    wrapper.update();
+
     expect(wrapper).toMatchSnapshot();
+
+    const spyStop = jest.spyOn(wrapper.instance(), 'stopTime');
+    const spyReset = jest.spyOn(wrapper.instance(), 'resetTimer');
+    wrapper.instance().forceUpdate();
+    wrapper
+      .find('i')
+      .at(1)
+      .simulate('click');
+    expect(spyStop).toHaveBeenCalled();
+    expect(spyReset).toHaveBeenCalled();
+  });
+
+  it('should add a stop description on mouse enter', () => {
+    wrapper.setState({ second: 1, hide: false, start: true });
+    wrapper.update();
+
+    const spyEnter = jest.spyOn(wrapper.instance(), 'addDescription');
+    wrapper.instance().forceUpdate();
+    wrapper
+      .find('i')
+      .at(1)
+      .simulate('mouseEnter');
+    expect(spyEnter).toHaveBeenCalled();
+
+    const spyLeave = jest.spyOn(wrapper.instance(), 'removeDescription');
+    wrapper.instance().forceUpdate();
+    wrapper
+      .find('i')
+      .at(1)
+      .simulate('mouseLeave');
+    expect(spyLeave).toHaveBeenCalled();
+  });
+
+  it('should match snapshot when description is start hide is false and start is false', () => {
+    wrapper.setState({ description: 'start', hide: false, start: false });
+    wrapper.update();
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should map to proper store', () => {
+    let mockStore = store.currentUser;
+    let mapped = mapStateToProps(mockStore);
+
+    expect(mapped.currentUser).toEqual(mockStore.currentUser);
+  });
+
+  it('should map to proper store', () => {
+    let mockStore = store.pomStatus;
+    let mapped = mapStateToProps(mockStore);
+
+    expect(mapped.pomInfo).toEqual(mockStore.pomInfo);
+  });
+
+  it('should call dispatch method when a function from map dispatch to props is called', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.setPomHistory();
+
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should call dispatch method when a function from map dispatch to props is called', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.togglePomState();
+
+    expect(mockDispatch).toHaveBeenCalled();
   });
 });

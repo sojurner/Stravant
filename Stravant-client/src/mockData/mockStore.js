@@ -11,6 +11,27 @@ export const currentUser = {
   weeklyStats: {}
 };
 
+export const currentUserWithWeekStats = {
+  info: {
+    accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+    firstName: 'Paul',
+    gender: 'M',
+    profilePic:
+      'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg',
+    userId: 34515396
+  },
+  totalStats: {},
+  weeklyStats: {
+    Friday: 3784.3,
+    Monday: 0,
+    Saturday: 0,
+    Sunday: 0,
+    Thursday: 0,
+    Tuesday: 0,
+    Wednesday: 0
+  }
+};
+
 export const pomStatus = {
   pomInfo: {
     pomStatus: true,
@@ -74,14 +95,29 @@ export const mockEmptyClubInfo = {
   clubInfo: { clubId: 473825, clubName: 'Stravant Club' }
 };
 
-export const mockTotalStats = {
-  currentUser: {
-    totalStats: {
-      runningTotal: {
-        'Distance (miles)': 1.2474473941223474,
-        'Time (min)': 11.299999999999999,
-        'Elevation (feet)': 1.7142857142857142
-      }
+export const currentUserWithTotalStats = {
+  info: {
+    accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+    firstName: 'Paul',
+    gender: 'M',
+    profilePic:
+      'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg',
+    userId: 34515396
+  },
+  totalStats: {
+    runningTotal: {
+      'Distance (miles)': 1.2474473941223474,
+      'Time (min)': 11.299999999999999,
+      'Elevation (feet)': 1.7142857142857142
     }
+  },
+  weeklyStats: {
+    Friday: 3784.3,
+    Monday: 0,
+    Saturday: 0,
+    Sunday: 0,
+    Thursday: 0,
+    Tuesday: 0,
+    Wednesday: 0
   }
 };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AreaChart } from 'react-easy-chart';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './Weekly.css';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as userActions from '../../actions/userAction';
@@ -57,13 +58,17 @@ export class Weekly extends Component {
       top: yCoordinates - 140,
       left: xCoordinates + 10
     };
+
     return (
       <div className="compare-data-text" onClick={this.trackMouseCoordinates}>
+        {this.props.currentUser.weeklyStats === {} && (
+          <img src="https://cdn-images-1.medium.com/max/1200/1*fFC0LdzpExlP3VG93coZDA.gif" />
+        )}
+        <h3 className="weekly-title">Weekly Progress</h3>
         <AreaChart
           xType={'text'}
-          axisLabels={{ x: 'Days of Week', y: 'Distance (Miles)' }}
           margin={{ top: 10, right: 10, bottom: 60, left: 60 }}
-          yDomainRange={[0, 3]}
+          yDomainRange={[0, 2.4]}
           axes
           grid
           dataPoints
@@ -75,6 +80,9 @@ export class Weekly extends Component {
           interpolate={'cardinal'}
           data={[dataToPlot]}
         />
+        <p className="x-axis"> Day of Week </p>
+        <p className="y-axis">Distance</p>
+
         <p className="area-data-details" style={styles}>
           {this.state.dataDisplay}
         </p>
@@ -82,6 +90,13 @@ export class Weekly extends Component {
     );
   }
 }
+
+const { object, func } = PropTypes;
+
+Weekly.propTypes = {
+  currentUser: object,
+  setWeeklyStats: func
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser

@@ -1,117 +1,1878 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PomControl should match snapShot 1`] = `
-<div
-  className="pom-control"
->
-  <h3
-    className="track-poms"
-  >
-    Track Pomodoros
-  </h3>
-  <section
-    className="pom-details"
-  >
-    <i
-      class="fas fa-play-circle"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-       
-    </i>
-  </section>
-  <PomContainer
-    pomHistory={
-      Object {
-        "Mon, Sep 10, 2018 11:43 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": false,
-          "second": 0,
-          "showHistory": false,
-        },
-        "Mon, Sep 10, 2018 11:58 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": false,
-          "second": 0,
-          "showHistory": false,
-        },
-        "Mon, Sep 10, 2018 9:12 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": true,
-          "second": 0,
-          "showHistory": true,
-        },
-      }
+exports[`PomControl should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PomControl
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {
+              "Biked": 0,
+              "Ran": 6.472964574269732,
+              "Swam": 0,
+            },
+            "weeklyStats": Object {},
+          }
     }
-    removePom={[Function]}
-  />
-</div>
+    pomInfo={
+        Object {
+            "lastPom": "",
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "pomStatus": false,
+          }
+    }
+    setPomHistory={[Function]}
+    togglePomState={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="track-poms"
+>
+          Track Pomodoros
+</h3>,
+        <section
+          className="pom-details"
+>
+          
+          <i
+                    class="fas fa-play-circle"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+          >
+                     
+          </i>
+</section>,
+        <PomContainer
+          pomHistory={
+                    Object {
+                              "Mon, Sep 10, 2018 11:43 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 11:58 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 9:12 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": true,
+                                "second": 0,
+                                "showHistory": true,
+                              },
+                            }
+          }
+          removePom={[Function]}
+/>,
+      ],
+      "className": "pom-control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Track Pomodoros",
+          "className": "track-poms",
+        },
+        "ref": null,
+        "rendered": "Track Pomodoros",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "",
+            <i
+              class="fas fa-play-circle"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+>
+               
+</i>,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          "className": "pom-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          "",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " ",
+              "class": "fas fa-play-circle",
+              "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
+            },
+            "ref": null,
+            "rendered": " ",
+            "type": "i",
+          },
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "pomHistory": Object {
+            "Mon, Sep 10, 2018 11:43 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 11:58 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 9:12 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": true,
+              "second": 0,
+              "showHistory": true,
+            },
+          },
+          "removePom": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="track-poms"
+>
+            Track Pomodoros
+</h3>,
+          <section
+            className="pom-details"
+>
+            
+            <i
+                        class="fas fa-play-circle"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+            >
+                         
+            </i>
+</section>,
+          <PomContainer
+            pomHistory={
+                        Object {
+                                    "Mon, Sep 10, 2018 11:43 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 11:58 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 9:12 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": true,
+                                      "second": 0,
+                                      "showHistory": true,
+                                    },
+                                  }
+            }
+            removePom={[Function]}
+/>,
+        ],
+        "className": "pom-control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Track Pomodoros",
+            "className": "track-poms",
+          },
+          "ref": null,
+          "rendered": "Track Pomodoros",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "",
+              <i
+                class="fas fa-play-circle"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+>
+                 
+</i>,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+              false,
+            ],
+            "className": "pom-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            "",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " ",
+                "class": "fas fa-play-circle",
+                "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
+              },
+              "ref": null,
+              "rendered": " ",
+              "type": "i",
+            },
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "removePom": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;
 
-exports[`PomControl should match snapshot 1`] = `
-<div
-  className="pom-control"
->
-  <h3
-    className="track-poms"
-  >
-    Track Pomodoros
-  </h3>
-  <section
-    className="pom-details"
-  >
-    <i
-      class="fas fa-play-circle"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-       
-    </i>
-  </section>
-  <PomContainer
-    pomHistory={
-      Object {
-        "Mon, Sep 10, 2018 11:43 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": false,
-          "second": 0,
-          "showHistory": false,
-        },
-        "Mon, Sep 10, 2018 11:58 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": false,
-          "second": 0,
-          "showHistory": false,
-        },
-        "Mon, Sep 10, 2018 9:12 PM": Object {
-          "description": false,
-          "hour": 0,
-          "mSecond": 0,
-          "minute": 0,
-          "save": true,
-          "second": 0,
-          "showHistory": true,
-        },
-      }
+exports[`PomControl should match snapshot when description is start hide is false and start is false 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PomControl
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {
+              "Biked": 0,
+              "Ran": 6.472964574269732,
+              "Swam": 0,
+            },
+            "weeklyStats": Object {},
+          }
     }
-    removePom={[Function]}
-  />
-</div>
+    pomInfo={
+        Object {
+            "lastPom": "",
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "pomStatus": false,
+          }
+    }
+    setPomHistory={[Function]}
+    togglePomState={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="track-poms"
+>
+          Track Pomodoros
+</h3>,
+        <section
+          className="pom-details"
+>
+          
+          <i
+                    class="fas fa-play-circle"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+          >
+                     
+          </i>
+          <p
+                    className="pom-instruction"
+          >
+                    Start Pom?
+          </p>
+</section>,
+        <PomContainer
+          pomHistory={
+                    Object {
+                              "Mon, Sep 10, 2018 11:43 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 11:58 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 9:12 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": true,
+                                "second": 0,
+                                "showHistory": true,
+                              },
+                            }
+          }
+          removePom={[Function]}
+/>,
+      ],
+      "className": "pom-control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Track Pomodoros",
+          "className": "track-poms",
+        },
+        "ref": null,
+        "rendered": "Track Pomodoros",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "",
+            <i
+              class="fas fa-play-circle"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+>
+               
+</i>,
+            false,
+            false,
+            <p
+              className="pom-instruction"
+>
+              Start Pom?
+</p>,
+            false,
+            false,
+            false,
+            false,
+          ],
+          "className": "pom-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          "",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " ",
+              "class": "fas fa-play-circle",
+              "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
+            },
+            "ref": null,
+            "rendered": " ",
+            "type": "i",
+          },
+          false,
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Start Pom?",
+              "className": "pom-instruction",
+            },
+            "ref": null,
+            "rendered": "Start Pom?",
+            "type": "p",
+          },
+          false,
+          false,
+          false,
+          false,
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "pomHistory": Object {
+            "Mon, Sep 10, 2018 11:43 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 11:58 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 9:12 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": true,
+              "second": 0,
+              "showHistory": true,
+            },
+          },
+          "removePom": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="track-poms"
+>
+            Track Pomodoros
+</h3>,
+          <section
+            className="pom-details"
+>
+            
+            <i
+                        class="fas fa-play-circle"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+            >
+                         
+            </i>
+            <p
+                        className="pom-instruction"
+            >
+                        Start Pom?
+            </p>
+</section>,
+          <PomContainer
+            pomHistory={
+                        Object {
+                                    "Mon, Sep 10, 2018 11:43 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 11:58 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 9:12 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": true,
+                                      "second": 0,
+                                      "showHistory": true,
+                                    },
+                                  }
+            }
+            removePom={[Function]}
+/>,
+        ],
+        "className": "pom-control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Track Pomodoros",
+            "className": "track-poms",
+          },
+          "ref": null,
+          "rendered": "Track Pomodoros",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "",
+              <i
+                class="fas fa-play-circle"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+>
+                 
+</i>,
+              false,
+              false,
+              <p
+                className="pom-instruction"
+>
+                Start Pom?
+</p>,
+              false,
+              false,
+              false,
+              false,
+            ],
+            "className": "pom-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            "",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " ",
+                "class": "fas fa-play-circle",
+                "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
+              },
+              "ref": null,
+              "rendered": " ",
+              "type": "i",
+            },
+            false,
+            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Start Pom?",
+                "className": "pom-instruction",
+              },
+              "ref": null,
+              "rendered": "Start Pom?",
+              "type": "p",
+            },
+            false,
+            false,
+            false,
+            false,
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "removePom": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`PomControl should match snapshot when state of time changes 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PomControl
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {
+              "Biked": 0,
+              "Ran": 6.472964574269732,
+              "Swam": 0,
+            },
+            "weeklyStats": Object {},
+          }
+    }
+    pomInfo={
+        Object {
+            "lastPom": "",
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "pomStatus": false,
+          }
+    }
+    setPomHistory={[Function]}
+    togglePomState={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3
+          className="track-poms"
+>
+          Track Pomodoros
+</h3>,
+        <section
+          className="pom-details"
+>
+          
+          <i
+                    class="fas fa-play-circle"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+          >
+                     
+          </i>
+          <i
+                    class="fas fa-stop-circle"
+                    onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+          />
+          <div
+                    className="time"
+          >
+                    <span
+                              className="hour"
+                    >
+                              0
+                              <div
+                                        className="abbr"
+                              >
+                                        h 
+                              </div>
+                               
+                    </span>
+                    <span
+                              className="minute"
+                    >
+                              0
+                              <div
+                                        className="abbr"
+                              >
+                                        m 
+                              </div>
+                               
+                    </span>
+                    <span
+                              className="second"
+                    >
+                              1
+                              <div
+                                        className="abbr"
+                              >
+                                        s 
+                              </div>
+                               
+                    </span>
+                    <span
+                              className="mSecond"
+                    />
+          </div>
+</section>,
+        <PomContainer
+          pomHistory={
+                    Object {
+                              "Mon, Sep 10, 2018 11:43 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 11:58 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": false,
+                                "second": 0,
+                                "showHistory": false,
+                              },
+                              "Mon, Sep 10, 2018 9:12 PM": Object {
+                                "description": false,
+                                "hour": 0,
+                                "mSecond": 0,
+                                "minute": 0,
+                                "save": true,
+                                "second": 0,
+                                "showHistory": true,
+                              },
+                            }
+          }
+          removePom={[Function]}
+/>,
+      ],
+      "className": "pom-control",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Track Pomodoros",
+          "className": "track-poms",
+        },
+        "ref": null,
+        "rendered": "Track Pomodoros",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "",
+            <i
+              class="fas fa-play-circle"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+>
+               
+</i>,
+            <i
+              class="fas fa-stop-circle"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+/>,
+            <div
+              className="time"
+>
+              <span
+                            className="hour"
+              >
+                            0
+                            <div
+                                          className="abbr"
+                            >
+                                          h 
+                            </div>
+                             
+              </span>
+              <span
+                            className="minute"
+              >
+                            0
+                            <div
+                                          className="abbr"
+                            >
+                                          m 
+                            </div>
+                             
+              </span>
+              <span
+                            className="second"
+              >
+                            1
+                            <div
+                                          className="abbr"
+                            >
+                                          s 
+                            </div>
+                             
+              </span>
+              <span
+                            className="mSecond"
+              />
+</div>,
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          "className": "pom-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          "",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": " ",
+              "class": "fas fa-play-circle",
+              "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
+            },
+            "ref": null,
+            "rendered": " ",
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "class": "fas fa-stop-circle",
+              "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="hour"
+>
+                  0
+                  <div
+                                    className="abbr"
+                  >
+                                    h 
+                  </div>
+                   
+</span>,
+                <span
+                  className="minute"
+>
+                  0
+                  <div
+                                    className="abbr"
+                  >
+                                    m 
+                  </div>
+                   
+</span>,
+                <span
+                  className="second"
+>
+                  1
+                  <div
+                                    className="abbr"
+                  >
+                                    s 
+                  </div>
+                   
+</span>,
+                <span
+                  className="mSecond"
+/>,
+              ],
+              "className": "time",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0,
+                    <div
+                      className="abbr"
+>
+                      h 
+</div>,
+                    " ",
+                  ],
+                  "className": "hour",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "h ",
+                      "className": "abbr",
+                    },
+                    "ref": null,
+                    "rendered": "h ",
+                    "type": "div",
+                  },
+                  " ",
+                ],
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    0,
+                    <div
+                      className="abbr"
+>
+                      m 
+</div>,
+                    " ",
+                  ],
+                  "className": "minute",
+                },
+                "ref": null,
+                "rendered": Array [
+                  0,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "m ",
+                      "className": "abbr",
+                    },
+                    "ref": null,
+                    "rendered": "m ",
+                    "type": "div",
+                  },
+                  " ",
+                ],
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    1,
+                    <div
+                      className="abbr"
+>
+                      s 
+</div>,
+                    " ",
+                  ],
+                  "className": "second",
+                },
+                "ref": null,
+                "rendered": Array [
+                  1,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "s ",
+                      "className": "abbr",
+                    },
+                    "ref": null,
+                    "rendered": "s ",
+                    "type": "div",
+                  },
+                  " ",
+                ],
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0,
+                  "className": "mSecond",
+                },
+                "ref": null,
+                "rendered": 0,
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          false,
+          false,
+          false,
+          false,
+          false,
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "pomHistory": Object {
+            "Mon, Sep 10, 2018 11:43 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 11:58 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": false,
+              "second": 0,
+              "showHistory": false,
+            },
+            "Mon, Sep 10, 2018 9:12 PM": Object {
+              "description": false,
+              "hour": 0,
+              "mSecond": 0,
+              "minute": 0,
+              "save": true,
+              "second": 0,
+              "showHistory": true,
+            },
+          },
+          "removePom": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3
+            className="track-poms"
+>
+            Track Pomodoros
+</h3>,
+          <section
+            className="pom-details"
+>
+            
+            <i
+                        class="fas fa-play-circle"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+            >
+                         
+            </i>
+            <i
+                        class="fas fa-stop-circle"
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+            />
+            <div
+                        className="time"
+            >
+                        <span
+                                    className="hour"
+                        >
+                                    0
+                                    <div
+                                                className="abbr"
+                                    >
+                                                h 
+                                    </div>
+                                     
+                        </span>
+                        <span
+                                    className="minute"
+                        >
+                                    0
+                                    <div
+                                                className="abbr"
+                                    >
+                                                m 
+                                    </div>
+                                     
+                        </span>
+                        <span
+                                    className="second"
+                        >
+                                    1
+                                    <div
+                                                className="abbr"
+                                    >
+                                                s 
+                                    </div>
+                                     
+                        </span>
+                        <span
+                                    className="mSecond"
+                        />
+            </div>
+</section>,
+          <PomContainer
+            pomHistory={
+                        Object {
+                                    "Mon, Sep 10, 2018 11:43 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 11:58 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": false,
+                                      "second": 0,
+                                      "showHistory": false,
+                                    },
+                                    "Mon, Sep 10, 2018 9:12 PM": Object {
+                                      "description": false,
+                                      "hour": 0,
+                                      "mSecond": 0,
+                                      "minute": 0,
+                                      "save": true,
+                                      "second": 0,
+                                      "showHistory": true,
+                                    },
+                                  }
+            }
+            removePom={[Function]}
+/>,
+        ],
+        "className": "pom-control",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Track Pomodoros",
+            "className": "track-poms",
+          },
+          "ref": null,
+          "rendered": "Track Pomodoros",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "",
+              <i
+                class="fas fa-play-circle"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+>
+                 
+</i>,
+              <i
+                class="fas fa-stop-circle"
+                onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+/>,
+              <div
+                className="time"
+>
+                <span
+                                className="hour"
+                >
+                                0
+                                <div
+                                                className="abbr"
+                                >
+                                                h 
+                                </div>
+                                 
+                </span>
+                <span
+                                className="minute"
+                >
+                                0
+                                <div
+                                                className="abbr"
+                                >
+                                                m 
+                                </div>
+                                 
+                </span>
+                <span
+                                className="second"
+                >
+                                1
+                                <div
+                                                className="abbr"
+                                >
+                                                s 
+                                </div>
+                                 
+                </span>
+                <span
+                                className="mSecond"
+                />
+</div>,
+              false,
+              false,
+              false,
+              false,
+              false,
+            ],
+            "className": "pom-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            "",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " ",
+                "class": "fas fa-play-circle",
+                "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
+              },
+              "ref": null,
+              "rendered": " ",
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "class": "fas fa-stop-circle",
+                "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="hour"
+>
+                    0
+                    <div
+                                        className="abbr"
+                    >
+                                        h 
+                    </div>
+                     
+</span>,
+                  <span
+                    className="minute"
+>
+                    0
+                    <div
+                                        className="abbr"
+                    >
+                                        m 
+                    </div>
+                     
+</span>,
+                  <span
+                    className="second"
+>
+                    1
+                    <div
+                                        className="abbr"
+                    >
+                                        s 
+                    </div>
+                     
+</span>,
+                  <span
+                    className="mSecond"
+/>,
+                ],
+                "className": "time",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0,
+                      <div
+                        className="abbr"
+>
+                        h 
+</div>,
+                      " ",
+                    ],
+                    "className": "hour",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "h ",
+                        "className": "abbr",
+                      },
+                      "ref": null,
+                      "rendered": "h ",
+                      "type": "div",
+                    },
+                    " ",
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      0,
+                      <div
+                        className="abbr"
+>
+                        m 
+</div>,
+                      " ",
+                    ],
+                    "className": "minute",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    0,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "m ",
+                        "className": "abbr",
+                      },
+                      "ref": null,
+                      "rendered": "m ",
+                      "type": "div",
+                    },
+                    " ",
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      1,
+                      <div
+                        className="abbr"
+>
+                        s 
+</div>,
+                      " ",
+                    ],
+                    "className": "second",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    1,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "s ",
+                        "className": "abbr",
+                      },
+                      "ref": null,
+                      "rendered": "s ",
+                      "type": "div",
+                    },
+                    " ",
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0,
+                    "className": "mSecond",
+                  },
+                  "ref": null,
+                  "rendered": 0,
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            false,
+            false,
+            false,
+            false,
+            false,
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "pomHistory": Object {
+              "Mon, Sep 10, 2018 11:43 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 11:58 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": false,
+                "second": 0,
+                "showHistory": false,
+              },
+              "Mon, Sep 10, 2018 9:12 PM": Object {
+                "description": false,
+                "hour": 0,
+                "mSecond": 0,
+                "minute": 0,
+                "save": true,
+                "second": 0,
+                "showHistory": true,
+              },
+            },
+            "removePom": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;

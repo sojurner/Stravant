@@ -28,7 +28,14 @@ describe('apiCalls', () => {
     });
 
     it('should return the proper result', async () => {
-      expected = mockResults.tokenResult;
+      expected = {
+        accessToken: 'a7eeea216a46a760a74c60acbffc3b55c66537c5',
+        firstName: 'Paul',
+        gender: 'M',
+        profilePic:
+          'https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg',
+        userId: 34515396
+      };
 
       result = await apiCalls.exchangeUserToken(mockCode);
 
@@ -57,7 +64,13 @@ describe('apiCalls', () => {
     });
 
     it('should return the proper result when fetch is succesful', async () => {
-      expected = mockResults.aggregateResult;
+      expected = {
+        runningTotal: {
+          'Distance (miles)': 1.2945929148539466,
+          'Elevation (feet)': 2,
+          'Time (min)': 11.213333333333335
+        }
+      };
 
       result = await apiCalls.getAggregateStats(
         stravaApi.access_token,
@@ -93,40 +106,4 @@ describe('apiCalls', () => {
       expect(result).toEqual(expected);
     });
   });
-
-  describe('getUserClubs', () => {
-    let expected;
-    let result;
-    beforeEach(() => {
-      window.fetch = jest.fn().mockImplementation(() => {
-        return Promise.resolve({
-          json: () => Promise.resolve(mockResolve.clubsResolve)
-        });
-      });
-    });
-
-    it('should call fetch with the correct params', async () => {
-      await apiCalls.getUserClubs(stravaApi.access_token);
-
-      expect(window.fetch).toHaveBeenCalledWith('jnjpap');
-    });
-
-    //   it('should return the proper result when fetch is successfull' () => {
-
-    //   })
-  });
-
-  // describe('getClubActivity', () => {
-  //   beforeEach(()=> {
-  //     window.fetch = jest.fn().mockImplementation(() => {
-  //       return Promise.resolve({
-  //         json: () => Promise.resolve()
-  //       })
-  //     })
-
-  //     it('should call fetch with correct params', () => {
-  //       apiCalls.get
-  //     })
-  //   })
-  // })
 });

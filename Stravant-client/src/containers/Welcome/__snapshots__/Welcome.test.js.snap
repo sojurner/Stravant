@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome should match snapShot when user is female 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Welcome
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Pam",
+              "gender": "F",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {},
+            "weeklyStats": Object {},
+          }
+    }
+    setAccessToken={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <span>
+        <img
+                className="avatar"
+                height="100"
+                src="female-avatar.png"
+                width="100"
+        />
+        <h4
+                className="speech-bubble"
+        >
+                Hi 
+                Pam
+        </h4>
+</span>,
+      "className": "welcome-page",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          false,
+          <img
+            className="avatar"
+            height="100"
+            src="female-avatar.png"
+            width="100"
+/>,
+          <h4
+            className="speech-bubble"
+>
+            Hi 
+            Pam
+</h4>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "avatar",
+            "height": "100",
+            "src": "female-avatar.png",
+            "width": "100",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Hi ",
+              "Pam",
+            ],
+            "className": "speech-bubble",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Hi ",
+            "Pam",
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "span",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <span>
+          <img
+                    className="avatar"
+                    height="100"
+                    src="female-avatar.png"
+                    width="100"
+          />
+          <h4
+                    className="speech-bubble"
+          >
+                    Hi 
+                    Pam
+          </h4>
+</span>,
+        "className": "welcome-page",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            false,
+            <img
+              className="avatar"
+              height="100"
+              src="female-avatar.png"
+              width="100"
+/>,
+            <h4
+              className="speech-bubble"
+>
+              Hi 
+              Pam
+</h4>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "avatar",
+              "height": "100",
+              "src": "female-avatar.png",
+              "width": "100",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Hi ",
+                "Pam",
+              ],
+              "className": "speech-bubble",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Hi ",
+              "Pam",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "span",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`Welcome should match snapshot when user is male 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Welcome
+    currentUser={
+        Object {
+            "info": Object {
+              "accessToken": "a7eeea216a46a760a74c60acbffc3b55c66537c5",
+              "firstName": "Paul",
+              "gender": "M",
+              "profilePic": "https://lh4.googleusercontent.com/-q79bv4Nc_dY/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaMcxPJyTx-ZbjWs8aCsKgkL96lV4w/mo/photo.jpg",
+              "userId": 34515396,
+            },
+            "totalStats": Object {},
+            "weeklyStats": Object {},
+          }
+    }
+    setAccessToken={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <span>
+        <img
+                className="avatar"
+                height="70"
+                src="male-avatar.png"
+                width="70"
+        />
+        <h4
+                className="speech-bubble"
+        >
+                Hi 
+                Paul
+        </h4>
+</span>,
+      "className": "welcome-page",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            className="avatar"
+            height="70"
+            src="male-avatar.png"
+            width="70"
+/>,
+          false,
+          <h4
+            className="speech-bubble"
+>
+            Hi 
+            Paul
+</h4>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "avatar",
+            "height": "70",
+            "src": "male-avatar.png",
+            "width": "70",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Hi ",
+              "Paul",
+            ],
+            "className": "speech-bubble",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Hi ",
+            "Paul",
+          ],
+          "type": "h4",
+        },
+      ],
+      "type": "span",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <span>
+          <img
+                    className="avatar"
+                    height="70"
+                    src="male-avatar.png"
+                    width="70"
+          />
+          <h4
+                    className="speech-bubble"
+          >
+                    Hi 
+                    Paul
+          </h4>
+</span>,
+        "className": "welcome-page",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              className="avatar"
+              height="70"
+              src="male-avatar.png"
+              width="70"
+/>,
+            false,
+            <h4
+              className="speech-bubble"
+>
+              Hi 
+              Paul
+</h4>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "avatar",
+              "height": "70",
+              "src": "male-avatar.png",
+              "width": "70",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Hi ",
+                "Paul",
+              ],
+              "className": "speech-bubble",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Hi ",
+              "Paul",
+            ],
+            "type": "h4",
+          },
+        ],
+        "type": "span",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

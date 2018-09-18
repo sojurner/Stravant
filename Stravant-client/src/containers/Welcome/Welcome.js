@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PomControl from '../PomControl/PomControl';
-import * as userActions from '../../actions/userAction';
+import PropTypes from 'prop-types';
 
+import * as userActions from '../../actions/userAction';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as scrape from '../../helpers/helpers/helpers';
 
@@ -11,47 +11,28 @@ export class Welcome extends Component {
   constructor() {
     super();
     this.state = {
-      coordinates: {},
       greeting: true
     };
   }
 
   componentDidMount() {
-    const { search } = window.location;
-    const codeIndex = search.indexOf('code') + 5;
-    const lastIndex = search.lastIndexOf('&');
-    const userCode = search.slice(codeIndex, lastIndex);
-    this.exchangeToken(userCode);
+    this.exchangeToken(window.location.search);
   }
 
-  exchangeToken = async code => {
+  exchangeToken = async url => {
+    const codeIndex = url.indexOf('code') + 5;
+    const lastIndex = url.lastIndexOf('&');
+    const code = url.slice(codeIndex, lastIndex);
     const result = await apiCalls.exchangeUserToken(code);
     if (!result.message) {
-      const scrapedUserInfo = scrape.userInfo(result);
-      this.props.setAccessToken(scrapedUserInfo);
+      this.props.setAccessToken(result);
     }
     localStorage.setItem('code', JSON.stringify({ code }));
   };
 
-  handleClick = (e, str) => {
-    const coord = {
-      position: 'absolute',
-      left: e.pageX + 30,
-      top: e.pageY - 50
-    };
-    if (str === 'remove') {
-      this.setState({ greeting: false });
-    } else {
-      this.setState({
-        greeting: true,
-        coordinates: coord
-      });
-    }
-  };
-
   render() {
     const { info } = this.props.currentUser;
-    const { greeting } = this.state;
+
     return (
       <div className="welcome-page">
         <span>
@@ -62,9 +43,6 @@ export class Welcome extends Component {
                 src={require('../../images/male-avatar.png')}
                 height="70"
                 width="70"
-                // onClick={e => this.handleClick(e, 'show')}
-                // onMouseEnter={this.handleClick}
-                // onMouseOut={e => this.handleClick(e, 'remove')}
               />
             )}
           {info &&
@@ -74,24 +52,28 @@ export class Welcome extends Component {
                 src={require('../../images/female-avatar.png')}
                 height="100"
                 width="100"
-                onClick={this.handleClick}
               />
             )}
-          {greeting && <h4 className="speech-bubble">Hi {info.firstName}</h4>}
+          <h4 className="speech-bubble">Hi {info.firstName}</h4>
         </span>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.currentUser,
-  pomStatus: state.pomStatus
+const { object, func } = PropTypes;
+
+Welcome.propTypes = {
+  currentUser: object,
+  setAccessToken: func
+};
+
+export const mapStateToProps = state => ({
+  currentUser: state.currentUser
 });
 
-const mapDispatchToProps = dispatch => ({
-  setAccessToken: token => dispatch(userActions.setAccessToken(token)),
-  setWeeklyStats: stats => dispatch(userActions.setWeeklyStats(stats))
+export const mapDispatchToProps = dispatch => ({
+  setAccessToken: token => dispatch(userActions.setAccessToken(token))
 });
 
 export default connect(

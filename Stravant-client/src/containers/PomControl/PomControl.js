@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import openSocket from 'socket.io-client';
 import moment from 'moment';
-// import { createActivity } from '../../helpers/apiCalls/apiCalls';
+import PropTypes from 'prop-types';
 import { PomContainer } from '../../components/PomContainer/PomContainer';
 import * as pomActions from '../../actions/pomAction';
 import { getLastPomTime } from '../../helpers/helpers/helpers';
@@ -134,6 +134,10 @@ export class PomControl extends Component {
       save: true,
       pomSummary: timeSummary
     });
+
+    setTimeout(() => {
+      this.setState({ pomSummary: '' });
+    }, 4000);
   };
 
   removePom = (history, time) => {
@@ -145,33 +149,13 @@ export class PomControl extends Component {
   render() {
     socket.on('pomClick', msg => {
       this.setState({ socketMessage: msg });
+
+      setTimeout(() => {
+        this.setState({ socketMessage: '' });
+      }, 3000);
     });
+
     const { pomHistory } = this.props.pomInfo;
-    // const styles = {
-    //   pomStyle: {
-    //     position: 'absolute',
-    //     left: window.screenX + 10,
-    //     top: window.screenY - 20
-    //   },
-
-    //   summaryStyle: {
-    //     position: 'absolute',
-    //     left: window.screenX + 25,
-    //     top: window.screenY + 90
-    //   },
-
-    //   suggestStyle: {
-    //     position: 'absolute',
-    //     left: window.screenX + 25,
-    //     top: window.screenY + 60
-    //   },
-
-    //   modalStyle: {
-    //     position: 'absolute',
-    //     left: window.screenX + 100,
-    //     top: window.screenY - 20
-    //   }
-    // };
     const {
       mSecond,
       second,
@@ -247,7 +231,6 @@ export class PomControl extends Component {
                 <span className="mSecond">{mSecond}</span>
               </div>
             )}
-          {!pomHistory && <p>You have no record Poms</p>}
           {description === 'start' &&
             !hide &&
             !start && <p className="pom-instruction">Start Pom?</p>}
@@ -260,14 +243,15 @@ export class PomControl extends Component {
 
           {hide && <p className="stop-instruction">Show Pom?</p>}
 
-          {save && (
-            <h4>
-              <div>Most recent:</div>
-              ---
-              {pomSummary}
-              ---
-            </h4>
-          )}
+          {save &&
+            pomSummary && (
+              <h4>
+                <div>Most recent:</div>
+                ---
+                {pomSummary}
+                ---
+              </h4>
+            )}
         </section>
 
         <PomContainer removePom={this.removePom} pomHistory={pomHistory} />
@@ -276,12 +260,21 @@ export class PomControl extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const { object, func } = PropTypes;
+
+PomControl.propTypes = {
+  currentUser: object,
+  pomInfo: object,
+  setPomHistory: func,
+  togglePomState: func
+};
+
+export const mapStateToProps = state => ({
   currentUser: state.currentUser,
   pomInfo: state.pomInfo
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setPomHistory: history => dispatch(pomActions.setPomHistory(history)),
   togglePomState: bool => dispatch(pomActions.togglePomState(bool))
 });

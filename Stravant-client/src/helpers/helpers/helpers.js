@@ -99,70 +99,53 @@ export const weeklyData = data => {
 };
 
 export const getLastPomTime = (currTime, pomTime) => {
-  let current = currTime.indexOf('2018');
-  let modCurrent = currTime.slice(current + 5);
-
-  let lastPom = pomTime.indexOf('2018');
-  let modLastPom = pomTime.slice(current + 5);
+  const current = currTime.indexOf('2018');
+  const modCurrent = currTime.slice(current + 5);
+  const modLastPom = pomTime.slice(current + 5);
 
   let currentHour;
   let currentMin;
   let lastPomHour;
   let lastPomMin;
 
-  // if(modCurrent.includes('PM') && modCurrent.length < 8){
-  //   currentHour = parseInt(currTime.slice(0, 1)) + 12;
-  //   currentMin = parseInt(currTime.slice(2, 4));
-  // }
-
-  // if(modCurrent.includes('PM') && modCurrent.length > 7){
-  //   currentHour = parseInt(currTime.slice(0, 2)) + 12;
-  //   currentMin = parseInt(currTime.slice(3, 5));
-  // }
-
-  // if(modCurrent.includes('AM') && modCurrent.length < 8){
-  //   currentHour = parseInt(currTime.slice(0, 1)) + 12;
-  //   currentMin = parseInt(currTime.slice(2, 4));
-  // }
-
-  if (currTime.includes('PM') && currTime.length < 25) {
-    currentHour = parseInt(currTime.slice(18, 19)) + 12;
-    currentMin = parseInt(currTime.slice(20, 22));
+  if (modCurrent.includes('PM') && modCurrent.length < 8) {
+    currentHour = parseInt(modCurrent.slice(0, 1)) + 12;
+    currentMin = parseInt(modCurrent.slice(2, 4));
   }
 
-  if (currTime.includes('PM') && currTime.length > 24) {
-    currentHour = parseInt(currTime.slice(18, 20)) + 12;
-    currentMin = parseInt(currTime.slice(20, 23));
+  if (modCurrent.includes('PM') && modCurrent.length > 7) {
+    currentHour = parseInt(modCurrent.slice(0, 2)) + 12;
+    currentMin = parseInt(modCurrent.slice(3, 5));
   }
 
-  if (currTime.includes('AM') && currTime.length > 24) {
-    currentHour = parseInt(currTime.slice(18, 20));
-    currentMin = parseInt(currTime.slice(21, 23));
+  if (modCurrent.includes('AM') && modCurrent.length < 8) {
+    currentHour = parseInt(modCurrent.slice(0, 1));
+    currentMin = parseInt(modCurrent.slice(2, 4));
   }
 
-  if (currTime.includes('AM') && currTime.length < 25) {
-    currentHour = parseInt(currTime.slice(18, 19));
-    currentMin = parseInt(currTime.slice(20, 22));
+  if (modCurrent.includes('AM') && modCurrent.length > 7) {
+    currentHour = parseInt(modCurrent.slice(0, 2));
+    currentMin = parseInt(modCurrent.slice(3, 5));
   }
 
-  if (pomTime.includes('PM') && pomTime.length < 25) {
-    lastPomHour = parseInt(pomTime.slice(18, 19)) + 12;
-    lastPomMin = parseInt(pomTime.slice(20, 22));
+  if (modLastPom.includes('PM') && modLastPom.length < 8) {
+    lastPomHour = parseInt(modLastPom.slice(0, 2)) + 12;
+    lastPomMin = parseInt(modLastPom.slice(2, 4));
   }
 
-  if (pomTime.includes('PM') && pomTime.length > 24) {
-    lastPomHour = parseInt(pomTime.slice(18, 20)) + 12;
-    lastPomMin = parseInt(pomTime.slice(20, 23));
+  if (modLastPom.includes('PM') && modLastPom.length > 7) {
+    lastPomHour = parseInt(modLastPom.slice(0, 2)) + 12;
+    lastPomMin = parseInt(modLastPom.slice(3, 5));
   }
 
-  if (pomTime.includes('AM') && pomTime.length > 24) {
-    lastPomHour = parseInt(pomTime.slice(18, 20));
-    lastPomMin = parseInt(pomTime.slice(21, 23));
+  if (modLastPom.includes('AM') && modLastPom.length > 7) {
+    lastPomHour = parseInt(modLastPom.slice(0, 2));
+    lastPomMin = parseInt(modLastPom.slice(3, 5));
   }
 
-  if (pomTime.includes('AM') && pomTime.length < 25) {
-    lastPomHour = parseInt(pomTime.slice(18, 19));
-    lastPomMin = parseInt(pomTime.slice(20, 22));
+  if (modLastPom.includes('AM') && modLastPom.length < 8) {
+    lastPomHour = parseInt(modLastPom.slice(0, 1));
+    lastPomMin = parseInt(modLastPom.slice(2, 4));
   }
 
   let hourDifference = currentHour - lastPomHour;

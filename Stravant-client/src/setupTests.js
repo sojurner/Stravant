@@ -1,9 +1,10 @@
-/* eslint-disable */
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { createSerializer } from 'enzyme-to-json';
 
-expect.addSnapshotSerializer(createSerializer({ mode: 'deep' }));
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const dom = new JSDOM('', { url: 'http://localhost:3001' });
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -25,8 +26,9 @@ class LocalStorage {
   }
 }
 
+global.window = dom.window;
+global.document = dom.window.document;
 global.localStorage = new LocalStorage();
 global.shallow = shallow;
 global.render = render;
 global.mount = mount;
-/* eslint-disable */

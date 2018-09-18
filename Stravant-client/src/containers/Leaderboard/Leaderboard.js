@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
 import * as clubActions from '../../actions/clubAction';
 import './Leaderboard.css';
@@ -26,9 +27,9 @@ export class LeaderBoard extends Component {
       (nameA, nameB) =>
         clubActivity[nameB].totalDistance - clubActivity[nameA].totalDistance
     );
-    const table = sortedByDistance.map(person => {
+    const table = sortedByDistance.map((person, index) => {
       return (
-        <tr>
+        <tr key={index}>
           <td>{person}</td>
           <td>{clubActivity[person].membersRecent}</td>
           <td>{Math.round(clubActivity[person].totalDistance * 100) / 100}</td>
@@ -75,6 +76,14 @@ export class LeaderBoard extends Component {
     );
   }
 }
+
+const { func, object } = PropTypes;
+
+LeaderBoard.propTypes = {
+  currentUser: object,
+  clubs: object,
+  setClubActivity: func.isRequired
+};
 
 export const mapStateToProps = state => ({
   currentUser: state.currentUser,
