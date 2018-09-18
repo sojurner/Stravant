@@ -1,11 +1,12 @@
 .pom-instruction,
 .stop-instruction {
   position: absolute;
-  bottom: 35%;
-  left: 47.8%;
+  bottom: 38%;
+  left: 47.5%;
   font-size: 1.2rem;
   font-family: daybold;
   color: azure;
+  margin: -0.6rem 0 0 -0.6rem;
 }
 
 .track-poms {
@@ -49,7 +50,7 @@ i {
 .fa-play-circle {
   color: #c2bcba;
   font-size: 4rem;
-  margin: 6.5rem 2rem 1.5rem 2rem;
+  margin: 5rem 2rem 1.5rem 2rem;
 }
 
 .fa-stop-circle {
@@ -84,13 +85,24 @@ i {
   padding: 3rem 1.5rem;
   left: 48%;
   margin: -12.5rem 0 0 -12.5rem;
-  top: 40%;
+  top: 42%;
   font-family: daybold;
   font-size: 4.5rem;
   animation: fadein 1s;
   border-radius: 8px;
   max-width: 25rem;
   min-width: 25rem;
+}
+
+.summary {
+  position: absolute;
+  animation: fadein 0.5s;
+  font-family: daybold;
+  font-size: 2rem;
+  left: 49%;
+  top: 55%;
+  margin: -5rem 0 0 -5rem;
+  color: #c2bcba;
 }
 
 .abbr {
@@ -109,4 +121,36 @@ i {
 
 i {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 510px) {
+  .time {
+    top: 37.3%;
+    left: 44%;
+  }
+  .pom-instruction,
+  .stop-instruction {
+    bottom: 51%;
+    left: 44%;
+    font-size: 1.2rem;
+    font-family: daybold;
+    color: azure;
+  }
+  .track-poms {
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+  }
+  .summary {
+    left: 47%;
+    top: 41%;
+    margin: -5rem 0 0 -5rem;
+  }
+}
+
+@media screen and (max-height: 668px) {
+  .summary {
+    left: 47%;
+    top: 50%;
+    margin: -5rem 0 0 -5rem;
+  }
 }

@@ -51,15 +51,15 @@ text {
   font-family: daybold;
   left: 49%;
   font-size: 1.7rem;
-  top: 25%; }
+  top: 25%;
+  color: whitesmoke; }
 
 @media screen and (max-width: 510px) {
   .compare-data-text {
     margin: 4rem auto 2.7rem auto; }
+  svg {
+    margin: 0 0 0 -2rem; }
   .y-axis {
-    top: 60%;
-    left: 51%; }
+    display: none; }
   .x-axis {
-    top: 77%;
-    left: 38%;
-    font-size: 2rem; } }
+    display: none; } }
