@@ -1,9 +1,12 @@
 # Stravant
 
+Instructions ---
+
+clone down this rpo
 ```
 git clone https://github.com/sojurner/Stravant.git
 ```
-
+Run in terminal
 ```
 npm install
 ```
@@ -12,6 +15,7 @@ node.serverjs
 ```
 cd into Stravant-client
 
+Run in terminal
 ```
 npm install
 ```
