@@ -5,14 +5,12 @@
 clone down this rpo
 ```
 git clone https://github.com/sojurner/Stravant.git
-
+```
+```
 npm install
-```
-```
 node.serverjs
 ```
 cd into Stravant-client
-
 
 ```
 npm install
@@ -20,7 +18,7 @@ npm install
 npm start
 ```
 
-Stravant is a Fitness App targeted towards Turing Staff members.  Utilizing the strava api and implementing WebSockets; stravant allows users to sign in through their strava account.  Users can view their fitness activity; Avg runtimes, weekly progress and compare their achievement with other members in the stravant club.  In addition, Stravant also allows users to track their Pomodoros during work to ensure they are taking regular poms.
+Stravant is a Fitness App targeted towards Turing Staff members.  Utilizing the Strava api and implementing WebSocket technology; Stravant allows users to sign in through their Strava account and monitor their health activity.  Users can view their fitness logs; Average runtimes, weekly progress made and compare their achievement with other members in the Stravant club.  In addition, Stravant also allows users to track their Pomodoros during work to ensure they are taking regular poms.
 
 HomeScreen
 ![image](https://user-images.githubusercontent.com/35910428/45703632-1df2a400-bb32-11e8-9296-efee0118f56c.png)
