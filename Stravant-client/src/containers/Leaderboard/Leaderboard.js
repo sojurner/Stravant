@@ -38,13 +38,13 @@ export class LeaderBoard extends Component {
       );
     });
 
-    const activity = unfilteredKeys.map(recent => {
+    const activity = unfilteredKeys.map((recent, index) => {
       const { distance, name, activity } = clubActivity.mostRecent;
       const roundedDistance = Math.round(distance * 100) / 100;
       const recentActivity = `${name} did a ${roundedDistance}
       mile ${activity}`;
       return (
-        <div>
+        <div key={index}>
           <h3 className="recent-dash">{recentActivity}</h3>
         </div>
       );

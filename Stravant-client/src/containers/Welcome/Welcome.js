@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import * as userActions from '../../actions/userAction';
 import * as apiCalls from '../../helpers/apiCalls/apiCalls';
-import * as scrape from '../../helpers/helpers/helpers';
 
 import './Welcome.css';
 export class Welcome extends Component {

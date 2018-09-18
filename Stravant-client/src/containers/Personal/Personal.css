@@ -44,17 +44,21 @@ li {
   opacity: 0.9; }
 
 .legend-container-fc25d28b8dda2e2172d549eafe0de054a26a4837 {
-  width: 9rem;
-  margin: -3rem 0 0 -19rem;
+  width: 11rem;
+  margin: -3rem 0 0 -23rem;
   position: fixed;
-  top: 43%;
+  top: 37%;
   left: 50%;
+  padding: 0.5rem 0 0 0;
   font-family: daybold;
-  font-size: 1rem; }
+  font-size: 1.5rem; }
 
 .legend {
-  padding-top: 0.5rem;
+  padding-top: 0.7rem;
   background-color: #b3aaab; }
+
+.li {
+  padding-top: 0.4rem; }
 
 .spinning-globe {
   width: 200px;
@@ -78,10 +82,24 @@ li {
   100% {
     background-position: 719px 0; } }
 
+@media screen and (max-width: 800px) {
+  .legend-container-fc25d28b8dda2e2172d549eafe0de054a26a4837 {
+    width: 8.3rem;
+    margin: -3rem 0 0 5rem;
+    top: 85%;
+    left: 0%;
+    padding: 0.5rem 0 0 0;
+    font-family: daybold;
+    font-size: 1rem;
+    z-index: 1; } }
+
 @media screen and (max-width: 510px) {
   .pie-chart-wrap {
     margin-top: 1.4rem; }
   .running-avg {
     margin: 0.7rem; }
   .data-details {
-    margin: 30rem 0; } }
+    margin: 27.5rem 0 0 0; }
+  .pie-chart-7450ce7f65e862c33c80040ea675f203302df7d5 {
+    position: absolute;
+    left: 2rem; } }

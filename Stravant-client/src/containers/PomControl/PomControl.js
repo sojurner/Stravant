@@ -175,7 +175,7 @@ export class PomControl extends Component {
         <section className="pom-details">
           {socketMessage && <h4 className="socket-msg">{socketMessage}</h4>}
           <i
-            class="fas fa-play-circle"
+            className="fas fa-play-circle"
             onMouseEnter={() => this.addDescription('start')}
             onMouseLeave={this.removeDescription}
             onClick={event => {
@@ -195,7 +195,7 @@ export class PomControl extends Component {
             !hide &&
             start && (
               <i
-                class="fas fa-stop-circle"
+                className="fas fa-stop-circle"
                 onClick={() => {
                   this.stopTime();
                   this.removeDescription();

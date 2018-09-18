@@ -44,7 +44,7 @@ export class Personal extends Component {
 
   render() {
     const { totalStats } = this.props.currentUser;
-    const filteredActivity = Object.keys(totalStats).map(type => {
+    const filteredActivity = Object.keys(totalStats).map((type, index) => {
       const destructured = totalStats[type];
       let dataArr = [];
       let configArr = [];
@@ -60,7 +60,7 @@ export class Personal extends Component {
         configArr.push(config);
       });
       return (
-        <div className="pie-div">
+        <div className="pie-div" key={index}>
           <h3 className="running-avg">Running Averages</h3>
           <Legend
             className="legend-key"
