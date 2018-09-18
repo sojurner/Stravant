@@ -1,23 +1,3201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PomContainer should matchsnapshot 1`] = `
-<div
-  className="pom-container"
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <PomContainer
+    pomHistory={
+        Array [
+            Object {
+              "city": "Denver",
+              "country": "United States",
+              "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+              "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+              "featured": false,
+              "id": 473825,
+              "member_count": 4,
+              "name": "Stravant Club",
+              "private": false,
+              "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+              "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+              "resource_state": 2,
+              "sport_type": "running",
+              "state": "Colorado",
+              "url": "stravant",
+              "verified": false,
+            },
+          ]
+    }
+    removePom={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": PomContainer {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 50,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 49,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstContextDependency": null,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstContextDependency": null,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="pom-container"
+                  >
+                                    <div
+                                                      class="pom-cards"
+                                    >
+                                                      <i
+                                                                        class="fab fa-xbox"
+                                                      />
+                                                      <h4>
+                                                                        0
+                                                      </h4>
+                                                      <p>
+                                                                        undefinedh undefinedm undefineds
+                                                      </p>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "timeoutHandle": -1,
+              },
+              "tag": 5,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "pomHistory": Array [
+                                                                    Object {
+                                                                      "city": "Denver",
+                                                                      "country": "United States",
+                                                                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                      "featured": false,
+                                                                      "id": 473825,
+                                                                      "member_count": 4,
+                                                                      "name": "Stravant Club",
+                                                                      "private": false,
+                                                                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                      "resource_state": 2,
+                                                                      "sport_type": "running",
+                                                                      "state": "Colorado",
+                                                                      "url": "stravant",
+                                                                      "verified": false,
+                                                                    },
+                                                                  ],
+                                                                  "removePom": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "pomHistory": Array [
+                                                                    Object {
+                                                                      "city": "Denver",
+                                                                      "country": "United States",
+                                                                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                      "featured": false,
+                                                                      "id": 473825,
+                                                                      "member_count": 4,
+                                                                      "name": "Stravant Club",
+                                                                      "private": false,
+                                                                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                      "resource_state": 2,
+                                                                      "sport_type": "running",
+                                                                      "state": "Colorado",
+                                                                      "url": "stravant",
+                                                                      "verified": false,
+                                                                    },
+                                                                  ],
+                                                                  "removePom": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "pomHistory": Array [
+                                                  Object {
+                                                    "city": "Denver",
+                                                    "country": "United States",
+                                                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                    "featured": false,
+                                                    "id": 473825,
+                                                    "member_count": 4,
+                                                    "name": "Stravant Club",
+                                                    "private": false,
+                                                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                    "resource_state": 2,
+                                                    "sport_type": "running",
+                                                    "state": "Colorado",
+                                                    "url": "stravant",
+                                                    "verified": false,
+                                                  },
+                                                ],
+                                                "removePom": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="pom-container"
+                >
+                                <div
+                                                class="pom-cards"
+                                >
+                                                <i
+                                                                class="fab fa-xbox"
+                                                />
+                                                <h4>
+                                                                0
+                                                </h4>
+                                                <p>
+                                                                undefinedh undefinedm undefineds
+                                                </p>
+                                </div>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "timeoutHandle": -1,
+            },
+            "tag": 5,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "pomHistory": Array [
+                                                        Object {
+                                                          "city": "Denver",
+                                                          "country": "United States",
+                                                          "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                          "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                          "featured": false,
+                                                          "id": 473825,
+                                                          "member_count": 4,
+                                                          "name": "Stravant Club",
+                                                          "private": false,
+                                                          "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                          "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                          "resource_state": 2,
+                                                          "sport_type": "running",
+                                                          "state": "Colorado",
+                                                          "url": "stravant",
+                                                          "verified": false,
+                                                        },
+                                                      ],
+                                                      "removePom": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "actualDuration": 0,
+        "actualStartTime": -1,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 51,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+            "lineNumber": 27,
+          },
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 52,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+              "lineNumber": 17,
+            },
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 53,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                "lineNumber": 18,
+              },
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": null,
+              "child": null,
+              "childExpirationTime": 0,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstContextDependency": null,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "className": "fab fa-xbox",
+                "onClick": [Function],
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "className": "fab fa-xbox",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseDuration": 0,
+              "sibling": FiberNode {
+                "_debugID": 54,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                  "lineNumber": 22,
+                },
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": null,
+                "child": FiberNode {
+                  "_debugID": 56,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": null,
+                  "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
+                  "alternate": null,
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstContextDependency": null,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": "0",
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": "0",
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseDuration": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 57,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": null,
+                    "_debugSource": null,
+                    "actualDuration": 0,
+                    "actualStartTime": -1,
+                    "alternate": null,
+                    "child": null,
+                    "childExpirationTime": 0,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstContextDependency": null,
+                    "firstEffect": null,
+                    "index": 1,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": " ",
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": " ",
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseDuration": 0,
+                    "sibling": null,
+                    "stateNode": ,
+                    "tag": 8,
+                    "treeBaseDuration": 0,
+                    "type": null,
+                    "updateQueue": null,
+                  },
+                  "stateNode": 0,
+                  "tag": 8,
+                  "treeBaseDuration": 0,
+                  "type": null,
+                  "updateQueue": null,
+                },
+                "childExpirationTime": 0,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstContextDependency": null,
+                "firstEffect": null,
+                "index": 1,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": Array [
+                    "0",
+                    " ",
+                  ],
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": Array [
+                    "0",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseDuration": 0,
+                "sibling": FiberNode {
+                  "_debugID": 55,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                    "lineNumber": 23,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
+                  "alternate": null,
+                  "child": null,
+                  "childExpirationTime": 0,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstContextDependency": null,
+                  "firstEffect": null,
+                  "index": 2,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": " undefinedh undefinedm undefineds",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": " undefinedh undefinedm undefineds",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseDuration": 0,
+                  "sibling": null,
+                  "stateNode": <p>
+                    undefinedh undefinedm undefineds
+</p>,
+                  "tag": 7,
+                  "treeBaseDuration": 0,
+                  "type": "p",
+                  "updateQueue": null,
+                },
+                "stateNode": <h4>
+                  0
+</h4>,
+                "tag": 7,
+                "treeBaseDuration": 0,
+                "type": "h4",
+                "updateQueue": null,
+              },
+              "stateNode": <i
+                class="fab fa-xbox"
+/>,
+              "tag": 7,
+              "treeBaseDuration": 0,
+              "type": "i",
+              "updateQueue": null,
+            },
+            "childExpirationTime": 0,
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": null,
+            "index": 0,
+            "key": "0",
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <i
+                  className="fab fa-xbox"
+                  onClick={[Function]}
+/>,
+                <h4>
+                  0
+                   
+</h4>,
+                <p>
+                   undefinedh undefinedm undefineds
+</p>,
+              ],
+              "className": "pom-cards",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <i
+                  className="fab fa-xbox"
+                  onClick={[Function]}
+/>,
+                <h4>
+                  0
+                   
+</h4>,
+                <p>
+                   undefinedh undefinedm undefineds
+</p>,
+              ],
+              "className": "pom-cards",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="pom-cards"
 >
-  <div
-    className="pom-cards"
-  >
-    <i
-      class="fab fa-xbox"
-      onClick={[Function]}
-    />
-    <h4>
-      0
-       
-    </h4>
-    <p>
-       undefinedh undefinedm undefineds
-    </p>
-  </div>
-</div>
+              <i
+                            class="fab fa-xbox"
+              />
+              <h4>
+                            0
+              </h4>
+              <p>
+                            undefinedh undefinedm undefineds
+              </p>
+</div>,
+            "tag": 7,
+            "treeBaseDuration": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstContextDependency": null,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": Array [
+              <div
+                className="pom-cards"
+>
+                <i
+                                className="fab fa-xbox"
+                                onClick={[Function]}
+                />
+                <h4>
+                                0
+                                 
+                </h4>
+                <p>
+                                 undefinedh undefinedm undefineds
+                </p>
+</div>,
+            ],
+            "className": "pom-container",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": Array [
+              <div
+                className="pom-cards"
+>
+                <i
+                                className="fab fa-xbox"
+                                onClick={[Function]}
+                />
+                <h4>
+                                0
+                                 
+                </h4>
+                <p>
+                                 undefinedh undefinedm undefineds
+                </p>
+</div>,
+            ],
+            "className": "pom-container",
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": <div
+            class="pom-container"
+>
+            <div
+                        class="pom-cards"
+            >
+                        <i
+                                    class="fab fa-xbox"
+                        />
+                        <h4>
+                                    0
+                        </h4>
+                        <p>
+                                    undefinedh undefinedm undefineds
+                        </p>
+            </div>
+</div>,
+          "tag": 7,
+          "treeBaseDuration": 0,
+          "type": "div",
+          "updateQueue": null,
+        },
+        "childExpirationTime": 0,
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstContextDependency": null,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "pomHistory": Array [
+            Object {
+              "city": "Denver",
+              "country": "United States",
+              "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+              "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+              "featured": false,
+              "id": 473825,
+              "member_count": 4,
+              "name": "Stravant Club",
+              "private": false,
+              "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+              "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+              "resource_state": 2,
+              "sport_type": "running",
+              "state": "Colorado",
+              "url": "stravant",
+              "verified": false,
+            },
+          ],
+          "removePom": [Function],
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "pomHistory": Array [
+            Object {
+              "city": "Denver",
+              "country": "United States",
+              "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+              "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+              "featured": false,
+              "id": 473825,
+              "member_count": 4,
+              "name": "Stravant Club",
+              "private": false,
+              "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+              "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+              "resource_state": 2,
+              "sport_type": "running",
+              "state": "Colorado",
+              "url": "stravant",
+              "verified": false,
+            },
+          ],
+          "removePom": [Function],
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 49,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": [Circular],
+          "childExpirationTime": 0,
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstContextDependency": null,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "pomHistory": Array [
+                Object {
+                  "city": "Denver",
+                  "country": "United States",
+                  "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                  "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                  "featured": false,
+                  "id": 473825,
+                  "member_count": 4,
+                  "name": "Stravant Club",
+                  "private": false,
+                  "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                  "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                  "resource_state": 2,
+                  "sport_type": "running",
+                  "state": "Colorado",
+                  "url": "stravant",
+                  "verified": false,
+                },
+              ],
+              "removePom": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 47,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": [Circular],
+              "child": null,
+              "childExpirationTime": 0,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstContextDependency": null,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="pom-container"
+                  >
+                                    <div
+                                                      class="pom-cards"
+                                    >
+                                                      <i
+                                                                        class="fab fa-xbox"
+                                                      />
+                                                      <h4>
+                                                                        0
+                                                      </h4>
+                                                      <p>
+                                                                        undefinedh undefinedm undefineds
+                                                      </p>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "timeoutHandle": -1,
+              },
+              "tag": 5,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "pomHistory": Array [
+                                                                    Object {
+                                                                      "city": "Denver",
+                                                                      "country": "United States",
+                                                                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                      "featured": false,
+                                                                      "id": 473825,
+                                                                      "member_count": 4,
+                                                                      "name": "Stravant Club",
+                                                                      "private": false,
+                                                                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                      "resource_state": 2,
+                                                                      "sport_type": "running",
+                                                                      "state": "Colorado",
+                                                                      "url": "stravant",
+                                                                      "verified": false,
+                                                                    },
+                                                                  ],
+                                                                  "removePom": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "pomHistory": Array [
+                                                                    Object {
+                                                                      "city": "Denver",
+                                                                      "country": "United States",
+                                                                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                      "featured": false,
+                                                                      "id": 473825,
+                                                                      "member_count": 4,
+                                                                      "name": "Stravant Club",
+                                                                      "private": false,
+                                                                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                      "resource_state": 2,
+                                                                      "sport_type": "running",
+                                                                      "state": "Colorado",
+                                                                      "url": "stravant",
+                                                                      "verified": false,
+                                                                    },
+                                                                  ],
+                                                                  "removePom": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "pomHistory": Array [
+                                                  Object {
+                                                    "city": "Denver",
+                                                    "country": "United States",
+                                                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                    "featured": false,
+                                                    "id": 473825,
+                                                    "member_count": 4,
+                                                    "name": "Stravant Club",
+                                                    "private": false,
+                                                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                    "resource_state": 2,
+                                                    "sport_type": "running",
+                                                    "state": "Colorado",
+                                                    "url": "stravant",
+                                                    "verified": false,
+                                                  },
+                                                ],
+                                                "removePom": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="pom-container"
+                >
+                                <div
+                                                class="pom-cards"
+                                >
+                                                <i
+                                                                class="fab fa-xbox"
+                                                />
+                                                <h4>
+                                                                0
+                                                </h4>
+                                                <p>
+                                                                undefinedh undefinedm undefineds
+                                                </p>
+                                </div>
+                </div>
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "didError": false,
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "expirationTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "interactionThreadID": 12,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "memoizedInteractions": Set {},
+              "nextExpirationTimeToWorkOn": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "pendingInteractionMap": Map {},
+              "timeoutHandle": -1,
+            },
+            "tag": 5,
+            "treeBaseDuration": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "pomHistory": Array [
+                                                        Object {
+                                                          "city": "Denver",
+                                                          "country": "United States",
+                                                          "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                          "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                          "featured": false,
+                                                          "id": 473825,
+                                                          "member_count": 4,
+                                                          "name": "Stravant Club",
+                                                          "private": false,
+                                                          "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                          "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                          "resource_state": 2,
+                                                          "sport_type": "running",
+                                                          "state": "Colorado",
+                                                          "url": "stravant",
+                                                          "verified": false,
+                                                        },
+                                                      ],
+                                                      "removePom": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseDuration": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseDuration": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "context": Object {},
+      "props": Object {
+        "pomHistory": Array [
+          Object {
+            "city": "Denver",
+            "country": "United States",
+            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+            "featured": false,
+            "id": 473825,
+            "member_count": 4,
+            "name": "Stravant Club",
+            "private": false,
+            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+            "resource_state": 2,
+            "sport_type": "running",
+            "state": "Colorado",
+            "url": "stravant",
+            "verified": false,
+          },
+        ],
+        "removePom": [Function],
+      },
+      "refs": Object {},
+      "state": null,
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "pomHistory": Array [
+        Object {
+          "city": "Denver",
+          "country": "United States",
+          "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+          "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+          "featured": false,
+          "id": 473825,
+          "member_count": 4,
+          "name": "Stravant Club",
+          "private": false,
+          "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+          "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+          "resource_state": 2,
+          "sport_type": "running",
+          "state": "Colorado",
+          "url": "stravant",
+          "verified": false,
+        },
+      ],
+      "removePom": [Function],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="pom-container"
+>
+        <div
+                class="pom-cards"
+        >
+                <i
+                        class="fab fa-xbox"
+                />
+                <h4>
+                        0
+                </h4>
+                <p>
+                        undefinedh undefinedm undefineds
+                </p>
+        </div>
+</div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="pom-cards"
+>
+            <i
+                        className="fab fa-xbox"
+                        onClick={[Function]}
+            />
+            <h4>
+                        0
+                         
+            </h4>
+            <p>
+                         undefinedh undefinedm undefineds
+            </p>
+</div>,
+        ],
+        "className": "pom-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="pom-cards"
+>
+            <i
+                        class="fab fa-xbox"
+            />
+            <h4>
+                        0
+            </h4>
+            <p>
+                        undefinedh undefinedm undefineds
+            </p>
+</div>,
+          "key": "0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="fab fa-xbox"
+                onClick={[Function]}
+/>,
+              <h4>
+                0
+                 
+</h4>,
+              <p>
+                 undefinedh undefinedm undefineds
+</p>,
+            ],
+            "className": "pom-cards",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <i
+                class="fab fa-xbox"
+/>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fab fa-xbox",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                undefined,
+              ],
+              "type": "i",
+            },
+            Object {
+              "instance": <h4>
+                0
+</h4>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "0",
+                  " ",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "0",
+                " ",
+              ],
+              "type": "h4",
+            },
+            Object {
+              "instance": <p>
+                undefinedh undefinedm undefineds
+</p>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": " undefinedh undefinedm undefineds",
+              },
+              "ref": null,
+              "rendered": Array [
+                " undefinedh undefinedm undefineds",
+              ],
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": PomContainer {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 50,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 49,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstContextDependency": null,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="pom-container"
+                    >
+                                        <div
+                                                            class="pom-cards"
+                                        >
+                                                            <i
+                                                                                class="fab fa-xbox"
+                                                            />
+                                                            <h4>
+                                                                                0
+                                                            </h4>
+                                                            <p>
+                                                                                undefinedh undefinedm undefineds
+                                                            </p>
+                                        </div>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "timeoutHandle": -1,
+                },
+                "tag": 5,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "pomHistory": Array [
+                                                                          Object {
+                                                                            "city": "Denver",
+                                                                            "country": "United States",
+                                                                            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                            "featured": false,
+                                                                            "id": 473825,
+                                                                            "member_count": 4,
+                                                                            "name": "Stravant Club",
+                                                                            "private": false,
+                                                                            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                            "resource_state": 2,
+                                                                            "sport_type": "running",
+                                                                            "state": "Colorado",
+                                                                            "url": "stravant",
+                                                                            "verified": false,
+                                                                          },
+                                                                        ],
+                                                                        "removePom": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "pomHistory": Array [
+                                                                          Object {
+                                                                            "city": "Denver",
+                                                                            "country": "United States",
+                                                                            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                            "featured": false,
+                                                                            "id": 473825,
+                                                                            "member_count": 4,
+                                                                            "name": "Stravant Club",
+                                                                            "private": false,
+                                                                            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                            "resource_state": 2,
+                                                                            "sport_type": "running",
+                                                                            "state": "Colorado",
+                                                                            "url": "stravant",
+                                                                            "verified": false,
+                                                                          },
+                                                                        ],
+                                                                        "removePom": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstContextDependency": null,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "pomHistory": Array [
+                                                        Object {
+                                                          "city": "Denver",
+                                                          "country": "United States",
+                                                          "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                          "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                          "featured": false,
+                                                          "id": 473825,
+                                                          "member_count": 4,
+                                                          "name": "Stravant Club",
+                                                          "private": false,
+                                                          "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                          "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                          "resource_state": 2,
+                                                          "sport_type": "running",
+                                                          "state": "Colorado",
+                                                          "url": "stravant",
+                                                          "verified": false,
+                                                        },
+                                                      ],
+                                                      "removePom": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="pom-container"
+                  >
+                                    <div
+                                                      class="pom-cards"
+                                    >
+                                                      <i
+                                                                        class="fab fa-xbox"
+                                                      />
+                                                      <h4>
+                                                                        0
+                                                      </h4>
+                                                      <p>
+                                                                        undefinedh undefinedm undefineds
+                                                      </p>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "timeoutHandle": -1,
+              },
+              "tag": 5,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "pomHistory": Array [
+                                                              Object {
+                                                                "city": "Denver",
+                                                                "country": "United States",
+                                                                "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                "featured": false,
+                                                                "id": 473825,
+                                                                "member_count": 4,
+                                                                "name": "Stravant Club",
+                                                                "private": false,
+                                                                "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                "resource_state": 2,
+                                                                "sport_type": "running",
+                                                                "state": "Colorado",
+                                                                "url": "stravant",
+                                                                "verified": false,
+                                                              },
+                                                            ],
+                                                            "removePom": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "pomHistory": Array [
+                    Object {
+                      "city": "Denver",
+                      "country": "United States",
+                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                      "featured": false,
+                      "id": 473825,
+                      "member_count": 4,
+                      "name": "Stravant Club",
+                      "private": false,
+                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                      "resource_state": 2,
+                      "sport_type": "running",
+                      "state": "Colorado",
+                      "url": "stravant",
+                      "verified": false,
+                    },
+                  ],
+                  "removePom": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "pomHistory": Array [
+                    Object {
+                      "city": "Denver",
+                      "country": "United States",
+                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                      "featured": false,
+                      "id": 473825,
+                      "member_count": 4,
+                      "name": "Stravant Club",
+                      "private": false,
+                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                      "resource_state": 2,
+                      "sport_type": "running",
+                      "state": "Colorado",
+                      "url": "stravant",
+                      "verified": false,
+                    },
+                  ],
+                  "removePom": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseDuration": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": -1,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 51,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+              "lineNumber": 27,
+            },
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": FiberNode {
+              "_debugID": 52,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": [Circular],
+              "_debugSource": Object {
+                "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                "lineNumber": 17,
+              },
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": null,
+              "child": FiberNode {
+                "_debugID": 53,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": Object {
+                  "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                  "lineNumber": 18,
+                },
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": null,
+                "child": null,
+                "childExpirationTime": 0,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstContextDependency": null,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "className": "fab fa-xbox",
+                  "onClick": [Function],
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "className": "fab fa-xbox",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseDuration": 0,
+                "sibling": FiberNode {
+                  "_debugID": 54,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": Object {
+                    "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                    "lineNumber": 22,
+                  },
+                  "actualDuration": 0,
+                  "actualStartTime": -1,
+                  "alternate": null,
+                  "child": FiberNode {
+                    "_debugID": 56,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": null,
+                    "_debugSource": null,
+                    "actualDuration": 0,
+                    "actualStartTime": -1,
+                    "alternate": null,
+                    "child": null,
+                    "childExpirationTime": 0,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstContextDependency": null,
+                    "firstEffect": null,
+                    "index": 0,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": "0",
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": "0",
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseDuration": 0,
+                    "sibling": FiberNode {
+                      "_debugID": 57,
+                      "_debugIsCurrentlyTiming": false,
+                      "_debugOwner": null,
+                      "_debugSource": null,
+                      "actualDuration": 0,
+                      "actualStartTime": -1,
+                      "alternate": null,
+                      "child": null,
+                      "childExpirationTime": 0,
+                      "effectTag": 0,
+                      "expirationTime": 0,
+                      "firstContextDependency": null,
+                      "firstEffect": null,
+                      "index": 1,
+                      "key": null,
+                      "lastEffect": null,
+                      "memoizedProps": " ",
+                      "memoizedState": null,
+                      "mode": 0,
+                      "nextEffect": null,
+                      "pendingProps": " ",
+                      "ref": null,
+                      "return": [Circular],
+                      "selfBaseDuration": 0,
+                      "sibling": null,
+                      "stateNode": ,
+                      "tag": 8,
+                      "treeBaseDuration": 0,
+                      "type": null,
+                      "updateQueue": null,
+                    },
+                    "stateNode": 0,
+                    "tag": 8,
+                    "treeBaseDuration": 0,
+                    "type": null,
+                    "updateQueue": null,
+                  },
+                  "childExpirationTime": 0,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstContextDependency": null,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": Array [
+                      "0",
+                      " ",
+                    ],
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": Array [
+                      "0",
+                      " ",
+                    ],
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseDuration": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 55,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": Object {
+                      "fileName": "/Users/pkim/Desktop/Stravant/Stravant-client/src/components/PomContainer/PomContainer.js",
+                      "lineNumber": 23,
+                    },
+                    "actualDuration": 0,
+                    "actualStartTime": -1,
+                    "alternate": null,
+                    "child": null,
+                    "childExpirationTime": 0,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstContextDependency": null,
+                    "firstEffect": null,
+                    "index": 2,
+                    "key": null,
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": " undefinedh undefinedm undefineds",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": " undefinedh undefinedm undefineds",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseDuration": 0,
+                    "sibling": null,
+                    "stateNode": <p>
+                      undefinedh undefinedm undefineds
+</p>,
+                    "tag": 7,
+                    "treeBaseDuration": 0,
+                    "type": "p",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <h4>
+                    0
+</h4>,
+                  "tag": 7,
+                  "treeBaseDuration": 0,
+                  "type": "h4",
+                  "updateQueue": null,
+                },
+                "stateNode": <i
+                  class="fab fa-xbox"
+/>,
+                "tag": 7,
+                "treeBaseDuration": 0,
+                "type": "i",
+                "updateQueue": null,
+              },
+              "childExpirationTime": 0,
+              "effectTag": 0,
+              "expirationTime": 0,
+              "firstContextDependency": null,
+              "firstEffect": null,
+              "index": 0,
+              "key": "0",
+              "lastEffect": null,
+              "memoizedProps": Object {
+                "children": Array [
+                  <i
+                    className="fab fa-xbox"
+                    onClick={[Function]}
+/>,
+                  <h4>
+                    0
+                     
+</h4>,
+                  <p>
+                     undefinedh undefinedm undefineds
+</p>,
+                ],
+                "className": "pom-cards",
+              },
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": Object {
+                "children": Array [
+                  <i
+                    className="fab fa-xbox"
+                    onClick={[Function]}
+/>,
+                  <h4>
+                    0
+                     
+</h4>,
+                  <p>
+                     undefinedh undefinedm undefineds
+</p>,
+                ],
+                "className": "pom-cards",
+              },
+              "ref": null,
+              "return": [Circular],
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": <div
+                class="pom-cards"
+>
+                <i
+                                class="fab fa-xbox"
+                />
+                <h4>
+                                0
+                </h4>
+                <p>
+                                undefinedh undefinedm undefineds
+                </p>
+</div>,
+              "tag": 7,
+              "treeBaseDuration": 0,
+              "type": "div",
+              "updateQueue": null,
+            },
+            "childExpirationTime": 0,
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [
+                <div
+                  className="pom-cards"
+>
+                  <i
+                                    className="fab fa-xbox"
+                                    onClick={[Function]}
+                  />
+                  <h4>
+                                    0
+                                     
+                  </h4>
+                  <p>
+                                     undefinedh undefinedm undefineds
+                  </p>
+</div>,
+              ],
+              "className": "pom-container",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [
+                <div
+                  className="pom-cards"
+>
+                  <i
+                                    className="fab fa-xbox"
+                                    onClick={[Function]}
+                  />
+                  <h4>
+                                    0
+                                     
+                  </h4>
+                  <p>
+                                     undefinedh undefinedm undefineds
+                  </p>
+</div>,
+              ],
+              "className": "pom-container",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="pom-container"
+>
+              <div
+                            class="pom-cards"
+              >
+                            <i
+                                          class="fab fa-xbox"
+                            />
+                            <h4>
+                                          0
+                            </h4>
+                            <p>
+                                          undefinedh undefinedm undefineds
+                            </p>
+              </div>
+</div>,
+            "tag": 7,
+            "treeBaseDuration": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "childExpirationTime": 0,
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstContextDependency": null,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "pomHistory": Array [
+              Object {
+                "city": "Denver",
+                "country": "United States",
+                "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                "featured": false,
+                "id": 473825,
+                "member_count": 4,
+                "name": "Stravant Club",
+                "private": false,
+                "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                "resource_state": 2,
+                "sport_type": "running",
+                "state": "Colorado",
+                "url": "stravant",
+                "verified": false,
+              },
+            ],
+            "removePom": [Function],
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "pomHistory": Array [
+              Object {
+                "city": "Denver",
+                "country": "United States",
+                "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                "featured": false,
+                "id": 473825,
+                "member_count": 4,
+                "name": "Stravant Club",
+                "private": false,
+                "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                "resource_state": 2,
+                "sport_type": "running",
+                "state": "Colorado",
+                "url": "stravant",
+                "verified": false,
+              },
+            ],
+            "removePom": [Function],
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 49,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": -1,
+            "alternate": null,
+            "child": [Circular],
+            "childExpirationTime": 0,
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstContextDependency": null,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "pomHistory": Array [
+                  Object {
+                    "city": "Denver",
+                    "country": "United States",
+                    "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                    "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                    "featured": false,
+                    "id": 473825,
+                    "member_count": 4,
+                    "name": "Stravant Club",
+                    "private": false,
+                    "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                    "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                    "resource_state": 2,
+                    "sport_type": "running",
+                    "state": "Colorado",
+                    "url": "stravant",
+                    "verified": false,
+                  },
+                ],
+                "removePom": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 47,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": -1,
+              "alternate": FiberNode {
+                "_debugID": 47,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": -1,
+                "alternate": [Circular],
+                "child": null,
+                "childExpirationTime": 0,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstContextDependency": null,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseDuration": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="pom-container"
+                    >
+                                        <div
+                                                            class="pom-cards"
+                                        >
+                                                            <i
+                                                                                class="fab fa-xbox"
+                                                            />
+                                                            <h4>
+                                                                                0
+                                                            </h4>
+                                                            <p>
+                                                                                undefinedh undefinedm undefineds
+                                                            </p>
+                                        </div>
+                    </div>
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "didError": false,
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "expirationTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "interactionThreadID": 12,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "memoizedInteractions": Set {},
+                  "nextExpirationTimeToWorkOn": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "pendingInteractionMap": Map {},
+                  "timeoutHandle": -1,
+                },
+                "tag": 5,
+                "treeBaseDuration": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "pomHistory": Array [
+                                                                          Object {
+                                                                            "city": "Denver",
+                                                                            "country": "United States",
+                                                                            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                            "featured": false,
+                                                                            "id": 473825,
+                                                                            "member_count": 4,
+                                                                            "name": "Stravant Club",
+                                                                            "private": false,
+                                                                            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                            "resource_state": 2,
+                                                                            "sport_type": "running",
+                                                                            "state": "Colorado",
+                                                                            "url": "stravant",
+                                                                            "verified": false,
+                                                                          },
+                                                                        ],
+                                                                        "removePom": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "pomHistory": Array [
+                                                                          Object {
+                                                                            "city": "Denver",
+                                                                            "country": "United States",
+                                                                            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                            "featured": false,
+                                                                            "id": 473825,
+                                                                            "member_count": 4,
+                                                                            "name": "Stravant Club",
+                                                                            "private": false,
+                                                                            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                            "resource_state": 2,
+                                                                            "sport_type": "running",
+                                                                            "state": "Colorado",
+                                                                            "url": "stravant",
+                                                                            "verified": false,
+                                                                          },
+                                                                        ],
+                                                                        "removePom": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "childExpirationTime": 0,
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstContextDependency": null,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "pomHistory": Array [
+                                                        Object {
+                                                          "city": "Denver",
+                                                          "country": "United States",
+                                                          "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                          "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                          "featured": false,
+                                                          "id": 473825,
+                                                          "member_count": 4,
+                                                          "name": "Stravant Club",
+                                                          "private": false,
+                                                          "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                          "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                          "resource_state": 2,
+                                                          "sport_type": "running",
+                                                          "state": "Colorado",
+                                                          "url": "stravant",
+                                                          "verified": false,
+                                                        },
+                                                      ],
+                                                      "removePom": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseDuration": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="pom-container"
+                  >
+                                    <div
+                                                      class="pom-cards"
+                                    >
+                                                      <i
+                                                                        class="fab fa-xbox"
+                                                      />
+                                                      <h4>
+                                                                        0
+                                                      </h4>
+                                                      <p>
+                                                                        undefinedh undefinedm undefineds
+                                                      </p>
+                                    </div>
+                  </div>
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "didError": false,
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "expirationTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "interactionThreadID": 12,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "memoizedInteractions": Set {},
+                "nextExpirationTimeToWorkOn": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "pendingInteractionMap": Map {},
+                "timeoutHandle": -1,
+              },
+              "tag": 5,
+              "treeBaseDuration": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "pomHistory": Array [
+                                                              Object {
+                                                                "city": "Denver",
+                                                                "country": "United States",
+                                                                "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                                                                "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                                                                "featured": false,
+                                                                "id": 473825,
+                                                                "member_count": 4,
+                                                                "name": "Stravant Club",
+                                                                "private": false,
+                                                                "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                                                                "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                                                                "resource_state": 2,
+                                                                "sport_type": "running",
+                                                                "state": "Colorado",
+                                                                "url": "stravant",
+                                                                "verified": false,
+                                                              },
+                                                            ],
+                                                            "removePom": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseDuration": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "pomHistory": Array [
+                    Object {
+                      "city": "Denver",
+                      "country": "United States",
+                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                      "featured": false,
+                      "id": 473825,
+                      "member_count": 4,
+                      "name": "Stravant Club",
+                      "private": false,
+                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                      "resource_state": 2,
+                      "sport_type": "running",
+                      "state": "Colorado",
+                      "url": "stravant",
+                      "verified": false,
+                    },
+                  ],
+                  "removePom": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "pomHistory": Array [
+                    Object {
+                      "city": "Denver",
+                      "country": "United States",
+                      "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+                      "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+                      "featured": false,
+                      "id": 473825,
+                      "member_count": 4,
+                      "name": "Stravant Club",
+                      "private": false,
+                      "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+                      "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+                      "resource_state": 2,
+                      "sport_type": "running",
+                      "state": "Colorado",
+                      "url": "stravant",
+                      "verified": false,
+                    },
+                  ],
+                  "removePom": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseDuration": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseDuration": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseDuration": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "context": Object {},
+        "props": Object {
+          "pomHistory": Array [
+            Object {
+              "city": "Denver",
+              "country": "United States",
+              "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+              "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+              "featured": false,
+              "id": 473825,
+              "member_count": 4,
+              "name": "Stravant Club",
+              "private": false,
+              "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+              "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+              "resource_state": 2,
+              "sport_type": "running",
+              "state": "Colorado",
+              "url": "stravant",
+              "verified": false,
+            },
+          ],
+          "removePom": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "pomHistory": Array [
+          Object {
+            "city": "Denver",
+            "country": "United States",
+            "cover_photo": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/large.jpg",
+            "cover_photo_small": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246574/1/small.jpg",
+            "featured": false,
+            "id": 473825,
+            "member_count": 4,
+            "name": "Stravant Club",
+            "private": false,
+            "profile": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/large.jpg",
+            "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/clubs/473825/10246543/1/medium.jpg",
+            "resource_state": 2,
+            "sport_type": "running",
+            "state": "Colorado",
+            "url": "stravant",
+            "verified": false,
+          },
+        ],
+        "removePom": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="pom-container"
+>
+          <div
+                    class="pom-cards"
+          >
+                    <i
+                              class="fab fa-xbox"
+                    />
+                    <h4>
+                              0
+                    </h4>
+                    <p>
+                              undefinedh undefinedm undefineds
+                    </p>
+          </div>
+</div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="pom-cards"
+>
+              <i
+                            className="fab fa-xbox"
+                            onClick={[Function]}
+              />
+              <h4>
+                            0
+                             
+              </h4>
+              <p>
+                             undefinedh undefinedm undefineds
+              </p>
+</div>,
+          ],
+          "className": "pom-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="pom-cards"
+>
+              <i
+                            class="fab fa-xbox"
+              />
+              <h4>
+                            0
+              </h4>
+              <p>
+                            undefinedh undefinedm undefineds
+              </p>
+</div>,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fab fa-xbox"
+                  onClick={[Function]}
+/>,
+                <h4>
+                  0
+                   
+</h4>,
+                <p>
+                   undefinedh undefinedm undefineds
+</p>,
+              ],
+              "className": "pom-cards",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <i
+                  class="fab fa-xbox"
+/>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fab fa-xbox",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  undefined,
+                ],
+                "type": "i",
+              },
+              Object {
+                "instance": <h4>
+                  0
+</h4>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "0",
+                    " ",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "0",
+                  " ",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": <p>
+                  undefinedh undefinedm undefineds
+</p>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": " undefinedh undefinedm undefineds",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " undefinedh undefinedm undefineds",
+                ],
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
 `;
