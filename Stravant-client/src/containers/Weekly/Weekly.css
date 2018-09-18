@@ -53,7 +53,7 @@ text {
   font-family: daybold;
   left: 49%;
   font-size: 1.7rem;
-  top: 25%;
+  top: 27%;
   color: whitesmoke; }
 
 @media screen and (max-width: 650px) {
@@ -70,4 +70,4 @@ text {
   .x-axis {
     display: none; }
   .weekly-title {
-    top: 18%; } }
+    top: 20%; } }

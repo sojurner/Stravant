@@ -42,7 +42,7 @@ ShallowWrapper {
         <AreaChart
           areaColors={
                     Array [
-                              "#7c5433",
+                              "orange",
                             ]
           }
           axes={true}
@@ -130,7 +130,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "areaColors": Array [
-            "#7c5433",
+            "orange",
           ],
           "axes": true,
           "axisLabels": Object {
@@ -228,7 +228,7 @@ ShallowWrapper {
           <AreaChart
             areaColors={
                         Array [
-                                    "#7c5433",
+                                    "orange",
                                   ]
             }
             axes={true}
@@ -316,7 +316,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "areaColors": Array [
-              "#7c5433",
+              "orange",
             ],
             "axes": true,
             "axisLabels": Object {
@@ -471,7 +471,7 @@ ShallowWrapper {
         <AreaChart
           areaColors={
                     Array [
-                              "#7c5433",
+                              "orange",
                             ]
           }
           axes={true}
@@ -588,7 +588,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "areaColors": Array [
-            "#7c5433",
+            "orange",
           ],
           "axes": true,
           "axisLabels": Object {
@@ -715,7 +715,7 @@ ShallowWrapper {
           <AreaChart
             areaColors={
                         Array [
-                                    "#7c5433",
+                                    "orange",
                                   ]
             }
             axes={true}
@@ -832,7 +832,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "areaColors": Array [
-              "#7c5433",
+              "orange",
             ],
             "axes": true,
             "axisLabels": Object {
