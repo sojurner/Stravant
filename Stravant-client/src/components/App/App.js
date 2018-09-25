@@ -34,7 +34,7 @@ export class App extends Component {
     }
     if (localStorage.getItem('code')) {
       const codeValue = JSON.parse(localStorage.getItem('code'));
-      const refreshUrl = `http://localhost:3000/?state=&code=${codeValue}&scope=`;
+      const refreshUrl = `https://stravant.herokuapp.com/?state=&code=${codeValue}&scope=`;
 
       window.location.reload(refreshUrl);
       localStorage.removeItem('code');
@@ -67,7 +67,7 @@ export class App extends Component {
 
   signOutUser = () => {
     localStorage.removeItem('code');
-    window.location = 'http://localhost:3000/';
+    window.location = 'https://stravant.herokuapp.com/';
   };
 
   render() {

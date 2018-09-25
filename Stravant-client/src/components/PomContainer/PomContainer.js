@@ -47,3 +47,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(PomContainer);
+
+
+//functional component

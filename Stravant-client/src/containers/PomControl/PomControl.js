@@ -9,7 +9,7 @@ import { getLastPomTime } from '../../helpers/helpers/helpers';
 
 import './PomControl.css';
 
-var socket = openSocket('http://localhost:5000');
+var socket = openSocket('https://stravant-server.herokuapp.com/');
 export class PomControl extends Component {
   constructor() {
     super();

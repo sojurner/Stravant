@@ -30,11 +30,15 @@ text {
 .x-axis {
   position: absolute;
   left: 47.5%;
-  top: 83%;
+  top: 84%;
   font-family: daybold;
   font-size: 1.5rem;
-  color: #5a5959;
-  font-weight: 800; }
+  color: #9d3c00;
+  font-weight: 800;
+  background-color: #a5a3a3;
+  border-radius: 0.8rem;
+  width: 10rem;
+  height: 1.5rem; }
 
 .y-axis {
   writing-mode: vertical-rl;
