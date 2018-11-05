@@ -11,18 +11,19 @@ Stravant is a Fitness App targeted towards Turing Staff members.  Utilizing the 
 * [Strava](https://developers.strava.com/)
 
 ### Setup
+##### Back-end 
+* Clone down this repository `git clone https://github.com/sojurner/Stravant.git`
 
-Clone down this repository `git clone https://github.com/sojurner/Stravant.git`
+* Install server-side dependencies `npm install`
 
-Install server-side dependencies `npm install`
+* Start server `node server`
+##### Front-end
+- In a new terminal window
+* Cd into Stravant-client `cd Stravant-client/`
 
-Run backend server `node server`
+* Install client-side dependencies `npm install`
 
-cd into Stravant-client `cd Stravant-client/`
-
-Install client-side dependencies `npm install`
-
-Run front-end server `npm start`
+* Run server `npm start`
 
 ### Screenshots
 
