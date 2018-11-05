@@ -18,7 +18,7 @@ Stravant is a Fitness App targeted towards Turing Staff members.  Utilizing the 
 
 * Start server `node server`
 ##### Front-end
-- In a new terminal window
+In a new terminal window
 * Cd into Stravant-client `cd Stravant-client/`
 
 * Install client-side dependencies `npm install`
